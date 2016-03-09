@@ -1,0 +1,19 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+
+  <title><%= basename %><%= extname %></title>
+
+  <link rel="stylesheet" href="<%= pathToRoot %><%= assets['main.js'].path %>" />
+</head>
+<body>
+
+
+  <%- content %>
+
+
+  <script src="<%= pathToRoot %><%= assets['main.js'].path %>"></script>
+
+
+</body>
+</html>
