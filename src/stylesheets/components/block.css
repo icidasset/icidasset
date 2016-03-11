@@ -2,6 +2,11 @@
   font-size: .85rem;
   margin: grid(5) 0 0;
 
+  &.block--without-margin {
+    margin-top: 0;
+  }
+
+
   /**
    * Title
    */

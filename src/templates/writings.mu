@@ -6,7 +6,7 @@ title = "Writings"
 
   <h1>{{title}}</h1>
 
-  <div class="block">
+  <div class="block block--without-margin">
     <div class="block__list">
       <ul>
         {{#each collections.writings}}
