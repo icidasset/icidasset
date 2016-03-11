@@ -1,10 +1,11 @@
-export default function(files, deps) {
+export default function(files, deps, layouts) {
   return files.map((f) => {
     return {
       ...f,
+
       metadata: {
         ...f.metadata,
-        layout: f.metadata.layout || 'src/layouts/application.mu',
+        layouts: layouts || ['src/layouts/application.mu'],
       },
     };
   });

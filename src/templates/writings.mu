@@ -6,4 +6,18 @@ title = "Writings"
 
   <h1>{{title}}</h1>
 
+  <div class="block">
+    <div class="block__list">
+      <ul>
+        {{#each collections.writings}}
+          <li><a href="{{pathToRoot}}writings/{{path}}">{{metadata.title}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="block__text block__text--subtle">
+      <p><em>Ordered by date.</em></p>
+    </div>
+  </div>
+
 </div>

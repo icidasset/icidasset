@@ -8,6 +8,7 @@
   </p>
 
 
+  <!-- NOW -->
   <div class="block">
     <h2 class="block__title">What I'm doing now</h2>
 
@@ -27,6 +28,7 @@
   </div>
 
 
+  <!-- PROJECTS -->
   <div class="block">
     <h2 class="block__title">Latest projects</h2>
 
@@ -40,13 +42,15 @@
   </div>
 
 
+  <!-- WRITINGS -->
   <div class="block">
     <h2 class="block__title">Latest writings</h2>
 
     <div class="block__list">
       <ul>
-        <li>Health, fitness &amp; lifestyle</li>
-        <li>Static site generators</li>
+        {{#each collections.latestWritings}}
+          <li><a href="{{pathToRoot}}writings/{{path}}">{{metadata.title}}</a></li>
+        {{/each}}
       </ul>
     </div>
 

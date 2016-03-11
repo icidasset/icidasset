@@ -4,6 +4,7 @@
 @import "base/fonts";
 @import "base/base";
 
+@import "components/article";
 @import "components/block";
 @import "components/container";
 @import "components/header";

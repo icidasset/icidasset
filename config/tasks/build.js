@@ -12,6 +12,7 @@ import webpackConfig from '../webpack';
 
 import evilIcons from '../base/evil-icons';
 import layouts from '../base/layouts';
+import markdown from '../base/markdown';
 
 
 const root = resolve(__dirname, '../../');
@@ -19,13 +20,15 @@ const root = resolve(__dirname, '../../');
 
 export default function() {
   return build__webpack()
-    .then(collectAdditionalData)
-    .then(build__templates);
+    .then(makeDataObject)
+    .then(makeWritingsCollection)
+    .then(build__templates)
+    .then(build__writings);
 }
 
 
 /**
- * {private} Get meta.toml data
+ * {private} meta.toml
  */
 function getMeta() {
   const content = fs.readFileSync(join(root, 'src/meta.toml'), 'utf-8');
@@ -34,9 +37,9 @@ function getMeta() {
 
 
 /**
- * {private} Collect additional data
+ * {private} Additional data
  */
-function collectAdditionalData(assetFiles) {
+function makeDataObject(assetFiles) {
   const meta = getMeta();
   const assets = {};
 
@@ -48,8 +51,35 @@ function collectAdditionalData(assetFiles) {
 }
 
 
+function makeWritingsCollection(data) {
+  return run(
+    [list__writings],
+
+    [renameExtension, '.html'],
+    [permalinks],
+    [pathToRoot],
+  )(
+    null,
+    root
+  ).then((files) => {
+    const writings = [...files];
+
+    return {
+      ...data,
+
+      collections: {
+        ...data.collections,
+
+        writings,
+        latestWritings: writings.slice(0, 5),
+      },
+    }
+  });
+}
+
+
 /**
- * {private} Build webpack
+ * {private} Webpack
  */
 function build__webpack() {
   return run(
@@ -63,29 +93,68 @@ function build__webpack() {
 
 
 /**
- * {private} Build templates
+ * {private} Templates
  */
-function build__templates(data = {}) {
-  return run(
+function build__templates(data) {
+  run(
     [read],
     [frontmatter, { lang: 'toml' }, { toml }],
     [metadata, data],
-    [pathToRoot],
     [layouts],
     [evilIcons],
-    [templates, render],
     [renameExtension, '.html'],
     [permalinks],
+    [pathToRoot],
+    [templates, render],
     [write, 'build']
   )(
     'src/templates/**/*.mu',
+    root,
+  );
+
+  return data;
+}
+
+
+/**
+ * {private} Writings
+ */
+const writings = 'src/writings/**/*.md';
+
+
+function list__writings() {
+  return run(
+    [read],
+    [frontmatter, { lang: 'toml' }, { toml }],
+  )(
+    writings,
+    root,
+  );
+}
+
+
+function build__writings(data) {
+  return run(
+    [() => data.collections.writings],
+
+    [metadata, data],
+    [layouts, ['src/layouts/writing.mu', 'src/layouts/application.mu']],
+    [evilIcons],
+    [markdown],
+    [renameExtension, '.html'],
+    [permalinks],
+    [pathToRoot, 1],
+    [templates, render],
+    [write, 'build/writings']
+  )(
+    null,
     root,
   );
 }
 
 
 /**
- * {private} Build static assets
+ * {private} Static assets
  */
 function build__staticAssets() {
   return run(
