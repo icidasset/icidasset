@@ -60,7 +60,7 @@ a {
 }
 
 p a {
-  border-bottom: 2px solid color($accent a(.475));
+  border-bottom: 2px solid $link-color;
 }
 
 ul {

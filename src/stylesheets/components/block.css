@@ -47,7 +47,7 @@
     }
 
     & a {
-      color: color($accent shade(37.5));
+      color: color($base0d shade(37.5));
     }
   }
 

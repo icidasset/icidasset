@@ -19,11 +19,7 @@ $base0f: #be643c;
  * Custom
  */
 $beige: #fffcf0;
-$light-purple: #dedcee;
-$purple: #6a60a9;
-$yellow: $base0a;
-$red: $base08;
-$blue: $base0d;
 
-$accent: $blue;
+$accent: $base08;
 $text-color: #111;
+$link-color: color($base0d a(.475));
