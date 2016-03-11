@@ -7,6 +7,8 @@
   </title>
 
   <link rel="stylesheet" href="{{ pathToRoot }}{{ assets.[main.css].path }}" />
+
+  {{> favicons}}
 </head>
 <body>
 

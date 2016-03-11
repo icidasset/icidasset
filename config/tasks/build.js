@@ -23,7 +23,8 @@ export default function() {
     .then(makeDataObject)
     .then(makeWritingsCollection)
     .then(build__templates)
-    .then(build__writings);
+    .then(build__writings)
+    .then(build__staticAssets);
 }
 
 
