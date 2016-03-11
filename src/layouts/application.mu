@@ -7,6 +7,7 @@
   </title>
 
   <link rel="stylesheet" href="{{ pathToRoot }}{{ assets.[main.css].path }}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Montserrat:700,400" />
 
   {{> favicons}}
 </head>
