@@ -1,5 +1,6 @@
 .icon {
   height: 2em;
   vertical-align: bottom;
+  transform: translateY(-0.125em);
   width: 2em;
 }

@@ -2,10 +2,14 @@
 
 @import "base/variables";
 @import "base/fonts";
+@import "base/queries";
 @import "base/base";
+
+@import "vendor/prism";
 
 @import "components/article";
 @import "components/block";
+@import "components/code";
 @import "components/container";
 @import "components/header";
 @import "components/icon";
