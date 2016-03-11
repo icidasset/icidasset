@@ -1,0 +1,8 @@
+@define-mixin default-font {
+  font-family: 'Libre Baskerville', serif;
+}
+
+
+@define-mixin heading-font {
+  font-family: 'Montserrat', sans-serif;
+}

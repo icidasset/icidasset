@@ -4,7 +4,7 @@ import express from 'express';
 
 
 export default function() {
-  const buildDir = resolve(__dirname, '../build');
+  const buildDir = resolve(__dirname, '../../build');
   const app = express();
   const port = 8080;
 

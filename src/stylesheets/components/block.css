@@ -1,0 +1,50 @@
+.block {
+  font-size: .85rem;
+  margin: grid(5) 0 0;
+
+  /**
+   * Title
+   */
+  & .block__title {
+    font-size: 1.15rem;
+    margin: 0 0 grid(2);
+  }
+
+
+  /**
+   * Text
+   */
+  & .block__text {
+    margin: grid(1.5) 0 0;
+    max-width: 350px;
+    text-align: justify;
+  }
+
+  & .block__text--subtle {
+    font-size: .725rem;
+
+    & a {
+      border-bottom: 0;
+      color: $accent;
+    }
+  }
+
+
+  /**
+   * List
+   */
+  & .block__list {
+    left: rem(-28px);
+    position: relative;
+
+    & li::before {
+      content: none;
+    }
+
+    & a {
+      color: color($accent shade(37.5));
+    }
+  }
+
+
+}

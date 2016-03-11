@@ -25,7 +25,7 @@ export default function() {
     postcss: () => {
       const defaults = [
         partialImport({
-          extension: 'pcss',
+          extension: 'css',
           prefix: '',
         }),
 
@@ -51,7 +51,11 @@ export default function() {
         mixins,
         propertyLookup,
         simpleVars,
-        cssnext,
+        cssnext({
+          features: {
+            rem: false,
+          },
+        }),
       ];
 
       return {

@@ -1,8 +1,10 @@
 import chalk from 'chalk';
 
-import build from './build';
-import server from './server';
-import watch from './watch';
+import build from './tasks/build';
+import server from './tasks/server';
+import watch from './tasks/watch';
+
+import './handlebars/helpers';
 
 
 const make = () => {

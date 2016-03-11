@@ -1,35 +1,51 @@
-import { resolve } from 'path';
+import { join, resolve } from 'path';
 import { run } from 'static-base';
+import fs from 'fs';
+import toml from 'toml';
 
 import { copy, frontmatter, metadata, pathToRoot, permalinks } from 'static-base-contrib';
 import { read, renameExtension, templates, webpack, write } from 'static-base-contrib';
 
-import * as utils from './utils';
-import layouts from './base/layouts';
-import webpackConfig from './webpack';
+import * as utils from '../utils';
+import render from '../handlebars/render';
+import webpackConfig from '../webpack';
+
+import evilIcons from '../base/evil-icons';
+import layouts from '../base/layouts';
 
 
-const root = resolve(__dirname, '../');
+const root = resolve(__dirname, '../../');
 
 
 export default function() {
   return build__webpack()
-    .then(collectAssets)
+    .then(collectAdditionalData)
     .then(build__templates);
 }
 
 
-function collectAssets(files) {
-  const assets = {};
-
-  files.forEach((f) => {
-    assets[`${f.basename}${f.extname}`] = f;
-  });
-
-  return { assets };
+/**
+ * {private} Get meta.toml data
+ */
+function getMeta() {
+  const content = fs.readFileSync(join(root, 'src/meta.toml'), 'utf-8');
+  return toml.parse(content);
 }
 
 
+/**
+ * {private} Collect additional data
+ */
+function collectAdditionalData(assetFiles) {
+  const meta = getMeta();
+  const assets = {};
+
+  assetFiles.forEach((f) => {
+    assets[`${f.basename}${f.extname}`] = f;
+  });
+
+  return { ...meta, assets };
+}
 
 
 /**
@@ -52,16 +68,17 @@ function build__webpack() {
 function build__templates(data = {}) {
   return run(
     [read],
-    [frontmatter],
+    [frontmatter, { lang: 'toml' }, { toml }],
     [metadata, data],
     [pathToRoot],
     [layouts],
-    [templates, utils.render],
+    [evilIcons],
+    [templates, render],
     [renameExtension, '.html'],
     [permalinks],
     [write, 'build']
   )(
-    'src/templates/**/*.ejs',
+    'src/templates/**/*.mu',
     root,
   );
 }

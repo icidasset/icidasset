@@ -1,0 +1,22 @@
+##
+## Projects
+##
+[[projects]]
+name = "Ectograph"
+url = "https://github.com/icidasset/ectograph"
+
+[[projects]]
+name = "Static Base"
+url = "https://github.com/icidasset/static-base"
+
+[[projects]]
+name = "Ongaku Ryoho"
+url = "https://github.com/icidasset/ongaku-ryoho"
+
+[[projects]]
+name = "Key Maps"
+url = "https://github.com/icidasset/key-maps"
+
+[[projects]]
+name = "Electricity & Mathematics"
+url = "https://electrical-mathematics.surge.sh/"
