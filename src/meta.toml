@@ -20,3 +20,27 @@ url = "https://github.com/icidasset/key-maps"
 [[projects]]
 name = "Electricity & Mathematics"
 url = "https://electrical-mathematics.surge.sh/"
+
+
+##
+## Links
+##
+[[links]]
+name = "Instagram"
+url = "https://instagram.com/icidasset"
+icon = "ei-sc-instagram"
+
+[[links]]
+name = "Github"
+url = "https://github.com/icidasset"
+icon = "ei-sc-github"
+
+[[links]]
+name = "Twitter"
+url = "https://twitter.com/icidasset"
+icon = "ei-sc-twitter"
+
+[[links]]
+name = "Email"
+url = "mailto:icid.asset@gmail.com"
+icon = "ei-envelope"

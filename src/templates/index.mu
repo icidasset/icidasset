@@ -34,9 +34,9 @@
 
     <div class="block__list">
       <ul>
-        {{#projects}}
+        {{#each projects}}
           <li><a href="{{url}}">{{name}}</a></li>
-        {{/projects}}
+        {{/each}}
       </ul>
     </div>
   </div>
@@ -60,6 +60,22 @@
           <em>{{{icon "ei-eye"}}} See all</em>
         </a>
       </p>
+    </div>
+  </div>
+
+
+  <!-- LINKS -->
+  <div class="block">
+    <h2 class="block__title">Links</h2>
+
+    <div class="block__list">
+      <ul class="links">
+        {{#each links}}
+          <li>
+            <a href="{{url}}">{{name}}</a>
+          </li>
+        {{/each}}
+      </ul>
     </div>
   </div>
 

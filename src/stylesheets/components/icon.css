@@ -1,6 +1,6 @@
 .icon {
   height: 2em;
-  vertical-align: bottom;
+  vertical-align: middle;
   transform: translateY(-0.125em);
-  width: 2em;
+  width: @height;
 }
