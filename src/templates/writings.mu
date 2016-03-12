@@ -10,7 +10,9 @@ title = "Writings"
     <div class="block__list">
       <ul>
         {{#each collections.writings}}
-          <li><a href="{{pathToRoot}}writings/{{path}}">{{metadata.title}}</a></li>
+          {{#if metadata.published}}
+            <li><a href="{{pathToRoot}}writings/{{path}}">{{metadata.title}}</a></li>
+          {{/if}}
         {{/each}}
       </ul>
     </div>

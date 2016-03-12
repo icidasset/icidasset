@@ -1,7 +1,7 @@
 ---
 title = "Functional Programming & Elixir"
 category = "Code"
-published = true
+published = false
 ---
 
 It might be difficult to get into functional programming because of

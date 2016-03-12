@@ -72,7 +72,7 @@ function makeWritingsCollection(data) {
         ...data.collections,
 
         writings,
-        latestWritings: writings.slice(0, 5),
+        latestWritings: writings.filter(p => p.metadata.published).slice(0, 5),
       },
     }
   });
