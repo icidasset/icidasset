@@ -20,6 +20,7 @@
     right: grid(1.5);
   }
 
+
   /**
    * Columns
    */
@@ -27,14 +28,30 @@
     flex: 1;
   }
 
-  & .header__col--left {
+  & .header__col--right {
+    font-style: italic;
+    text-align: right;
+  }
+
+
+  /**
+   * Content
+   */
+  & .header__logo {
     @mixin heading-font;
     font-weight: bold;
   }
 
-  & .header__col--right {
-    font-style: italic;
-    text-align: right;
+  & .header__go-up {
+    display: inline-block;
+    margin-left: grid(0.5);
+
+    & .icon {
+      color: $accent;
+      height: grid(1.5);
+      transform: translateY(-0.075em);
+      width: @height;
+    }
   }
 
 

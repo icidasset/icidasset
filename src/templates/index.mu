@@ -49,14 +49,14 @@
     <div class="block__list">
       <ul>
         {{#each collections.latestWritings}}
-          <li><a href="{{pathToRoot}}writings/{{path}}">{{metadata.title}}</a></li>
+          <li><a href="{{@root.pathToRoot}}writings/{{path}}">{{metadata.title}}</a></li>
         {{/each}}
       </ul>
     </div>
 
     <div class="block__text block__text--subtle">
       <p>
-        <a href="{{pathToRoot}}writings/">
+        <a href="{{@root.pathToRoot}}writings/">
           <em>{{{icon "ei-eye"}}} See all</em>
         </a>
       </p>

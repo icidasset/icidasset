@@ -22,4 +22,5 @@ $beige: #fffcf0;
 
 $accent: $base08;
 $text-color: #111;
-$link-color: color($base0d a(.475));
+$link-color: color($accent shade(37.5));
+$link-border-color: color($accent a(.475));

@@ -13,6 +13,7 @@ import webpackConfig from '../webpack';
 import evilIcons from '../base/evil-icons';
 import layouts from '../base/layouts';
 import markdown from '../base/markdown';
+import parentPath from '../base/parent-path';
 
 
 const root = resolve(__dirname, '../../');
@@ -106,6 +107,7 @@ function build__templates(data) {
     [renameExtension, '.html'],
     [permalinks],
     [pathToRoot],
+    [parentPath, 'writings'],
     [templates, render],
     [write, 'build']
   )(
@@ -145,6 +147,7 @@ function build__writings(data) {
     [renameExtension, '.html'],
     [permalinks],
     [pathToRoot, 1],
+    [parentPath, 'writings'],
     [templates, render],
     [write, 'build/writings']
   )(

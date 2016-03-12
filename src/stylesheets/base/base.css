@@ -1,6 +1,10 @@
 html {
   font-size: 13px;
 
+  @media (--xsmall) {
+    font-size: 14px;
+  }
+
   @media (--small) {
     font-size: 15px;
   }
@@ -60,7 +64,7 @@ a {
 }
 
 p a {
-  border-bottom: 2px solid $link-color;
+  border-bottom: 2px solid $link-border-color;
 }
 
 ul {
