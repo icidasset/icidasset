@@ -2,3 +2,8 @@ pre[class^="language-"] {
   font-size: .95em;
   padding: 1.65em;
 }
+
+:not(pre) code[class^="language-"] {
+  font-size: .95em;
+  padding: .2em .25em;
+}

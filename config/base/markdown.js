@@ -6,6 +6,8 @@ import it__mark from 'markdown-it-mark';
 import it__sub from 'markdown-it-sub';
 import it__sup from 'markdown-it-sup';
 
+import { escapeHtml } from 'markdown-it/lib/common/utils';
+
 import Prism from 'prismjs/components/prism-core.js';
 
 import 'prismjs/components/prism-clike.js';
@@ -42,6 +44,13 @@ md.use(it__footnote);
 md.use(it__mark);
 md.use(it__sub);
 md.use(it__sup);
+
+
+md.renderer.rules.code_inline = (tokens, idx) => {
+  return  '<code class="language-unknown">' +
+            escapeHtml(tokens[idx].content) +
+          '</code>';
+};
 
 
 export default function(files, deps) {
