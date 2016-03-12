@@ -3,8 +3,11 @@
   <p class="intro">
     I’m a programmer living in Ghent, Belgium,
     who works for a company based in Victoria, Canada,
-    named <a href="http://metalab.co/">MetaLab</a>. I love great music, books and quotes.
-    I also dabble in electrical engineering.
+    named <a href="http://metalab.co/">MetaLab</a>.
+    I love great <a href="https://soundcloud.com/purplesynth/likes">music</a>,
+    <a href="https://www.goodreads.com/user/show/12152181-steven">books</a> and
+    <a href="http://keymaps-api.herokuapp.com/public/MS9xdW90ZXM=">quotes</a>.
+    I also dabble in <a href="https://electrical-mathematics.surge.sh/">electrical engineering</a>.
   </p>
 
 
@@ -17,7 +20,7 @@
         I’m currently taking up Elixir and functional programming.
         Experimenting with static websites and webpack.
         Traveling to Canada for the first time.
-        Trying to stick to this workout schedule.
+        Trying to stick to <a href="https://www.evernote.com/shard/s268/sh/0b02360f-1455-4889-b898-d87c60dba15c/6d72d9048cfdf443a8360f158b79e665">this workout schedule</a>.
         Reading `Meditations, by Marcus Aurelius`.
       </p>
     </div>

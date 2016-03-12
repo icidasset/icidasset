@@ -25,11 +25,14 @@
     text-align: justify;
   }
 
+  & .block__text a {
+    border-bottom: 0;
+  }
+
   & .block__text--subtle {
     font-size: .725rem;
 
     & a {
-      border-bottom: 0;
       color: $accent;
     }
   }

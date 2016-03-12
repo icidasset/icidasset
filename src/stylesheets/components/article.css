@@ -1,5 +1,12 @@
 article {
   max-width: 525px;
 
+  & p a,
+  & ul a,
+  & ol a {
+    border-bottom: 2px solid $link-border-color;
+    color: inherit;
+  }
+
 
 }

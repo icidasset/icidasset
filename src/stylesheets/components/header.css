@@ -39,6 +39,7 @@
    */
   & .header__logo {
     @mixin heading-font;
+    color: inherit;
     font-weight: bold;
   }
 

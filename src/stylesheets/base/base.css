@@ -59,12 +59,8 @@ p + ol {
 }
 
 a {
-  color: inherit;
+  color: $link-color;
   text-decoration: none;
-}
-
-p a {
-  border-bottom: 2px solid $link-border-color;
 }
 
 ul {
