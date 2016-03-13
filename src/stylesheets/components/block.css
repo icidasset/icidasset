@@ -2,6 +2,10 @@
   font-size: .85rem;
   margin: grid(5) 0 0;
 
+  @media (--small) {
+    flex: 1 0 50%;
+  }
+
   &.block--without-margin {
     margin-top: 0;
   }
@@ -22,6 +26,7 @@
   & .block__text {
     margin: grid(1.5) 0 0;
     max-width: 350px;
+    padding-right: grid(4);
     text-align: justify;
   }
 

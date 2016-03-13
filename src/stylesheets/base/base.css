@@ -55,7 +55,7 @@ p, pre, ul, ol {
 
 p + ul,
 p + ol {
-  margin-top: grid(-1.5);
+  margin-top: grid(-1.25);
 }
 
 a {
@@ -68,8 +68,8 @@ ul {
   padding: 0;
 
   & li {
-    line-height: 1.65;
-    margin-bottom: .5em;
+    line-height: 1.7;
+    margin-bottom: .7em;
     padding-left: rem(28px);
     position: relative;
   }

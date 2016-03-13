@@ -4,7 +4,10 @@
   line-height: 1.9;
 
   & a {
-    color: $accent;
+    border-bottom: 2px solid $base05;
+    color: inherit;
+    display: inline-block;
+    line-height: 1.15;
   }
 
 }

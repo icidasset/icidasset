@@ -9,6 +9,7 @@
 
 @import "components/article";
 @import "components/block";
+@import "components/blocks";
 @import "components/code";
 @import "components/container";
 @import "components/header";

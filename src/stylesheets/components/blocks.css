@@ -1,0 +1,6 @@
+.blocks {
+  @media (--small) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
