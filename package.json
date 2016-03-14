@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "evil-icons": "^1.8.0",
-    "static-base": "^0.1.0",
-    "static-base-contrib": "^0.1.0"
+    "static-base": "^0.2.0",
+    "static-base-contrib": "^0.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.6.4",
