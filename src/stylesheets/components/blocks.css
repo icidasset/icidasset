@@ -1,6 +1,26 @@
 .blocks {
-  @media (--small) {
-    display: flex;
-    flex-wrap: wrap;
+
+  & .blocks__row .block {
+    margin: grid(5) 0 0;
+
+    @media (--small) {
+      margin: 0;
+    }
   }
+
+  & .blocks__row {
+    @media (--small) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: grid(5) 0 0;
+    }
+  }
+
+  & .blocks__row .block:first-child {
+    @media (--small) {
+      margin-right: grid(5);
+    }
+  }
+
+
 }

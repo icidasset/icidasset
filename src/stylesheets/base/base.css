@@ -18,7 +18,7 @@ body {
   @mixin default-font;
 
   color: $text-color;
-  font-size: .925rem;
+  font-size: .95rem;
   line-height: 1.95;
   margin-bottom: grid(6);
   text-rendering: optimizeLegibility;
@@ -66,6 +66,10 @@ a {
 ul {
   list-style: none;
   padding: 0;
+
+  @media (--xsmall) {
+    max-width: 77.5%;
+  }
 
   & li {
     line-height: 1.7;

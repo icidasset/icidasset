@@ -1,5 +1,5 @@
 ---
-title = "Writings"
+title = "Projects"
 ---
 
 <div class="container">
@@ -9,10 +9,8 @@ title = "Writings"
   <div class="block">
     <div class="block__list">
       <ul>
-        {{#each collections.writings}}
-          {{#if metadata.published}}
-            <li><a href="{{@root.pathToRoot}}writings/{{path}}">{{metadata.title}}</a></li>
-          {{/if}}
+        {{#each projects}}
+          <li><a href="{{url}}">{{name}}</a></li>
         {{/each}}
       </ul>
     </div>

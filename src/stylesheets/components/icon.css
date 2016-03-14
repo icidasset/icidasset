@@ -1,6 +1,9 @@
 .icon {
   height: 2em;
   vertical-align: middle;
-  transform: translateY(-0.125em);
   width: @height;
+
+  & svg {
+    fill: currentColor;
+  }
 }

@@ -7,11 +7,11 @@
   </title>
 
   <link rel="stylesheet" href="{{ pathToRoot }}{{ assets.[main.css].path }}" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Montserrat:700,400" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display|Montserrat:400,700|Lora:400,700,400italic,700italic" />
 
   {{> favicons}}
 </head>
-<body>
+<body data-prefix="{{prefix}}">
 
 
   {{> header}}

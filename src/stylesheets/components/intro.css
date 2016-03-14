@@ -1,11 +1,13 @@
 .intro {
+  @mixin display-font;
+  color: $accent;
   font-size: grid(2.25);
-  font-style: italic;
   line-height: 1.9;
+  padding: grid(1) 0 0;
 
   & a {
-    border-bottom: 2px solid $base05;
-    color: inherit;
+    border-bottom: 2px solid color($accent shade(22.5) a(.15));
+    color: color($accent shade(22.5));
     display: inline-block;
     line-height: 1.15;
   }

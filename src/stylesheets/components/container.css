@@ -2,5 +2,9 @@
   margin: 0 auto;
   max-width: 920px;
   padding: 0 grid(1.5);
+}
 
+
+[data-prefix="writings"] .container {
+  max-width: 670px;
 }

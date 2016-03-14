@@ -2,6 +2,7 @@
 title = "Health, fitness & lifestyle"
 category = "Reminders"
 published = true
+promote = true
 ---
 
 Things I need to remind myself of, __Part I__.

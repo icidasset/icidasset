@@ -1,46 +1,31 @@
-##
-## Projects
-##
+#
+# Projects
+# -- Ordered by name
+#
 [[projects]]
 name = "Ectograph"
 url = "https://github.com/icidasset/ectograph"
+promote = true
 
 [[projects]]
-name = "Static Base"
-url = "https://github.com/icidasset/static-base"
-
-[[projects]]
-name = "Ongaku Ryoho"
-url = "https://github.com/icidasset/ongaku-ryoho"
+name = "Electricity & Mathematics"
+url = "https://electrical-mathematics.surge.sh/"
+promote = true
 
 [[projects]]
 name = "Key Maps"
 url = "https://github.com/icidasset/key-maps"
 
 [[projects]]
-name = "Electricity & Mathematics"
-url = "https://electrical-mathematics.surge.sh/"
+name = "Ongaku Ryoho"
+url = "https://github.com/icidasset/ongaku-ryoho"
+promote = true
 
+[[projects]]
+name = "Static Base"
+url = "https://github.com/icidasset/static-base"
+promote = true
 
-##
-## Links
-##
-[[links]]
-name = "Instagram"
-url = "https://instagram.com/icidasset"
-icon = "ei-sc-instagram"
-
-[[links]]
-name = "Github"
-url = "https://github.com/icidasset"
-icon = "ei-sc-github"
-
-[[links]]
-name = "Twitter"
-url = "https://twitter.com/icidasset"
-icon = "ei-sc-twitter"
-
-[[links]]
-name = "Email"
-url = "mailto:icid.asset@gmail.com"
-icon = "ei-envelope"
+[[projects]]
+name = "Static Base Contrib"
+url = "https://github.com/icidasset/static-base-contrib"

@@ -73,7 +73,6 @@ function makeWritingsCollection(data) {
         ...data.collections,
 
         writings,
-        latestWritings: writings.filter(p => p.metadata.published).slice(0, 5),
       },
     }
   });
@@ -107,7 +106,7 @@ function build__templates(data) {
     [renameExtension, '.html'],
     [permalinks],
     [pathToRoot],
-    [parentPath, 'writings'],
+    [parentPath],
     [templates, render],
     [write, 'build']
   )(
