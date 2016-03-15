@@ -11,7 +11,7 @@
    * {kind} Filler
    */
   &.block--filler {
-    background: color($accent a(.0375));
+    background: color($accent a(.0325));
     display: none;
     height: 25vw;
     min-height: 88px;
@@ -23,7 +23,7 @@
     }
 
     &.with-content {
-      background: color($accent a(.1));
+      background: color($accent a(.0675));
       display: block;
     }
   }

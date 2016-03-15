@@ -1,4 +1,5 @@
 .header {
+  color: $darker-text-color;
   font-size: .9rem;
   line-height: grid(2);
   margin: 0 0 grid(3);
