@@ -22,9 +22,15 @@
       height: auto;
     }
 
-    &.with-content {
+    &.has-content {
       background: color($accent a(.0675));
       display: block;
+    }
+
+    &.has-content.has-fixed-height {
+      @media (--small) {
+        padding-top: 14%;
+      }
     }
   }
 

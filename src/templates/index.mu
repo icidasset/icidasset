@@ -14,37 +14,32 @@
 
   <div class="blocks">
 
-
     <div class="blocks__row">
-      <a href="{{pathToRoot}}writings/" class="block block--filler with-content">
-        <span class="block--filler__inner">
-          {{{icon 'ei-pencil'}}}
-          <span>See all writings</span>
-        </span>
-      </a>
-
-      {{> blocks/now}}
-    </div>
-
-    <div class="blocks__row">
-      {{> blocks/latest-writings}}
-      {{> blocks/filler}}
-    </div>
-
-    <div class="blocks__row">
-      <a href="{{pathToRoot}}projects/" class="block block--filler with-content">
+      <a href="{{pathToRoot}}projects/" class="block block--filler has-content has-fixed-height">
         <span class="block--filler__inner">
           {{{icon 'ei-archive'}}}
           <span>See all projects</span>
         </span>
       </a>
 
-      {{> blocks/latest-projects}}
+      <a href="{{pathToRoot}}writings/" class="block block--filler has-content has-fixed-height">
+        <span class="block--filler__inner">
+          {{{icon 'ei-pencil'}}}
+          <span>See all writings</span>
+        </span>
+      </a>
     </div>
 
+
     <div class="blocks__row">
+      {{> blocks/now}}
       {{> blocks/social}}
-      {{> blocks/filler}}
+    </div>
+
+
+    <div class="blocks__row">
+      {{> blocks/latest-projects}}
+      {{> blocks/latest-writings}}
     </div>
 
   </div>

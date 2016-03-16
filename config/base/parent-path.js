@@ -2,18 +2,12 @@ import { join } from 'path';
 import { cleanPath } from 'static-base/lib/utils';
 
 
-export default function(files, deps, prefix = '') {
-  const __prefix = cleanPath(prefix, { beginning: true });
-
+export default function(files, deps) {
   return files.map((f) => {
-    const __f = { ...f };
-    const dirs = join(__prefix, f.dirname).split('/');
-    dirs.pop();
-
-    __f.prefix = __prefix;
-
+    const dirs = f.dirname.length ? f.dirname.split('/') : [];
     const parent = dirs.map(d => '..').join('/');
-    if (parent.length) return { ...__f, parentPath: `${parent}/` };
-    return __f;
+
+    if (parent.length) return { ...f, parentPath: `${parent}/` };
+    return f;
   });
 }

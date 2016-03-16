@@ -146,7 +146,7 @@ function build__writings(data) {
     [renameExtension, '.html'],
     [permalinks],
     [pathToRoot, 1],
-    [parentPath, 'writings'],
+    [parentPath],
     [templates, render],
     [write, 'build/writings']
   )(

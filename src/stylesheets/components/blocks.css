@@ -13,6 +13,10 @@
       display: flex;
       flex-wrap: wrap;
       margin: grid(5) 0 0;
+
+      &.has-no-margin-top {
+        margin-top: 0;
+      }
     }
   }
 
