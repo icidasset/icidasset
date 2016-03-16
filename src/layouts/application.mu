@@ -11,13 +11,12 @@
 
   {{> favicons}}
 </head>
-<body data-prefix="{{prefix}}">
+<body data-collection="{{collection}}">
 
 
   {{> header}}
 
   {{{ content }}}
-  {{{ evilIcons.sprite }}}
 
 
   <script src="{{ pathToRoot }}{{ assets.[main.js].path }}"></script>

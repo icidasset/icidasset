@@ -17,14 +17,14 @@
     <div class="blocks__row">
       <a href="{{pathToRoot}}projects/" class="block block--filler has-content has-fixed-height">
         <span class="block--filler__inner">
-          {{{icon 'ei-archive'}}}
+          {{{icon 'i-tools'}}}
           <span>See all projects</span>
         </span>
       </a>
 
       <a href="{{pathToRoot}}writings/" class="block block--filler has-content has-fixed-height">
         <span class="block--filler__inner">
-          {{{icon 'ei-pencil'}}}
+          {{{icon 'i-text-document'}}}
           <span>See all writings</span>
         </span>
       </a>

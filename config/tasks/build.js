@@ -10,7 +10,6 @@ import * as utils from '../utils';
 import render from '../handlebars/render';
 import webpackConfig from '../webpack';
 
-import evilIcons from '../base/evil-icons';
 import layouts from '../base/layouts';
 import markdown from '../base/markdown';
 import parentPath from '../base/parent-path';
@@ -102,7 +101,6 @@ function build__templates(data) {
     [frontmatter, { lang: 'toml' }, { toml }],
     [metadata, data],
     [layouts],
-    [evilIcons],
     [renameExtension, '.html'],
     [permalinks],
     [pathToRoot],
@@ -139,9 +137,8 @@ function build__writings(data) {
   return run(
     [() => data.collections.writings],
 
-    [metadata, data],
+    [metadata, { ...data, collection: 'writings' }],
     [layouts, ['src/layouts/writing.mu', 'src/layouts/application.mu']],
-    [evilIcons],
     [markdown],
     [renameExtension, '.html'],
     [permalinks],

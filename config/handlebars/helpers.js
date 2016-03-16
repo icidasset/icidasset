@@ -1,20 +1,11 @@
-import evilIcons from 'evil-icons';
 import handlebars from 'handlebars';
 
 
-handlebars.registerHelper('icon', (name) => {
+handlebars.registerHelper('icon', function(name) {
   const classes = `icon icon--${name}`;
-  const icon = `<svg class="icon__cnt"><use xlink:href="#${name}-icon" /></svg>`;
-  const span = `<span class="${classes}">${wrapSpinner(icon, classes)}</span>`;
+  const path = `${this.pathToRoot}images/icons.svg`;
+  const icon = `<svg class="icon__cnt"><use xlink:href="${path}#${name}" /></svg>`;
+  const span = `<span class="${classes}">${icon}</span>`;
 
   return span;
 });
-
-
-function wrapSpinner(html, classes) {
-  if (classes.includes('spinner')) {
-    return `<span class="icon__spinner">${html}</span>`;
-  }
-
-  return html;
-}

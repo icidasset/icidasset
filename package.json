@@ -8,9 +8,9 @@
     "dev": "npm run build-development"
   },
   "dependencies": {
-    "evil-icons": "^1.8.0",
     "static-base": "^0.2.0",
-    "static-base-contrib": "^0.2.0"
+    "static-base-contrib": "^0.2.0",
+    "svgxuse": "^1.1.15"
   },
   "devDependencies": {
     "babel-cli": "^6.6.4",

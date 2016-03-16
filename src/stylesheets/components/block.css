@@ -43,13 +43,15 @@
     transform: translate(-50%, -50%);
 
     & .icon {
-      height: 4em;
+      height: grid(3.25);
+      margin-bottom: grid(1.25);
       width: @height;
     }
 
     & .icon + span {
       @mixin heading-font;
       display: block;
+      line-height: 1;
     }
   }
 

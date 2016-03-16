@@ -46,12 +46,12 @@
 
   & .header__go-up {
     display: inline-block;
-    margin-left: grid(0.5);
+    margin-left: grid(1);
 
     & .icon {
       color: $accent;
       height: grid(1.5);
-      transform: translateY(-0.075em);
+      transform: translateY(-8%);
       width: @height;
     }
   }

@@ -28,7 +28,7 @@ title = "Writings"
 
       <a class="block block--filler has-content">
         <span class="block--filler__inner">
-          {{{icon 'ei-pencil'}}}
+          {{{icon 'i-text-document'}}}
           <span>{{title}}</span>
         </span>
       </a>

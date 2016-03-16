@@ -5,6 +5,6 @@
 }
 
 
-[data-prefix="writings"] .container {
-  max-width: 670px;
+[data-collection="writings"] .container {
+  max-width: calc(920px / 1.61803398875);
 }

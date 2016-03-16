@@ -26,7 +26,7 @@ title = "Projects"
 
       <a class="block block--filler has-content">
         <span class="block--filler__inner">
-          {{{icon 'ei-archive'}}}
+          {{{icon 'i-tools'}}}
           <span>{{title}}</span>
         </span>
       </a>
