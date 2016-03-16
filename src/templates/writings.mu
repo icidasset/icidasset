@@ -26,7 +26,7 @@ title = "Writings"
       </div>
 
 
-      <a class="block block--filler has-content">
+      <a class="block block--filler has-content" hide-lt="small">
         <span class="block--filler__inner">
           {{{icon 'i-text-document'}}}
           <span>{{title}}</span>

@@ -1,5 +1,6 @@
 .blocks {
 
+  /* add margin-top to blocks on mobile */
   & .blocks__row .block {
     margin: grid(5) 0 0;
 
@@ -8,6 +9,13 @@
     }
   }
 
+  /* make previously defined margin a bit smaller if it's a "filler" block */
+  & .block + .block--filler {
+    margin-top: grid(1);
+  }
+
+  /* instead of setting a margin-top on each block, set it on the row */
+  /* + enable flexbox  */
   & .blocks__row {
     @media (--small) {
       display: flex;
@@ -20,6 +28,7 @@
     }
   }
 
+  /* margin between blocks on the same row */
   & .blocks__row .block:first-child {
     @media (--small) {
       margin-right: grid(5);
