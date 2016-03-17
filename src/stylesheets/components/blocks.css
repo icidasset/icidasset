@@ -12,6 +12,10 @@
   /* make previously defined margin a bit smaller if it's a "filler" block */
   & .block + .block--filler {
     margin-top: grid(1);
+
+    @media (--small) {
+      margin-top: 0;
+    }
   }
 
   /* instead of setting a margin-top on each block, set it on the row */
