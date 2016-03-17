@@ -5,6 +5,8 @@ published = true
 promote = true
 ---
 
+_**Note:** This article is still a work in progress, so feedback is welcome._
+
 It might be difficult to get into functional programming because of
 the complexity and the terminology. The goal of this article is to
 explain the terminology in a simple manner, reduce the complexity and
