@@ -193,11 +193,19 @@ Lets explain these one by one.
 The monadic type is the type of the value our bind function should return.
 In our case this is the union of an 'integer' and a 'nil' value.
 So, in other words, it's either an integer or nil.
+Much like the optional types in [Rust](https://doc.rust-lang.org/std/option/)
+and [Swift](http://swiftdoc.org/v2.1/type/Optional/).
+
+```elixir
+# one of these, an integer or nil:
+value = 1
+value = nil
+```
 
 #### Unit function
 
-The unit function is responsible for the conversion
-of a value of an unknown type into our monadic type.
+The unit function is responsible for the, initial, conversion
+of a value of an unknown type into a type that our bind function can deal with.
 
 ```elixir
 unit = fn(value) ->
