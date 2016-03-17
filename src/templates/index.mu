@@ -5,8 +5,8 @@
     who works for a company based in Victoria, Canada,
     named <a href="http://metalab.co/">MetaLab</a>.
     I love great <a href="https://soundcloud.com/purplesynth/likes">music</a>,
-    <a href="https://www.goodreads.com/user/show/12152181-steven">books</a> and
-    <a href="http://keymaps-api.herokuapp.com/public/MS9xdW90ZXM=">quotes</a>.
+    <a href="{{pathToRoot}}books/">books</a> and
+    <a href="{{pathToRoot}}quotes/">quotes</a>.
     I also dabble in <a href="https://electrical-mathematics.surge.sh/">electrical engineering</a>.
   </p>
 
