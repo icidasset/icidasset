@@ -1,4 +1,48 @@
 #
+# Books (that I've read and recommend)
+# -- Ordered by name
+#
+books = [
+  { title = "10% Happier", author = "Dan Harris" },
+  { title = "Benjamin Franklin", author = "Walter Isaacson" },
+  { title = "Bigger Leaner Stronger", author = "Michael Matthews" },
+  { title = "Daily Rituals: How Artists Work", author = "Mason Currey" },
+  { title = "Getting Real", author = "37 Signals" },
+  { title = "How We Got to Now", author = "Steven Johnon" },
+  { title = "Making Ideas Happen", author = "Scott Belsky" },
+  { title = "Meditations", author = "Marcus Aurelius", reading = true },
+  { title = "Rework", author = "Jason Fried" },
+  { title = "So Good They Can't Ignore You", author = "Cal Newport" },
+  { title = "Tesla: Man Out of Time", author = "Margaret Cheney" },
+  { title = "The 4-Hour Workweek", author = "Timothy Ferriss", reading = true },
+  { title = "The 4-Hour Body", author = "Timothy Ferriss" },
+  { title = "The Art of Learning", author = "Josh Waitzkin" },
+  { title = "The Icarus Deception", author = "Seth Godin" },
+  { title = "The Information", author = "James Gleick" },
+  { title = "The Obstacle Is the Way", author = "Ryan Holiday" },
+  { title = "The Wild Diet", author = "Abel James" },
+  { title = "Vagabonding", author = "Rolf Potts" },
+  { title = "We Learn Nothing", author = "Tim Kreider" },
+  { title = "You're Never Weird on the Internet (Almost)", author = "Felicia Day" },
+  { title = "Zen and the Art of Motorcycle Maintenance", author = "Robert Pirsig" },
+]
+
+
+books__toread = [
+  { title = "Cat's Cradle", author = "Kurt Vonnegut" },
+  { title = "The Alchemist", author = "Paulo Coelho" },
+]
+
+
+books__average = [
+  { title = "One, Two, Three: Absolutely Elementary Mathematics", author = "David Berlinkski" },
+  { title = "Journey to the Center of the Earth", author = "Jules Verne" },
+  { title = "Pythagoras & His Theorem", author = "Paul Strathern" },
+  { title = "Wizard: The Life and Times of Nikola Tesla", author = "Marc Seifer" },
+]
+
+
+#
 # Projects
 # -- Ordered by name
 #
