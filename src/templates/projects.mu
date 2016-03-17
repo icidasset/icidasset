@@ -10,10 +10,16 @@ title = "Projects"
       <div class="block">
         <h1 class="block__title">{{title}}</h1>
 
-        <div class="block__list">
+        <div class="block__list has-extra-space">
           <ul>
             {{#each projects}}
-              <li><a href="{{url}}">{{name}}</a></li>
+              <li>
+                <a href="{{url}}">
+                  {{name}}
+                </a>
+                <br />
+                <small class="small--block">{{description}}</small>
+              </li>
             {{/each}}
           </ul>
         </div>

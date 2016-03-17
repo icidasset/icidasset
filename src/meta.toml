@@ -49,27 +49,33 @@ books__average = [
 [[projects]]
 name = "Ectograph"
 url = "https://github.com/icidasset/ectograph"
+description = "A set of utility functions for using Ecto in combination with GraphQL (joshprice/graphql-elixir)."
 promote = true
 
 [[projects]]
 name = "Electricity & Mathematics"
 url = "https://electrical-mathematics.surge.sh/"
+description = "All you need to learn about electrical engineering from the ground up."
 promote = true
 
 [[projects]]
 name = "Key Maps"
 url = "https://github.com/icidasset/key-maps"
+description = "Provides an interface to fill in custom data structures and a JSON api with CORS support to fetch the data."
 
 [[projects]]
 name = "Ongaku Ryoho"
 url = "https://github.com/icidasset/ongaku-ryoho"
+description = "A music player which connects to your cloud storage."
 promote = true
 
 [[projects]]
 name = "Static Base"
 url = "https://github.com/icidasset/static-base"
+description = "A small functional toolset for building static websites."
 promote = true
 
 [[projects]]
 name = "Static Base Contrib"
 url = "https://github.com/icidasset/static-base-contrib"
+description = "Functions you can use with static-base."

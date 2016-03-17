@@ -105,5 +105,9 @@
     margin-bottom: 0;
   }
 
+  & .block__list.has-extra-space li {
+    padding-bottom: grid(1);
+  }
+
 
 }
