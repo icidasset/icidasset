@@ -8,10 +8,6 @@ export default function() {
         test: /\.jsx?$/,
         include: path.resolve(__dirname, '../../src'),
         loader: 'babel',
-      }, {
-        test: /ez\.js$/,
-        include: path.resolve(__dirname, '../../node_modules/ez.js'),
-        loader: 'babel',
       }],
     },
   };
