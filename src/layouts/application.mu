@@ -18,8 +18,11 @@
 
   {{{ content }}}
 
-
   <script src="{{ pathToRoot }}{{ assets.[main.js].path }}"></script>
+
+  {{#if env.production}}
+    {{> analytics}}
+  {{/if}}
 
 
 </body>
