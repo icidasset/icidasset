@@ -29,7 +29,7 @@
 
     &.has-content.has-fixed-height {
       @media (--small) {
-        padding-top: 14%;
+        height: 15.5vw;
       }
     }
   }

@@ -34,7 +34,7 @@ title = "Quotes I Like"
       </div>
 
 
-      <a class="block block--filler has-content">
+      <a class="block block--filler has-content" hide-lt="small">
         <span class="block--filler__inner">
           {{{icon 'i-quote'}}}
           <span>{{title}}</span>

@@ -35,7 +35,11 @@
   /* margin between blocks on the same row */
   & .blocks__row .block:first-child {
     @media (--small) {
-      margin-right: grid(5);
+      margin-right: grid(1);
+    }
+
+    @media (--medium) {
+      margin-right: grid(2);
     }
   }
 
