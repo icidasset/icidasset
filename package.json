@@ -4,8 +4,11 @@
   "description": "Personal website of Steven Vandevelde",
   "main": "config/index.js",
   "scripts": {
-    "build-development": "rm -rf ./build && ENV=development babel-node ./config/index.js",
-    "dev": "npm run build-development"
+    "clean-build": "rm -rf ./build",
+    "build-development": "npm run clean-build && ENV=development babel-node ./config/index.js",
+    "build-production": "npm run clean-build && ENV=production babel-node ./config/index.js",
+    "dev": "npm run build-development -- --watch --serve",
+    "production": "npm run build-production && surge ./build icidasset.com"
   },
   "dependencies": {
     "static-base": "^0.2.0",

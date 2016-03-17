@@ -7,6 +7,12 @@ import watch from './tasks/watch';
 import './handlebars/helpers';
 
 
+const args = {
+  serve: process.argv.includes('--serve'),
+  watch: process.argv.includes('--watch'),
+};
+
+
 const make = () => {
   return build().then(
     () => console.log(chalk.bold.green('Build successful!'))
@@ -14,7 +20,9 @@ const make = () => {
 };
 
 
-make()
-  .then(() => watch(make))
-  .then(() => server())
-  .catch((err) => console.log(chalk.bold.red(err)));
+let f = make();
+
+if (args.watch) f = f.then(() => watch(make));
+if (args.serve) f = f.then(() => server());
+
+f.catch((err) => console.log(chalk.bold.red(err)));

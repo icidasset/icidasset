@@ -9,8 +9,6 @@ import render from '../../../handlebars/render';
 
 
 export default function(data) {
-  console.log(data.__root__);
-
   run(
     [read],
     [frontmatter, { lang: 'toml' }, { toml }],

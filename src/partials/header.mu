@@ -6,7 +6,7 @@
 
       {{#if parentPath}}
         <a href="{{parentPath}}" class="header__go-up" title="Go up">
-          {{{icon 'i-aircraft-take-off'}}}
+          {{{icon 'i-flash'}}}
         </a>
       {{/if}}
     </div>
