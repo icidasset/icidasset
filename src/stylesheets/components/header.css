@@ -21,6 +21,11 @@
     right: grid(1.5);
   }
 
+  & .header__col--right,
+  & .header__logo {
+    line-height: 2rem;
+  }
+
 
   /**
    * Columns
@@ -30,8 +35,17 @@
   }
 
   & .header__col--right {
-    font-style: italic;
+    font-size: .7rem;
+    letter-spacing: .2em;
     text-align: right;
+    text-transform: uppercase;
+
+    & span {
+      @mixin font-smoothing;
+      display: inline-block;
+      opacity: .25;
+      transform: translateY(.5px);
+    }
   }
 
 
@@ -41,7 +55,9 @@
   & .header__logo {
     @mixin heading-font;
     color: inherit;
+    font-size: .85rem;
     font-weight: bold;
+    letter-spacing: .1em;
   }
 
   & .header__go-up {

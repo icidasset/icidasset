@@ -15,7 +15,7 @@ $base0d: #8b56bf;
 $base0e: #bf568b;
 $base0f: #bf5656;
 
-$accent: $base0c;
+$accent: $base0d;
 $text-color: #5f5f5f;
 $darker-text-color: #2d2d2d;
 $link-color: color($accent saturation(-17.5));

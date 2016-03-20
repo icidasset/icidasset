@@ -9,3 +9,8 @@
 @define-mixin display-font {
   font-family: 'Playfair Display', serif;
 }
+
+@define-mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+}
