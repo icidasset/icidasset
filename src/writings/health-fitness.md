@@ -1,11 +1,9 @@
 ---
-title = "Health, fitness & lifestyle"
+title = "Summary of Health & Fitness Information"
 category = "Reminders"
 published = true
 promote = true
 ---
-
-Things I need to remind myself of, __Part I__.
 
 Most of these are based upon the research of [Tim](http://fourhourbody.com/) [Ferriss](http://fourhourchef.com/), the work of [Peter Attia](http://eatingacademy.com/), the guys from [Muscle for Life](http://www.muscleforlife.com/), the [Barbell Shrugged](http://www.barbellshrugged.com/) podcast and the work of [Dr. Rhonda Patrick](http://www.foundmyfitness.com/). If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
 
@@ -142,10 +140,11 @@ Not a clue, investigate foods that reduce hystamine?
 - 8 to 12 sets of 4 to 6 reps, seems to work best.
 - Make sure to get enough rest, train every muscle group once per week.
   It can take 3 to 7 days to fully recover from a heavy-weight workout.
-- You can train your abs/core multiple times per week,
+- You can train your abs/core and calves multiple times per week,
   as they take less time to recover (smaller muscles).
 - Train your grip and core for better overall strength.
-- Cardio isn't necessary, but is helpful to burn extra calories.
+- Cardio isn't necessary, but it can help you build and retain more muscle.
+  [More info](http://www.muscleforlife.com/cardio-and-muscle-growth-friends-or-foes/).
 - When you do cardio, prefer
   [HIIT](http://www.muscleforlife.com/high-intensity-interval-training-and-weight-loss/)
   (High-Intensity Interval Training) over other methods.
@@ -189,7 +188,7 @@ Not a clue, investigate foods that reduce hystamine?
 
 
 
-## Lifestyle
+## Stress
 
 - Do not think stress is something bad.
   It's a signal that you're body is preparing for something.
