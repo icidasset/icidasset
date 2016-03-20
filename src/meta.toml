@@ -9,6 +9,7 @@ books = [
   { title = "Daily Rituals: How Artists Work", author = "Mason Currey" },
   { title = "Getting Real", author = "37 Signals" },
   { title = "How We Got to Now", author = "Steven Johnon" },
+  { title = "Letters from a Stoic", author = "Seneca" },
   { title = "Making Ideas Happen", author = "Scott Belsky" },
   { title = "Meditations", author = "Marcus Aurelius", reading = true },
   { title = "Rework", author = "Jason Fried" },
@@ -29,8 +30,11 @@ books = [
 
 
 books__toread = [
+  { title = "Artist of Life", author = "Bruce Lee" },
   { title = "Cat's Cradle", author = "Kurt Vonnegut" },
+  { title = "How to Live", author = "Sarah Bakewell" },
   { title = "The Alchemist", author = "Paulo Coelho" },
+  { title = "The Checklist", author = "Atul Gawande" },
 ]
 
 
