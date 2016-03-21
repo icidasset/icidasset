@@ -200,6 +200,8 @@ Not a clue, investigate foods that reduce hystamine?
 
 ## Stress & Lifestyle
 
+- Visualizing yourself doing a task can improve your actual ability to do it.  
+  [More info](http://www.muscleforlife.com/how-to-get-stronger/).
 - Do not think stress is something bad.
   It's a signal that you're body is preparing for something.
 - How you think about stress and how you act in general,
