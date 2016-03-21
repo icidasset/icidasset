@@ -5,7 +5,7 @@ published = true
 promote = true
 ---
 
-Most of these are based upon the research of [Tim](http://fourhourbody.com/) [Ferriss](http://fourhourchef.com/), the work of [Peter Attia](http://eatingacademy.com/), the guys from [Muscle for Life](http://www.muscleforlife.com/), the [Barbell Shrugged](http://www.barbellshrugged.com/) podcast and the work of [Dr. Rhonda Patrick](http://www.foundmyfitness.com/). If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
+Most of this is based upon the research of [Tim](http://fourhourbody.com/) [Ferriss](http://fourhourchef.com/), the work of [Peter Attia](http://eatingacademy.com/), the guys from [Muscle for Life](http://www.muscleforlife.com/), the [Barbell Shrugged](http://www.barbellshrugged.com/) podcast and the work of [Dr. Rhonda Patrick](http://www.foundmyfitness.com/). If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
 
 
 
@@ -21,7 +21,8 @@ Most of these are based upon the research of [Tim](http://fourhourbody.com/) [Fe
   This is called __cutting__.
 - If you want to gain muscle, eat 5-10% more than recommended.
   Try not to eat more than this, or you will gain too much body fat.
-  This is called __bulking__.
+  This is called __bulking__.  
+  <small>(Only effective if training properly, see workout schedule)</small>
 - Do __not__ overeat, ever, you're only going to gain body fat.
 - Drink enough water, if you're thirsty, it's already too late.
   Two to three liters per day should be good.
@@ -61,6 +62,9 @@ For me personally:
   This enables you to build muscle more easily.
 - Keep the cutting periods as small as possible.
   Example: cuts for 2 to 3 months, and bulks for 4 to 6 months.
+- When you stop with cutting and going into bulking mode,
+  do not eat a large amount or you will regain a lot of body fat.
+  Make 100-150 calorie progressions, increase every week.
 
 [More info](http://www.muscleforlife.com/healthy-meal-planning-tips/).
 
@@ -154,17 +158,23 @@ Not a clue, investigate foods that reduce hystamine?
 
 ### Extra information
 
-- Before meals (not pre and post-workout meals)
+- Before meals, not pre and post-workout meals,
   you can do some light exercises <small>(like wall-pushes and squats)</small>
   to ensure that those muscles get fed
   <small>(also an hour and a half after the meal)</small>.
+- When cutting, you burn less energy, so move more or do more cardio.
+  Your body adjusts itself because you're eating less.
 
 
 ### Detailed information
 
+- If you are able to keep your strength level the same while cutting
+  and you are losing body fat, that means you are doing good.
 - When you are moving, your brain suppresses the pain signals.
   That's why sometimes you feel more pain after waking up the next morning.
   Your body received the full load, because you stopped moving for that long.
+- *HIIT cardio:* You need to get moving fast and long enough to make your breathing labored,
+  and you need to hold that speed for a fair amount of time.
 
 
 
@@ -188,9 +198,23 @@ Not a clue, investigate foods that reduce hystamine?
 
 
 
-## Stress
+## Stress & Lifestyle
 
 - Do not think stress is something bad.
   It's a signal that you're body is preparing for something.
 - How you think about stress and how you act in general,
   determines the amount and nature of its physical effects.
+- Enjoy the now, don't think to much about where you're going.
+- Don't think about tomorrow, nothing bad is going to happen.
+- Breathing effectively is important for your focus, metabolism, stress, etc.
+  –> __Wim Hof method.__
+- Meditating 20 minutes a day can bring enormous benefits, e.g. reduce bad stress.  
+  Focus on breathing/air flow.
+- Mental stress <=> physical stress <small>(it's all related)</small>
+
+
+### Detailed information
+
+- _Wim Hof method:_ breathing is required to resist the cold,
+  when trying to resist the cold you burn brown fat,
+  which in turn keeps your temperature up and produces huge amounts of energy.
