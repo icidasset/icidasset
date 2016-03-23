@@ -131,7 +131,15 @@ Testosterone can be increased in the following ways:
 
 ### Allergies
 
-Not a clue, investigate foods that reduce hystamine?
+- Exercise, ie. physical activity, speeds up blood flow and
+  this allows allergens to be moved quickly through the body
+  and eliminated via the kidneys and skin.
+- Or in other words, a lack of exercise results in a sluggish blood flow.
+  Stagnant allergens gather in a fixed position, which begins to destroy
+  the tissues around them. Constant movement of the allergens through
+  the blood stream prevents these delicate tissues from becoming inflamed.
+- People whose natural defense system is weakened due to an infection
+  or other physical stressor are at increased risk of developing an allergy.
 
 
 
