@@ -24,7 +24,7 @@ title = "Books I Recommend"
       </div>
 
 
-      <a class="block block--filler has-content" hide-lt="small">
+      <a class="block block--filler" hide-lt="small">
         <span class="block--filler__inner">
           {{{icon 'i-book'}}}
           <span>{{title}}</span>

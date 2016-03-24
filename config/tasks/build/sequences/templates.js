@@ -3,6 +3,7 @@ import { frontmatter, metadata, pathToRoot, permalinks } from 'static-base-contr
 import { read, renameExtension, templates, write } from 'static-base-contrib';
 import toml from 'toml';
 
+import applyFilter from '../../../base/apply-filter';
 import layouts from '../../../base/layouts';
 import parentPath from '../../../base/parent-path';
 import render from '../../../handlebars/render';
@@ -15,7 +16,7 @@ export default function(data) {
     [metadata, data],
     [layouts],
     [renameExtension, '.html'],
-    [permalinks],
+    [applyFilter(permalinks, permalinksFilter)],
     [pathToRoot],
     [parentPath],
     [templates, render],
@@ -26,4 +27,9 @@ export default function(data) {
   );
 
   return data;
+}
+
+
+function permalinksFilter(file) {
+  return ['404'].includes(file.basename) === false;
 }

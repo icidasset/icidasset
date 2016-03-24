@@ -13,6 +13,7 @@
   "dependencies": {
     "anim": "0.0.1",
     "delegate": "^3.0.1",
+    "lodash": "^4.6.1",
     "static-base": "^0.2.0",
     "static-base-contrib": "^0.2.0",
     "svgxuse": "^1.1.15"

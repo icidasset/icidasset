@@ -1,16 +1,26 @@
-import { resolve } from 'path';
+import { join, resolve } from 'path';
 import chalk from 'chalk';
 import express from 'express';
 
 
+const BUILD_DIR = resolve(__dirname, '../../build');
+
+
 export default function() {
-  const buildDir = resolve(__dirname, '../../build');
   const app = express();
-  const port = 8080;
 
-  app.use(express.static(buildDir));
+  app.use(express.static(BUILD_DIR));
+  app.use(handleNotFound);
 
-  app.listen(port, () => {
-    console.log(chalk.bold.magenta('Running static server at localhost:8080'));
-  });
+  app.listen(8080, callback);
+}
+
+
+function callback() {
+  console.log(chalk.bold.magenta('Running static server at localhost:8080'));
+}
+
+
+function handleNotFound(req, res) {
+  res.status(400).sendFile( join(BUILD_DIR, '404.html') );
 }

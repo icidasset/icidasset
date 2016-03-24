@@ -11,10 +11,11 @@
    * {kind} Filler
    */
   &.block--filler {
-    background: color($accent a(.0325));
+    background: color($accent a(.035));
+    color: color($link-color a(.55));
     display: none;
     height: 25vw;
-    min-height: 88px;
+    min-height: rem(150px);
     position: relative;
 
     @media (--small) {
@@ -24,6 +25,7 @@
 
     &.has-content {
       background: color($accent a(.0675));
+      color: $link-color;
       display: block;
     }
 
@@ -69,7 +71,6 @@
    * Text
    */
   & .block__text {
-    margin: grid(1.5) 0 0;
     max-width: 350px;
     padding-right: grid(4);
     text-align: justify;

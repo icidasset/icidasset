@@ -30,7 +30,7 @@ title = "Projects"
       </div>
 
 
-      <a class="block block--filler has-content" hide-lt="small">
+      <a class="block block--filler" hide-lt="small">
         <span class="block--filler__inner">
           {{{icon 'i-tools'}}}
           <span>{{title}}</span>
