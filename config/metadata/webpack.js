@@ -1,3 +1,7 @@
+/**
+ * Adds:
+ * { assets: { 'main.js': ... } }
+ */
 export default function(data) {
   const assets = {};
 

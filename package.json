@@ -14,8 +14,6 @@
     "anim": "0.0.1",
     "delegate": "^3.0.1",
     "lodash": "^4.6.1",
-    "static-base": "^0.2.0",
-    "static-base-contrib": "^0.2.0",
     "svgxuse": "^1.1.15"
   },
   "devDependencies": {
@@ -29,6 +27,7 @@
     "express": "^4.13.4",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "gray-matter": "^2.0.2",
     "handlebars": "^4.0.5",
     "markdown-it": "^6.0.0",
     "markdown-it-anchor": "^2.4.0",
@@ -46,6 +45,8 @@
     "postcss-property-lookup": "^1.2.1",
     "postcss-simple-vars": "^1.2.0",
     "prismjs": "^1.4.1",
+    "static-base": "^0.3.0",
+    "static-base-contrib": "^0.3.0",
     "style-loader": "^0.13.0",
     "surge": "^0.17.7",
     "toml": "^2.3.0",

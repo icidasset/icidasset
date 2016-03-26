@@ -1,6 +1,10 @@
-import * as utils from '../../../utils';
+import * as utils from '../utils';
 
 
+/**
+ * Adds:
+ * { env: { development: true, production: false } }
+ */
 export default function(data) {
   return Promise.resolve({
     ...data,

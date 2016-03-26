@@ -1,7 +1,7 @@
 import { run } from 'static-base';
 import { webpack, write } from 'static-base-contrib';
 
-import webpackConfig from '../../../webpack';
+import webpackConfig from '../webpack';
 
 
 export default function(data) {
@@ -9,7 +9,6 @@ export default function(data) {
     [webpack, webpackConfig],
     [write, 'build']
   )(
-    null,
     data.__root__
   );
 }

@@ -4,9 +4,9 @@
   <div class="block__list">
     <ul>
       {{#each collections.writings}}
-        {{#if metadata.published}}
-          {{#if metadata.promote}}
-            <li><a href="{{@root.pathToRoot}}writings/{{path}}">{{metadata.title}}</a></li>
+        {{#if published}}
+          {{#if promote}}
+            <li><a href="{{@root.pathToRoot}}writings/{{path}}">{{title}}</a></li>
           {{/if}}
         {{/if}}
       {{/each}}

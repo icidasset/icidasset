@@ -3,10 +3,7 @@ export default function(files, deps, layouts) {
     return {
       ...f,
 
-      metadata: {
-        ...f.metadata,
-        layouts: layouts || ['src/layouts/application.mu'],
-      },
+      layouts: layouts || ['src/layouts/application.mu'],
     };
   });
 }
