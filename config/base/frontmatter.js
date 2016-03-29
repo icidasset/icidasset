@@ -5,7 +5,7 @@ import toml from 'toml';
 matter.parsers.requires.toml = toml;
 
 
-export default function(files, deps) {
+export default function(files) {
   return files.map((f) => {
     const m = matter(f.content, { lang: 'toml' });
 

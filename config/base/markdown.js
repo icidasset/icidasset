@@ -53,7 +53,7 @@ md.renderer.rules.code_inline = (tokens, idx) => {
 };
 
 
-export default function(files, deps) {
+export default function(files) {
   return files.map((f) => {
     return {
       ...f,

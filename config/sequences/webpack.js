@@ -8,7 +8,5 @@ export default function(data) {
   return run(
     [webpack, webpackConfig],
     [write, 'build']
-  )(
-    data.__root__
-  );
+  )();
 }

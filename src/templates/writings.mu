@@ -14,7 +14,7 @@ title = "Writings"
           <ul>
             {{#each collections.writings}}
               {{#if published}}
-                <li><a href="{{@root.pathToRoot}}writings/{{path}}">{{title}}</a></li>
+                <li><a href="{{@root.pathToRoot}}writings/{{dirname}}">{{title}}</a></li>
               {{/if}}
             {{/each}}
           </ul>

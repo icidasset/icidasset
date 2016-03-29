@@ -1,4 +1,4 @@
-export default function(files, deps, layouts) {
+export default function(files, layouts) {
   return files.map((f) => {
     return {
       ...f,

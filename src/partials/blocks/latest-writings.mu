@@ -6,7 +6,7 @@
       {{#each collections.writings}}
         {{#if published}}
           {{#if promote}}
-            <li><a href="{{@root.pathToRoot}}writings/{{path}}">{{title}}</a></li>
+            <li><a href="{{@root.pathToRoot}}writings/{{dirname}}">{{title}}</a></li>
           {{/if}}
         {{/if}}
       {{/each}}
