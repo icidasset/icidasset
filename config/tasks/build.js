@@ -40,7 +40,7 @@ function partTwo(dataObj) {
 
     return Promise.all([
       buildCollection(collections, 'pages', 'build'),
-      buildCollection(collections, 'writings', 'build/writings'),
+      buildCollection(collections, 'writings', 'build/writings', { onlyApplyLayout: true }),
 
       run([copy, `build/images`])('src/images/**/*', dataObj.__root__),
     ]);
@@ -51,10 +51,10 @@ function partTwo(dataObj) {
 /**
  * The sequence for building a collection.
  */
-function buildCollection(collections, key, destination) {
+function buildCollection(collections, key, destination, options) {
   return run(
     [metadata, { collections }],
-    [templates, render],
+    [templates, render, options],
     [write, destination]
   )(
     collections[key]
