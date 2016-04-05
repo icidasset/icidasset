@@ -86,8 +86,11 @@ Elixir provides a way to make it more clear what we're trying to do here.
 ```elixir
 # This is easier to read, especially for mathematical operations.
 # ((2 + 1) + 1) * 4
-2 |> add_one |> add_one |> multiply_by_four
+2 |> add_one.() |> add_one.() |> multiply_by_four.()
 ```
+
+*<small>This would look better if I were using named functions.
+Then I could omit the trailing `.()`</small>*
 
 
 ### Closures
@@ -118,7 +121,7 @@ f_x.() # still returns 4
 ### Higher-order functions
 
 A higher-order function (HoF) is a function which takes one or more functions as arguments
-and returns a new function, *which is a closure*.
+and/or a function that returns a new function, *which is a closure*.
 
 #### Example
 
@@ -284,3 +287,7 @@ some pretty good
 __Next up in the functional programming category is what to do and what not do with
 functions.__ Or to put in technical terms, limiting side-effects, data-first and
 using map and reduce instead of a loop.
+
+*<small>Credits: Thanks to [Brooklyn Zelenka](https://twitter.com/expede)
+and [Izaak Schroeder](https://twitter.com/izaakschroeder)
+for all the help!</small>*
