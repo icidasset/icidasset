@@ -89,8 +89,7 @@ Elixir provides a way to make it more clear what we're trying to do here.
 2 |> add_one.() |> add_one.() |> multiply_by_four.()
 ```
 
-*<small>This would look better if I were using named functions.
-Then I could omit the trailing `.()`</small>*
+*<small>This is the syntax for anonymous functions, which looks a bit odd, if I were using named functions I could omit the trailing `.()`</small>*
 
 
 ### Closures
@@ -115,7 +114,7 @@ x = 3
 f_x.() # still returns 4
 ```
 
-*<small>`:math` is a Erlang module</small>*
+*<small>`:math` is a Erlang module, which in Elixir are represented by atoms. Elixir runs on top of the [Erlang VM](https://medium.com/r/?url=http%3A%2F%2Fwww.erlang-factory.com%2Fupload%2Fpresentations%2F708%2FHitchhikersTouroftheBEAM.pdf), which makes it possible to use Erlang code with Elixir</small>*
 
 
 ### Higher-order functions
