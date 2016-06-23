@@ -53,7 +53,7 @@ books__average = [
 [[projects]]
 name = "Ectograph"
 url = "https://github.com/icidasset/ectograph"
-description = "A set of utility functions for using Ecto in combination with GraphQL (joshprice/graphql-elixir)."
+description = "A set of utility functions for using Ecto in combination with GraphQL (graphql-elixir/graphql)."
 promote = true
 
 [[projects]]
@@ -64,7 +64,7 @@ promote = true
 
 [[projects]]
 name = "Key Maps"
-url = "https://github.com/icidasset/key-maps"
+url = "https://github.com/icidasset/key_maps"
 description = "Provides an interface to fill in custom data structures and a JSON api with CORS support to fetch the data."
 
 [[projects]]
