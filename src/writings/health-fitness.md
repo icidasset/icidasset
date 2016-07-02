@@ -105,7 +105,7 @@ Testosterone can be increased in the following ways:
 ### Extra information
 
 - Good for the gut: Fermented foods, Kombucha.
-- Carbs can best be eaten later in the day.
+- Carbs can best be eaten early in the day (you're more insulin sensitive later in the day).
 - Meal frequency doesn't matter.
 - Keep at least 20 minutes between meal portions.
 - Don't think about your BMI, it's not relevant.
