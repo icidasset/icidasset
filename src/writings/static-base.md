@@ -18,7 +18,7 @@ I guess the most used, and easiest to understand, example would be a blog. You i
 3. We need a layout, where we set the document title.
 4. We get a html page we can publish.
 
-Ok so, how do we go about this? Let's define in more concrete steps.
+Ok so, how do we go about this? Let's define this in more concrete steps.
 
 1. **Select** the markdown files.
 2. **Read** the contents of those files.
