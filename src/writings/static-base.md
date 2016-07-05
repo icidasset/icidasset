@@ -4,7 +4,7 @@ category = "Code"
 published = false
 ---
 
-First of all, what is it anyway? Well, it's a small functional toolset written for [node.js](https://nodejs.org/en/) to **build static websites**, and by that I mean, output html files. As it is still the fundamental part of the web, it's probably not a bad idea to consider it as a rather important piece of puzzle.
+First of all, what is it anyway? It's a small functional toolset written for [node.js](https://nodejs.org/en/) to **build static websites**, and by that I mean, output html files. As it is still the fundamental part of the web, it's probably not a bad idea to consider it as a rather important piece of puzzle.
 
 <small>_Links:_</small>  
 [**static-base** github repo](https://github.com/icidasset/static-base)  
