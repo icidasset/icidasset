@@ -1,7 +1,8 @@
 ---
 title = "Why I wrote static-base"
 category = "Code"
-published = false
+published = true
+promote = true
 ---
 
 First of all, what is it anyway? It's a small functional toolset written for [node.js](https://nodejs.org/en/) to **build static websites**, and by that I mean, output html files. As it is still the fundamental part of the web, it's probably not a bad idea to consider it as a rather important piece of puzzle.
