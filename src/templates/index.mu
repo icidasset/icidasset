@@ -15,6 +15,18 @@
   <div class="blocks">
 
     <div class="blocks__row">
+      {{> blocks/now}}
+      {{> blocks/social}}
+    </div>
+
+
+    <div class="blocks__row">
+      {{> blocks/latest-projects}}
+      {{> blocks/latest-writings}}
+    </div>
+
+
+    <div class="blocks__row">
       <a href="{{pathToRoot}}projects/" class="block block--filler has-content has-fixed-height">
         <span class="block--filler__inner">
           {{{icon 'i-tools'}}}
@@ -28,18 +40,6 @@
           <span>See all writings</span>
         </span>
       </a>
-    </div>
-
-
-    <div class="blocks__row">
-      {{> blocks/now}}
-      {{> blocks/social}}
-    </div>
-
-
-    <div class="blocks__row">
-      {{> blocks/latest-projects}}
-      {{> blocks/latest-writings}}
     </div>
 
   </div>

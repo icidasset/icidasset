@@ -17,6 +17,7 @@ html {
 body {
   @mixin default-font;
 
+  background: white;
   color: $text-color;
   font-size: .95rem;
   line-height: 1.95;
@@ -65,8 +66,14 @@ p + ol {
 }
 
 a {
-  color: $link-color;
+  color: inherit;
   text-decoration: none;
+}
+
+p a,
+ul a,
+ol a {
+  border-bottom: 1px solid color($text-color a(.5));
 }
 
 ul, ol {

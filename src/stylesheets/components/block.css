@@ -11,8 +11,8 @@
    * {kind} Filler
    */
   &.block--filler {
-    background: color($accent a(.035));
-    color: color($link-color a(.55));
+    background: color($base07 a(.425));
+    color: $base06;
     display: none;
     height: 25vw;
     min-height: rem(150px);
@@ -24,8 +24,9 @@
     }
 
     &.has-content {
-      background: color($accent a(.0675));
-      color: $link-color;
+      background: transparent;
+      box-shadow: 0 0 0 2px color($base06 a(.5)) inset;
+      color: $base05;
       display: block;
     }
 
@@ -38,7 +39,6 @@
 
   & .block--filler__inner {
     left: 50%;
-    opacity: .425;
     position: absolute;
     text-align: center;
     top: 50%;
