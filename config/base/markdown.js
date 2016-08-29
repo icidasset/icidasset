@@ -54,7 +54,7 @@ md.renderer.rules.code_inline = (tokens, idx) => {
 
 
 export default function(files) {
-  return files.map((f) => {
+  return files.map(f => {
     return {
       ...f,
 

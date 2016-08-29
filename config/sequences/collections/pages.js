@@ -1,11 +1,17 @@
+import { filter as applyFilter } from 'static-base-contrib/utils';
 import { run } from 'static-base';
-import { metadata, parentPath, pathToRoot, permalinks } from 'static-base-contrib';
-import { read, renameExt } from 'static-base-contrib';
-import applyFilter from 'static-base-contrib/lib/utils/filter';
+import layouts from '../../base/layouts';
 import toml from 'toml';
 
-import frontmatter from '../../base/frontmatter';
-import layouts from '../../base/layouts';
+import {
+  frontmatter,
+  metadata,
+  parentPath,
+  pathToRoot,
+  permalinks,
+  read,
+  renameExt,
+} from 'static-base-contrib';
 
 
 export default function(data) {
@@ -16,11 +22,11 @@ export default function(data) {
     [applyFilter(permalinks, permalinksFilter)],
     [pathToRoot],
     [parentPath],
-    [frontmatter],
+    [frontmatter, { parser: toml.parse, lang: 'toml' }],
     [metadata, data]
   )(
     'src/templates/**/*.mu',
-    data.__root__,
+    data.__root__
   );
 }
 

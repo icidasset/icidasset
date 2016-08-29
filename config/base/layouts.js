@@ -1,5 +1,5 @@
 export default function(files, layouts) {
-  return files.map((f) => {
+  return files.map(f => {
     return {
       ...f,
 

@@ -118,7 +118,7 @@ const layout = `
 <!DOCTYPE html>
 <html>
   <head><title>{{title}}</title></head>
-  <body>{{{content}}}</body>
+  <body><h1>{{title}}</h1>{{{content}}}</body>
 </html>
 `.trim();
 

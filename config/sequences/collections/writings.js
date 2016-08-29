@@ -1,10 +1,17 @@
 import { run } from 'static-base';
-import { metadata, parentPath, pathToRoot, permalinks } from 'static-base-contrib';
-import { read, renameExt } from 'static-base-contrib';
-
-import frontmatter from '../../base/frontmatter';
 import layouts from '../../base/layouts';
 import markdown from '../../base/markdown';
+import toml from 'toml';
+
+import {
+  frontmatter,
+  metadata,
+  parentPath,
+  pathToRoot,
+  permalinks,
+  read,
+  renameExt,
+} from 'static-base-contrib';
 
 
 export default function(data) {
@@ -15,11 +22,11 @@ export default function(data) {
     [permalinks],
     [pathToRoot, 1],
     [parentPath],
-    [frontmatter],
+    [frontmatter, { parser: toml.parse, lang: 'toml' }],
     [metadata, { ...data, collection: 'writings' }],
     [markdown]
   )(
     'src/writings/**/*.md',
-    data.__root__,
+    data.__root__
   );
 }
