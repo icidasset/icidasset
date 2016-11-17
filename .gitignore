@@ -1,4 +1,4 @@
-/build
+.stack-work
+build
+deploy.sh
 node_modules
-.DS_Store
-*.log

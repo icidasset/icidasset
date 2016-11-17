@@ -1,9 +1,0 @@
-small {
-
-  &.small--block {
-    display: block;
-    line-height: 1.55;
-    margin-top: grid(.5);
-  }
-
-}

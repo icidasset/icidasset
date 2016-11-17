@@ -1,68 +1,7 @@
 {
-  "name": "icid-asset",
-  "version": "1.0.0",
-  "description": "Personal website of Steven Vandevelde",
-  "main": "config/index.js",
-  "scripts": {
-    "clean-build": "rm -rf ./build",
-    "build-development": "npm run clean-build && ENV=development babel-node ./config/index.js",
-    "build-production": "npm run clean-build && ENV=production babel-node ./config/index.js",
-    "dev": "npm run build-development -- --watch --serve",
-    "production": "npm run build-production && surge ./build icidasset.com"
-  },
-  "dependencies": {
-    "anim": "0.0.1",
-    "delegate": "^3.0.1",
-    "lodash": "^4.15.0",
-    "svgxuse": "^1.1.20"
-  },
+  "private": true,
   "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-core": "^6.14.0",
-    "babel-loader": "^6.2.5",
-    "babel-preset-metalab": "^0.2.1",
-    "chalk": "^1.1.1",
-    "chokidar": "^1.6.0",
-    "css-loader": "^0.24.0",
-    "enfscopy": "^0.1.0",
-    "express": "^4.14.0",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
-    "gray-matter": "^2.0.2",
-    "handlebars": "^4.0.5",
-    "markdown-it": "^7.0.1",
-    "markdown-it-anchor": "^2.4.0",
-    "markdown-it-footnote": "^3.0.1",
-    "markdown-it-mark": "^2.0.0",
-    "markdown-it-sub": "^1.0.0",
-    "markdown-it-sup": "^1.0.0",
-    "postcss": "^5.1.2",
-    "postcss-cssnext": "^2.7.0",
-    "postcss-functions": "^2.1.0",
-    "postcss-loader": "^0.11.0",
-    "postcss-mixins": "^5.0.1",
-    "postcss-normalize": "^0.3.0",
-    "postcss-partial-import": "^1.3.0",
-    "postcss-property-lookup": "^1.2.1",
-    "postcss-simple-vars": "^3.0.0",
-    "prismjs": "^1.5.1",
-    "static-base": "^1.0.0",
-    "static-base-contrib": "^1.0.1",
-    "style-loader": "^0.13.0",
-    "surge": "^0.18.0",
-    "toml": "^2.3.0",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.2",
-    "webpack-partial": "^1.3.0"
-  },
-  "author": "icid.asset@gmail.com",
-  "license": "ISC",
-  "homepage": "https://icidasset.com/",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/icidasset/icid-asset.git"
-  },
-  "bugs": {
-    "url": "https://github.com/icidasset/icid-asset/issues"
+    "icidasset-template": "file:./icidasset-template",
+    "postcss-cli-simple": "^1.0.1"
   }
 }

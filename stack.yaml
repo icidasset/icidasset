@@ -1,0 +1,8 @@
+resolver: lts-7.9
+
+packages:
+- '.'
+- './icidasset-template'
+
+extra-deps:
+- 'shikensu-0.1.3'

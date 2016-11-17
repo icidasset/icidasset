@@ -1,0 +1,3 @@
+[submodule "icidasset-template"]
+	path = icidasset-template
+	url = git@github.com:icidasset/icidasset-template.git

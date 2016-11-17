@@ -1,0 +1,1 @@
+I'm a programmer living in Ghent, Belgium, who works for a company based in Victoria, Canada, named [MetaLab](http://metalab.co/). I love great [music](https://soundcloud.com/purplesynth/likes), [books](books/) and [quotes](http://quotes.icidasset.com/). I also dabble in [electrical engineering](https://electrical-mathematics.surge.sh/).
