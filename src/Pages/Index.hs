@@ -77,7 +77,7 @@ nowBlock obj =
 
       , blockText_
           [ class_ "block__text--subtle" ] ↩
-          [ p_ (em_ modifiedData) ]
+          [ p_ (em_ [] ↩ [ modifiedData, "." ]) ]
       ]
 
 
