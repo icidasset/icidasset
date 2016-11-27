@@ -68,7 +68,7 @@ nowBlock obj =
     block_
       [] ↩
       [ blockTitleLvl2_
-          [] ↩
+          [ class_ "is-colored" ] ↩
           [ "What I’m doing now" ]
 
       , blockText_
@@ -85,8 +85,13 @@ socialBlock :: Partial
 socialBlock obj =
   block_
     [] ↩
-    [ blockTitleLvl2_ [] ("Social links")
-    , blockText_      [] (markdown_ $ obj ⚡⚡ "social")
+    [ blockTitleLvl2_
+        [ class_ "is-colored" ]
+        ("Social links")
+
+    , blockText_
+        []
+        (markdown_ $ obj ⚡⚡ "social")
     ]
 
 
@@ -103,8 +108,13 @@ latestProjectsBlock obj =
   in
     block_
       [] ↩
-      [ blockTitleLvl2_ [] ("Latest projects")
-      , blockList_      [] (ul_ ↩ projects)
+      [ blockTitleLvl2_
+          [ class_ "is-colored" ]
+          ("Latest projects")
+
+      , blockList_
+          []
+          (ul_ ↩ projects)
 
       , blockText_
           [ class_ "block__text--subtle" ]
@@ -129,8 +139,13 @@ latestWritingsBlock obj =
   in
     block_
       [] ↩
-      [ blockTitleLvl2_ [] ("Latest writings")
-      , blockList_      [] (ul_ ↩ writings)
+      [ blockTitleLvl2_
+          [ class_ "is-colored" ]
+          ("Latest writings")
+
+      , blockList_
+          []
+          (ul_ ↩ writings)
 
       , blockText_
           [ class_ "block__text--subtle" ]

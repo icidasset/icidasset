@@ -7,7 +7,7 @@
   padding: 1gr 0 0;
 
   & a {
-    border-bottom: 2px solid $base06;
+    border-bottom: 2px solid color($base09 a(.175));
     color: inherit;
     display: inline-block;
     line-height: 1.15;
