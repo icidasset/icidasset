@@ -179,6 +179,7 @@ writing parent obj =
       [ parent ⚡⚡ "pathToRoot" :: Text
       , "writings/"
       , obj ⚡⚡ "basename" :: Text
+      , "/"
       ]
   in
     li_
