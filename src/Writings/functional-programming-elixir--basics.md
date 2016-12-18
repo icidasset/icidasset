@@ -82,6 +82,7 @@ multiply_by_four.(add_one.(add_one.(2)))   # returns '16'
 ```
 
 Elixir provides a way to make it more clear what we're trying to do here.
+This operator is called the pipe operator.
 
 ```elixir
 # This is easier to read, especially for mathematical operations.
