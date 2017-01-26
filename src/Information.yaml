@@ -14,13 +14,13 @@ titles:
 #
 projects:
   - name: "Checklists"
-    url: "https://checklists.icidasset.com/"
+    url: "http://checklists.icidasset.com/"
     description: >
       Build checklists that have a url.
     promote: true
 
   - name: "Circuits"
-    url: "https://circuits.icidasset.com/"
+    url: "http://circuits.icidasset.com/"
     description: >
       Electrical circuits, theory and examples.
     promote: true
@@ -39,8 +39,7 @@ projects:
   - name: "Key Maps"
     url: "https://github.com/icidasset/key_maps"
     description: >
-      Provides an interface to fill in custom data structures
-      and a JSON api with CORS support to fetch the data.
+      A simple data-structure API.
 
   - name: "Ongaku Ryoho"
     url: "https://github.com/icidasset/ongaku-ryoho"
@@ -80,7 +79,7 @@ books:
   - { title: "The 4-Hour Body", author: "Timothy Ferriss" }
   - { title: "The 4-Hour Workweek", author: "Timothy Ferriss" }
   - { title: "The Art of Learning", author: "Josh Waitzkin" }
-  - { title: "The Checklist Manifesto", author: "Atul Gawande", reading: true }
+  - { title: "The Checklist Manifesto", author: "Atul Gawande" }
   - { title: "The Obstacle Is the Way", author: "Ryan Holiday" }
   - { title: "Vagabonding", author: "Rolf Potts" }
   - { title: "We Learn Nothing", author: "Tim Kreider" }
