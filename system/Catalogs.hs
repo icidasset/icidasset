@@ -12,10 +12,10 @@ import qualified Pages.Writings
 
 pages :: TemplateCatalog
 pages =
-  HashMap.fromList
-    [ ("404", Pages.NotFound.template)
-    , ("books", Pages.Books.template)
-    , ("index", Pages.Index.template)
-    , ("projects", Pages.Projects.template)
-    , ("writings", Pages.Writings.template)
-    ]
+    HashMap.fromList
+        [ ( "404", Pages.NotFound.template )
+        , ( "books", Pages.Books.template )
+        , ( "index", Pages.Index.template )
+        , ( "projects", Pages.Projects.template )
+        , ( "writings", Pages.Writings.template )
+        ]

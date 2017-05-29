@@ -5,8 +5,9 @@ import Elements
 import Flow
 import Lucid.Base (Html, makeAttribute, toHtml)
 import Lucid.Html5
+import Shikensu.Utilities ((~>), (!~>))
 import Types
-import Utilities ((↩), (⚡), (⚡⚡))
+import Utilities ((↩))
 
 import qualified Components.Blocks.Filler
 import qualified Data.Aeson as Aeson (Object, Value)
@@ -37,7 +38,7 @@ leftSide obj =
   Components.Blocks.Filler.template
     []
     "i-megaphone"
-    (obj ⚡⚡ "title")
+    (obj !~> "title")
     (obj)
 
 

@@ -29,13 +29,13 @@ executable build
     Pages.Writings
 
   build-depends:
-    aeson == 0.11.*,
+    aeson == 1.0.*,
     base,
-    directory == 1.*,
+    directory == 1.3.*,
     flow == 1.*,
     icidasset-template == 1.*,
     lucid == 2.9.*,
-    shikensu == 0.1.*,
+    shikensu == 0.3.3,
     text == 1.*,
     time == 1.6.*,
     unordered-containers == 0.2.*,

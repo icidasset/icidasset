@@ -5,8 +5,9 @@ import Elements
 import Flow
 import Lucid.Base (Html, toHtml)
 import Lucid.Html5
+import Shikensu.Utilities ((~>), (!~>))
 import Types
-import Utilities ((↩), (⚡), (⚡⚡))
+import Utilities ((↩))
 
 import qualified Components.Blocks.Filler
 import qualified Data.Aeson as Aeson (Object, Value)
@@ -19,7 +20,7 @@ template obj _ =
     [] ↩
     [ p_
         [ class_ "intro" ] ↩
-        [ markdownWithoutBlocks_ $ obj ⚡⚡ "intro" ]
+        [ markdownWithoutBlocks_ $ obj !~> "intro" ]
 
     , blocks_
         [] ↩
@@ -60,7 +61,7 @@ template obj _ =
 nowBlock :: Partial
 nowBlock obj =
   let
-    modifiedData = (obj ⚡⚡ "nowDate")
+    modifiedData = (obj !~> "nowDate")
       |> Text.toLower
       |> Text.append (Text.pack "Last update, ")
       |> toHtml
@@ -73,7 +74,7 @@ nowBlock obj =
 
       , blockText_
           [] ↩
-          [ markdown_ $ obj ⚡⚡ "now" ]
+          [ markdown_ $ obj !~> "now" ]
 
       , blockText_
           [ class_ "block__text--subtle" ] ↩
@@ -91,7 +92,7 @@ socialBlock obj =
 
     , blockText_
         []
-        (markdown_ $ obj ⚡⚡ "social")
+        (markdown_ $ obj !~> "social")
     ]
 
 
@@ -99,11 +100,11 @@ latestProjectsBlock :: Partial
 latestProjectsBlock obj =
   let
     reducer = \acc p ->
-      case p ⚡ "promote" of
+      case p ~> "promote" of
         Just True -> acc ++ [project p]
         _         -> acc
 
-    projectValues = (obj ⚡⚡ "info" ⚡⚡ "projects" :: [Aeson.Object])
+    projectValues = (obj !~> "info" !~> "projects" :: [Aeson.Object])
     projects = foldl reducer [] projectValues
   in
     block_
@@ -127,14 +128,14 @@ latestWritingsBlock obj =
   let
     reducer = \acc w ->
       let
-        isPublished = w ⚡⚡ "published" :: Bool
-        isPromoted  = w ⚡ "promote" :: Maybe Bool
+        isPublished = w !~> "published" :: Bool
+        isPromoted  = w ~> "promote" :: Maybe Bool
       in
         case isPromoted of
           Just True -> if isPublished == True then acc ++ [writing obj w] else acc
           _         -> acc
 
-    writingValues = (obj ⚡⚡ "writings" :: [Aeson.Object])
+    writingValues = (obj !~> "writings" :: [Aeson.Object])
     writings = foldl reducer [] writingValues
   in
     block_
@@ -160,8 +161,8 @@ latestWritingsBlock obj =
 project :: Aeson.Object -> Html ()
 project obj =
   let
-    name = toHtml (obj ⚡⚡ "name" :: String)
-    url = obj ⚡⚡ "url" :: Text
+    name = toHtml (obj !~> "name" :: String)
+    url = obj !~> "url" :: Text
   in
     li_
       [] ↩
@@ -174,11 +175,11 @@ project obj =
 writing :: Aeson.Object -> Aeson.Object -> Html ()
 writing parent obj =
   let
-    title = toHtml (obj ⚡⚡ "title" :: String)
+    title = toHtml (obj !~> "title" :: String)
     href = Text.concat
-      [ parent ⚡⚡ "pathToRoot" :: Text
+      [ parent !~> "pathToRoot" :: Text
       , "writings/"
-      , obj ⚡⚡ "basename" :: Text
+      , obj !~> "basename" :: Text
       , "/"
       ]
   in

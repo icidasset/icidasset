@@ -14,7 +14,6 @@ build: clean system css
 
 
 build-production: build
-	# TODO: Minify, etc.
 
 
 clean:
@@ -48,12 +47,3 @@ system:
 systemWithProfiles:
 	@echo "> Compiling System (with stack-traces / profiles)"
 	@stack build --force-dirty --executable-profiling --library-profiling && stack exec build
-
-
-
-watch: build
-	@stack exec fswatcher -- \
-		--path ./ \
-		--include "icidasset-template|src|system" \
-		--exclude "build|node_modules|.DS_Store|.stack-work" \
-		make

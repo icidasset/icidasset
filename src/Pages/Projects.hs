@@ -5,8 +5,9 @@ import Elements
 import Flow
 import Lucid.Base (Html, makeAttribute, toHtml)
 import Lucid.Html5
+import Shikensu.Utilities ((~>), (!~>))
 import Types
-import Utilities ((↩), (⚡), (⚡⚡))
+import Utilities ((↩))
 
 import qualified Components.Blocks.Filler
 import qualified Data.Aeson as Aeson (Object, Value)
@@ -35,14 +36,14 @@ template obj _ =
 leftSide :: Partial
 leftSide obj =
   let
-    projectValues = (obj ⚡⚡ "info" ⚡⚡ "projects" :: [Aeson.Object])
+    projectValues = (obj !~> "info" !~> "projects" :: [Aeson.Object])
     projects = fmap project projectValues
   in
     block_
       [] ↩
       [ blockTitleLvl1_
           [] ↩
-          [ toHtml (obj ⚡⚡ "title" :: String) ]
+          [ toHtml (obj !~> "title" :: String) ]
 
       , blockList_
           [ class_ "has-extra-space" ] ↩
@@ -59,7 +60,7 @@ rightSide obj =
   Components.Blocks.Filler.template
     [ makeAttribute "hide-lt" "small" ]
     "i-tools"
-    (obj ⚡⚡ "title")
+    (obj !~> "title")
     (obj)
 
 
@@ -70,9 +71,9 @@ rightSide obj =
 project :: Aeson.Object -> Html ()
 project obj =
   let
-    name  = toHtml (obj ⚡⚡ "name" :: String)
-    desc  = toHtml (obj ⚡⚡ "description" :: String)
-    url   = obj ⚡⚡ "url" :: Text
+    name  = toHtml (obj !~> "name" :: String)
+    desc  = toHtml (obj !~> "description" :: String)
+    url   = obj !~> "url" :: Text
   in
     li_
       [] ↩

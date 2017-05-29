@@ -1,11 +1,8 @@
-resolver: lts-7.9
+resolver: lts-8.15
 
 packages:
 - '.'
 - './icidasset-template'
-- location:
-    git: https://github.com/ehamberg/fswatcher.git
-    commit: c08d1fb44555866ad623ccf32f9aff0286db8bea
 
 extra-deps:
-- 'shikensu-0.1.3'
+- 'shikensu-0.3.3'

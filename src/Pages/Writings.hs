@@ -5,8 +5,9 @@ import Elements
 import Flow
 import Lucid.Base (Html, makeAttribute, toHtml)
 import Lucid.Html5
+import Shikensu.Utilities ((~>), (!~>))
 import Types
-import Utilities ((↩), (⚡), (⚡⚡))
+import Utilities ((↩))
 
 import qualified Components.Blocks.Filler
 import qualified Data.Aeson as Aeson (Object, Value)
@@ -37,20 +38,20 @@ leftSide obj =
   let
     reducer = \acc w ->
       let
-        isPublished = w ⚡⚡ "published" :: Bool
+        isPublished = w !~> "published" :: Bool
       in
         case isPublished of
           True -> acc ++ [writing obj w]
           _    -> acc
 
-    writingValues = (obj ⚡⚡ "writings" :: [Aeson.Object])
+    writingValues = (obj !~> "writings" :: [Aeson.Object])
     writings = foldl reducer [] writingValues
   in
     block_
       [] ↩
       [ blockTitleLvl1_
           [] ↩
-          [ toHtml (obj ⚡⚡ "title" :: String) ]
+          [ toHtml (obj !~> "title" :: String) ]
 
       , blockList_
           [] ↩
@@ -67,7 +68,7 @@ rightSide obj =
   Components.Blocks.Filler.template
     [ makeAttribute "hide-lt" "small" ]
     "i-text-document"
-    (obj ⚡⚡ "title")
+    (obj !~> "title")
     (obj)
 
 
@@ -78,11 +79,11 @@ rightSide obj =
 writing :: Aeson.Object -> Aeson.Object -> Html ()
 writing parent obj =
   let
-    title = toHtml (obj ⚡⚡ "title" :: String)
+    title = toHtml (obj !~> "title" :: String)
     href  = Text.concat
-      [ parent ⚡⚡ "pathToRoot" :: Text
+      [ parent !~> "pathToRoot" :: Text
       , "writings/"
-      , obj ⚡⚡ "basename" :: Text
+      , obj !~> "basename" :: Text
       , "/"
       ]
   in

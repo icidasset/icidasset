@@ -5,8 +5,9 @@ import Elements
 import Flow
 import Lucid.Base (Html, makeAttribute, toHtml)
 import Lucid.Html5
+import Shikensu.Utilities ((~>), (!~>))
 import Types
-import Utilities ((↩), (⚡), (⚡⚡))
+import Utilities ((↩))
 
 import qualified Components.Blocks.Filler
 import qualified Data.Aeson as Aeson (Object, Value)
@@ -35,14 +36,14 @@ template obj _ =
 leftSide :: Partial
 leftSide obj =
   let
-    bookValues = (obj ⚡⚡ "info" ⚡⚡ "books" :: [Aeson.Object])
+    bookValues = (obj !~> "info" !~> "books" :: [Aeson.Object])
     books = fmap book bookValues
   in
     block_
       [] ↩
       [ blockTitleLvl1_
           [] ↩
-          [ toHtml (obj ⚡⚡ "title" :: String) ]
+          [ toHtml (obj !~> "title" :: String) ]
 
       , blockList_
           [] ↩
@@ -59,7 +60,7 @@ rightSide obj =
   Components.Blocks.Filler.template
     [ makeAttribute "hide-lt" "small" ]
     "i-book"
-    (obj ⚡⚡ "title")
+    (obj !~> "title")
     (obj)
 
 
@@ -70,14 +71,14 @@ rightSide obj =
 book :: Aeson.Object -> Html ()
 book obj =
   let
-    title  = toHtml (obj ⚡⚡ "title" :: String)
-    author = toHtml (obj ⚡⚡ "author" :: String)
+    title  = toHtml (obj !~> "title" :: String)
+    author = toHtml (obj !~> "author" :: String)
   in
     li_
       [] ↩
       [ title
 
-      , case obj ⚡ "reading" of
+      , case obj ~> "reading" of
           Just True -> span_ [ class_ "block__list__affix" ] ( "Currently reading" )
           _         -> ""
 
