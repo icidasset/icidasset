@@ -1,5 +1,5 @@
 ---
-title: "Summary of Health & Fitness Information"
+title: "Notes on Health & Fitness"
 category: "Reminders"
 published: true
 promote: true
@@ -40,6 +40,9 @@ Most of this is based upon the research of [Tim](http://fourhourbody.com/) [Ferr
 - Complex carbohydrates are the most healthy form of carbs,
   i.e. most nutritious.  
   <small>Green vegetables, beans, lentils, sweet potatoes, whole grains, etc.</small>
+- Fasting 13 hours per day is considered the optimal amount of fasting.
+  Fasting is good for disease prevention, better sleep, more energy.
+  Note that fasting is __only consuming water and nothing else__. [More info](http://podcastnotes.org/2016/07/11/time-restricted-feeding-and-its-effects-on-obesity-muscle-mass-heart-health/).
 - [Intermittent fasting](http://jamesclear.com/the-beginners-guide-to-intermittent-fasting)
   is a great pattern for eating
   to increase muscle mass and to decrease body fat.
@@ -61,7 +64,7 @@ For me personally:
 - Reduce body fat percentage to 10% or less before bulking.
   This enables you to build muscle more easily.
 - Keep the cutting periods as small as possible.
-  Example: cuts for 2 to 3 months, and bulks for 4 to 6 months.
+  Example: cuts for 3 to 4 months, and bulks for 6 to 8 months.
 - When you stop with cutting and going into bulking mode,
   do not eat a large amount or you will regain a lot of body fat.
   Make 100-150 calorie progressions, increase every week.
@@ -89,19 +92,6 @@ Post:
 - [More info](http://www.muscleforlife.com/guide-to-post-workout-nutrition/)
 
 
-### Testosterone
-
-Testosterone is another important factor.  
-Testosterone can be increased in the following ways:
-
-- More active = more testosterone.
-- Use a lot of muscle groups while exercising (compound movements).
-- Get enough sleep.
-- Get enough vitamin D.
-- Get rid of sugar (kills 25%).
-- Making sure your selenium levels are in order.
-
-
 ### Extra information
 
 - Good for the gut: Fermented foods, Kombucha.
@@ -127,19 +117,6 @@ Testosterone can be increased in the following ways:
 - A good diet is the best way to prevent cancer.
 - Supplement sodium (salt) and magnesium when feeling weak/dizzy while exercising.
 - Vitamin A is good for the eyes.
-
-
-### Allergies
-
-- Exercise, ie. physical activity, speeds up blood flow and
-  this allows allergens to be moved quickly through the body
-  and eliminated via the kidneys and skin.
-- Or in other words, a lack of exercise results in a sluggish blood flow.
-  Stagnant allergens gather in a fixed position, which begins to destroy
-  the tissues around them. Constant movement of the allergens through
-  the blood stream prevents these delicate tissues from becoming inflamed.
-- People whose natural defense system is weakened due to an infection
-  or other physical stressor are at increased risk of developing an allergy.
 
 
 
@@ -172,6 +149,10 @@ Testosterone can be increased in the following ways:
   <small>(also an hour and a half after the meal)</small>.
 - When cutting, you burn less energy, so move more or do more cardio.
   Your body adjusts itself because you're eating less.
+- Relating to rest between sets, rest until your breath has somewhat
+  returned to normal. Not too long though. Roughly, 3-4 minutes for
+  large muscle groups (eg. legs) and 1 minute for smaller muscle groups
+  (eg. biceps).
 
 
 ### Detailed information
@@ -183,6 +164,36 @@ Testosterone can be increased in the following ways:
   Your body received the full load, because you stopped moving for that long.
 - *HIIT cardio:* You need to get moving fast and long enough to make your breathing labored,
   and you need to hold that speed for a fair amount of time.
+
+
+
+
+## Testosterone
+
+Testosterone is another important factor.  
+Testosterone can be increased in the following ways:
+
+- More active = more testosterone.
+- Use a lot of muscle groups while exercising (compound movements).
+- Get enough sleep.
+- Get enough vitamin D.
+- Get rid of sugar (kills 25%).
+- Making sure your selenium levels are in order.
+
+
+
+
+## Allergies
+
+- Exercise, ie. physical activity, speeds up blood flow and
+  this allows allergens to be moved quickly through the body
+  and eliminated via the kidneys and skin.
+- Or in other words, a lack of exercise results in a sluggish blood flow.
+  Stagnant allergens gather in a fixed position, which begins to destroy
+  the tissues around them. Constant movement of the allergens through
+  the blood stream prevents these delicate tissues from becoming inflamed.
+- People whose natural defense system is weakened due to an infection
+  or other physical stressor are at increased risk of developing an allergy.
 
 
 
@@ -208,7 +219,11 @@ Testosterone can be increased in the following ways:
 
 ## Stress & Lifestyle
 
-- Visualizing yourself doing a task can improve your actual ability to do it.  
+- _[Wim Hof method](https://www.wimhofmethod.com/):_
+  breathing is required to resist the cold,
+  when trying to resist the cold you burn brown fat,
+  which in turn keeps your temperature up and produces huge amounts of energy.
+- Visualizing yourself doing a task can improve your actual ability to do it.
   [More info](http://www.muscleforlife.com/how-to-get-stronger/).
 - Do not think stress is something bad.
   It's a signal that you're body is preparing for something.
@@ -218,13 +233,6 @@ Testosterone can be increased in the following ways:
 - Don't think about tomorrow, nothing bad is going to happen.
 - Breathing effectively is important for your focus, metabolism, stress, etc.
   –> __Wim Hof method.__
-- Meditating 20 minutes a day can bring enormous benefits, e.g. reduce bad stress.  
+- Meditating 20 minutes a day can bring enormous benefits, e.g. reduce bad stress.
   Focus on breathing/air flow.
 - Mental stress <=> physical stress <small>(it's all related)</small>
-
-
-### Detailed information
-
-- _Wim Hof method:_ breathing is required to resist the cold,
-  when trying to resist the cold you burn brown fat,
-  which in turn keeps your temperature up and produces huge amounts of energy.
