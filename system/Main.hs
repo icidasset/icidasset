@@ -1,30 +1,30 @@
 module Main where
 
+import Catalogs
 import Data.Maybe (fromJust, fromMaybe)
 import Data.Text (Text)
 import Data.Time.Format (defaultTimeLocale, formatTime)
 import Data.Yaml (decodeFile)
-import Catalogs
 import Flow
 import Layouts.Application
 import Layouts.Writing
 import Renderers.Lucid
 import Renderers.Markdown
 import Shikensu
+import Shikensu.Contrib
+import Shikensu.Contrib.IO as Shikensu
 import Shikensu.Functions
 import Shikensu.Metadata
 import Shikensu.Types
-import Shikensu.Contrib
-import Shikensu.Contrib.IO as Shikensu
 import Shikensu.Utilities
 import System.Directory (getModificationTime)
 import Utilities
 
 import qualified Data.Aeson as Aeson (Object, Value, toJSON)
 import qualified Data.HashMap.Strict as HashMap (fromList, singleton)
+import qualified Data.List as List (concatMap)
 import qualified Data.Text as Text (pack)
 import qualified Data.Text.IO as Text (readFile)
-import qualified Data.List as List (concatMap)
 
 
 -- | (• ◡•)| (❍ᴥ❍ʋ)
@@ -103,7 +103,7 @@ flow _ ("images", dict) =
 
 
 -- Additional IO
---   (Next to the sequences)
+-- (Next to the sequences)
 
 
 dependencies :: IO Dependencies

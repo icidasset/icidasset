@@ -5,7 +5,7 @@ import Elements
 import Flow
 import Lucid.Base (Html, makeAttribute, toHtml)
 import Lucid.Html5
-import Shikensu.Utilities ((~>), (!~>))
+import Shikensu.Utilities ((!~>), (~>))
 import Types
 import Utilities ((↩))
 
@@ -79,7 +79,7 @@ book obj =
       [ title
 
       , case obj ~> "reading" of
-          Just True -> span_ [ class_ "block__list__affix" ] ( "Currently reading" )
+          Just True -> span_ [ class_ "block__list__affix" ] "Currently reading"
           _         -> ""
 
       , br_

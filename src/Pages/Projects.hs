@@ -5,7 +5,7 @@ import Elements
 import Flow
 import Lucid.Base (Html, makeAttribute, toHtml)
 import Lucid.Html5
-import Shikensu.Utilities ((~>), (!~>))
+import Shikensu.Utilities ((!~>), (~>))
 import Types
 import Utilities ((↩))
 

@@ -70,11 +70,9 @@ of a value of an unknown type into a type that our bind function can deal with.
 
 ```elixir
 unit = fn(value) ->
-  if is_integer(value) || is_float(value) do
-    value
-  else
-    nil
-  end
+  if is_integer(value) || is_float(value),
+    do: value,
+  else: nil
 end
 ```
 
