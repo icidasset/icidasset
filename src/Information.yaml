@@ -17,13 +17,11 @@ projects:
     url: "http://checklists.icidasset.com/"
     description: >
       Build checklists that have a url.
-    promote: true
 
   - name: "Circuits"
     url: "http://circuits.icidasset.com/"
     description: >
       Electrical circuits, theory and examples.
-    promote: true
 
   - name: "Ectograph"
     url: "https://github.com/icidasset/ectograph"
@@ -45,6 +43,7 @@ projects:
     url: "https://github.com/icidasset/ongaku-ryoho"
     description: >
       A music player which connects to your cloud storage.
+    promote: true
 
   - name: "Quotes"
     url: "https://github.com/icidasset/quotes"
@@ -67,12 +66,19 @@ projects:
     description: >
       Functions you can use with static-base.
 
+  - name: "Waves"
+    url: "http://waves.icidasset.com/?config=eJyl0D0PgjAQBuD%2Fcq4dji%2Bx3Sra1UEHjXEgpCQkhCJQlBD%2BuxdZhDjB0ry9S55c3h5ecatPtiltAwLGcM4KHZmaXmDffQ3i3kP8zijAjYaJyU1FeXPkgeSKJmmln1YXSQdiiwxMmtaaRIptnFsNwkEcsUtX0hdkBAP7j3qeVGE4RR13rYooDwpn6m6Bev1Vw8CXPFpfwARVaq9wfuqSAqYqBq7vLC7gMXwAnY2l%2BQ%3D%3D"
+    description: >
+      Electrical-wave analyzer.
+    promote: true
+
 
 #
 # Books (that I love)
 # -- Ordered by name
 #
 books:
+  - { title: "After Dark", author: "Haruki Murakami" }
   - { title: "How We Got to Now", author: "Steven Johnon" }
   - { title: "Letters from a Stoic", author: "Seneca" }
   - { title: "Meditations", author: "Marcus Aurelius" }
@@ -90,7 +96,6 @@ books__toRead:
   - { title: "Artist of Life", author: "Bruce Lee" }
   - { title: "Cat's Cradle", author: "Kurt Vonnegut" }
   - { title: "How to Live", author: "Sarah Bakewell" }
-  - { title: "The Alchemist", author: "Paulo Coelho" }
 
 
 books__average:
@@ -101,6 +106,7 @@ books__average:
   - { title: "Journey to the Center of the Earth", author: "Jules Verne" }
   - { title: "One, Two, Three: Absolutely Elementary Mathematics", author: "David Berlinkski" }
   - { title: "Pythagoras & His Theorem", author: "Paul Strathern" }
+  - { title: "The Alchemist", author: "Paulo Coelho" }
   - { title: "The Wild Diet", author: "Abel James" }
   - { title: "Wizard: The Life and Times of Nikola Tesla", author: "Marc Seifer" }
 

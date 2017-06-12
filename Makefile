@@ -1,16 +1,23 @@
 .PHONY: build system
 
 
-# variables
-BIN=./node_modules/.bin
+# Variables
+
+NODE_BIN=./node_modules/.bin
+SRC_DIR=./src
 BUILD_DIR=./build
 
 
-# tasks
-all: build
+# Default task
+
+all: dev
 
 
+#
+# Build tasks
+#
 build: clean system css
+	@echo "> Done ⚡"
 
 
 build-production: build
@@ -23,7 +30,7 @@ clean:
 
 css:
 	@echo "> Compiling CSS"
-	@$(BIN)/postcss \
+	@$(NODE_BIN)/postcss \
 		-u postcss-import \
 		-u postcss-mixins \
 		-u postcss-custom-units \
@@ -34,16 +41,35 @@ css:
 		./src/Css/index.css
 
 
-server:
-	@echo "> Booting up web server"
-	@stack build && stack exec server -- -p 8080 --no-access-log --no-error-log
-
-
 system:
 	@echo "> Compiling System"
 	@stack build && stack exec build
 
 
-systemWithProfiles:
-	@echo "> Compiling System (with stack-traces / profiles)"
-	@stack build --force-dirty --executable-profiling --library-profiling && stack exec build
+#
+# Dev tasks
+#
+dev: build
+	@make -j watch_wo_build server
+
+
+server:
+	@echo "> Booting up web server"
+	@stack build && stack exec server
+
+
+watch: build
+	@make watch_wo_build
+
+
+watch_wo_build:
+	@echo "> Watching"
+	@make -j watch_css watch_system
+
+
+watch_css:
+	@watchexec -p -w src -w icidasset-template --filter *.css -- make css
+
+
+watch_system:
+	@watchexec -p -w src -w icidasset-template --ignore *.css -- make system

@@ -1,4 +1,5 @@
 .stack-work
-build
+*.cabal
+/build
 deploy.sh
 node_modules

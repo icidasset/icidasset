@@ -1,0 +1,34 @@
+name: icidasset
+version: 1.0.0
+
+
+dependencies:
+  - aeson
+  - base >= 4.7 && < 5
+  - directory
+  - flow
+  - icidasset-template
+  - lucid
+  - shikensu
+  - text
+  - time
+  - unordered-containers
+  - warp
+  - yaml
+
+
+executables:
+  # 🚜
+  build:
+    main: Main.hs
+    source-dirs:
+      - src
+      - system/Build
+    default-extensions:
+      - ExtendedDefaultRules
+      - OverloadedStrings
+
+  # 🏔
+  server:
+    main: Main.hs
+    source-dirs: system/Server
