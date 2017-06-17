@@ -178,8 +178,7 @@ writing parent obj =
     title = toHtml (obj !~> "title" :: String)
     href = Text.concat
       [ parent !~> "pathToRoot" :: Text
-      , "writings/"
-      , obj !~> "basename" :: Text
+      , obj !~> "dirname" :: Text
       , "/"
       ]
   in
