@@ -1,36 +1,34 @@
 module Main where
 
 import Catalogs
-import Data.Maybe (fromJust, fromMaybe)
 import Data.Text (Text)
 import Data.Time.Format (defaultTimeLocale, formatTime)
-import Data.Yaml (decodeFile)
 import Flow
 import Layouts.Application
 import Layouts.Writing
 import Renderers.Lucid
 import Renderers.Markdown
-import Shikensu
 import Shikensu.Contrib
 import Shikensu.Contrib.IO as Shikensu
 import Shikensu.Functions
 import Shikensu.Metadata
 import Shikensu.Types
 import Shikensu.Utilities
-import System.Directory (getModificationTime)
 import Utilities
 
 import qualified Data.Aeson as Aeson (Object, Value, toJSON)
-import qualified Data.HashMap.Strict as HashMap (fromList, singleton)
-import qualified Data.List as List (concatMap)
+import qualified Data.HashMap.Strict as HashMap (empty, fromList, singleton)
+import qualified Data.List as List (concatMap, find, map)
+import qualified Data.Maybe as Maybe (fromJust, fromMaybe)
 import qualified Data.Text as Text (pack)
 import qualified Data.Text.IO as Text (readFile)
+import qualified Data.Tuple as Tuple (fst, snd)
+import qualified Data.Yaml as Yaml (decodeFile)
+import qualified Shikensu
+import qualified System.Directory as Dir (getModificationTime)
 
 
 -- | (• ◡•)| (❍ᴥ❍ʋ)
-
-
-type Dependencies = Aeson.Object
 
 
 main :: IO Dictionary
@@ -47,30 +45,52 @@ main =
         write "./build" dictionary
 
 
-non_permalinked_pages :: [String]
-non_permalinked_pages =
+nonPermalinkedPages :: [String]
+nonPermalinkedPages =
     ["200", "404"]
-
-
-enshrine :: String -> (Dictionary -> IO Dictionary) -> IO Dictionary
-enshrine pattern operator =
-    Shikensu.listRelativeF "." [pattern] >>= operator
 
 
 
 -- Sequences
 
 
-sequences :: IO [(String, Dictionary)]
-sequences = lsequence
-    [ ( "pages",     enshrine   "src/Pages/**/*.hs"                 return          )
-    , ( "writings",  enshrine   "src/Writings/**/*.md"              Shikensu.read   )
-    , ( "images",    enshrine   "icidasset-template/images/**/*.*"  Shikensu.read   )
-    ]
+data Sequence
+    = Pages
+    | Writings
+    | Images
+    deriving (Eq)
 
 
-flow :: Dependencies -> (String, Dictionary) -> Dictionary
-flow deps ("pages", dict) =
+sequences :: IO [(Sequence, Dictionary)]
+sequences =
+    do
+        pages           <- list "src/Pages/**/*.hs"
+        images          <- list "icidasset-template/images/**/*.*"  >>= Shikensu.read
+        writings        <- writingsIO
+
+        return
+            [ (Images, images)
+            , (Pages, pages)
+            , (Writings, writings)
+            ]
+
+
+writingsIO :: IO Dictionary
+writingsIO =
+    list "src/Writings/**/*.md" >>= Shikensu.read
+
+
+list :: String -> IO Dictionary
+list thePattern =
+    Shikensu.listRelativeF "." [thePattern]
+
+
+
+-- Flows
+
+
+flow :: Dependencies -> (Sequence, Dictionary) -> Dictionary
+flow deps (Pages, dict) =
     dict
         |> renameExt ".hs" ".html"
         |> rename "NotFound.html" "404.html"
@@ -83,7 +103,7 @@ flow deps ("pages", dict) =
         |> renderContent (Renderers.Lucid.renderer Layouts.Application.template)
 
 
-flow deps ("writings", dict) =
+flow deps (Writings, dict) =
     dict
         |> renameExt ".md" ".html"
         |> permalink "index"
@@ -91,12 +111,12 @@ flow deps ("writings", dict) =
         |> prefixDirname "writings/"
         |> copyPropsToMetadata
         |> insertMetadata deps
-        |> renderContent (Renderers.Markdown.renderer)
+        |> renderContent Renderers.Markdown.renderer
         |> renderContent (Renderers.Lucid.renderer Layouts.Writing.template)
         |> renderContent (Renderers.Lucid.renderer Layouts.Application.template)
 
 
-flow _ ("images", dict) =
+flow _ (Images, dict) =
     dict
         |> prefixDirname "images/"
 
@@ -106,47 +126,56 @@ flow _ ("images", dict) =
 -- (Next to the sequences)
 
 
-dependencies :: IO Dependencies
-dependencies =
-    lsequence
-        [ ( "info",         parseYamlFile "src/Information.yaml"    )
-        , ( "intro",        getFileContents "src/Intro.md"          )
-        , ( "now",          getFileContents "src/Now.md"            )
-        , ( "nowDate",      getFileLastModDate "src/Now.md"         )
-        , ( "social",       getFileContents "src/Social.md"         )
-        , ( "writings",     gatherWritings                          )
-        ]
+type Dependencies = Aeson.Object
 
-    |> fmap (fmap $ \(a, b) -> (Text.pack a, b))
-    |> fmap (HashMap.fromList)
+
+dependencies :: IO Dependencies
+dependencies = do
+    info            <- decodeYaml "src/Information.yaml"
+    intro           <- fileContents "src/Intro.md"
+    now             <- fileContents "src/Now.md"
+    nowDate         <- fileModificationDate "src/Now.md"
+    social          <- fileContents "src/Social.md"
+    writings        <- gatherWritings
+
+    return $ HashMap.fromList
+        [ ("info", info)
+        , ("intro", intro)
+        , ("now", now)
+        , ("nowDate", nowDate)
+        , ("social", social)
+        , ("writings", writings)
+        ]
 
 
 gatherWritings :: IO Aeson.Value
-gatherWritings =
-    Shikensu.read
-        |> enshrine "src/Writings/**/*.md"
-        |> fmap (copyPropsToMetadata .> frontmatter .> fmap metadata .> Aeson.toJSON)
+gatherWritings = do
+    writings        <- writingsIO
+
+    (Writings, writings)
+        |> flow HashMap.empty
+        |> List.map metadata
+        |> Aeson.toJSON
+        |> return
 
 
-getFileContents :: String -> IO Aeson.Value
-getFileContents relativePath =
-    relativePath
-        |> Text.readFile
-        |> fmap (Aeson.toJSON)
+fileContents :: String -> IO Aeson.Value
+fileContents =
+    Text.readFile
+    .> fmap Aeson.toJSON
 
 
-getFileLastModDate :: String -> IO Aeson.Value
-getFileLastModDate relativePath =
-    relativePath
-        |> getModificationTime
-        |> fmap (formatTime defaultTimeLocale "%B %Y" .> Aeson.toJSON)
+fileModificationDate :: String -> IO Aeson.Value
+fileModificationDate =
+    Dir.getModificationTime
+    .> fmap (formatTime defaultTimeLocale "%B %Y")
+    .> fmap Aeson.toJSON
 
 
-parseYamlFile :: String -> IO Aeson.Value
-parseYamlFile relativePath =
-    relativePath
-        |> decodeFile
-        |> fmap (fromJust)
+decodeYaml :: String -> IO Aeson.Value
+decodeYaml =
+    Yaml.decodeFile
+    .> fmap Maybe.fromJust
 
 
 
@@ -154,26 +183,23 @@ parseYamlFile relativePath =
 
 
 permalinkPages :: Dictionary -> Dictionary
-permalinkPages =
-    fmap $ \def ->
-        if elem (basename def) non_permalinked_pages
+permalinkPages = fmap $
+    \def ->
+        if basename def `elem` nonPermalinkedPages
             then def { pathToRoot = "/" }
             else permalinkDef "index" def
 
 
 insertTitleIntoMetadata :: (Text -> Maybe Aeson.Value) -> Dictionary -> Dictionary
-insertTitleIntoMetadata finder =
-    let
-        insertMeta_ = flip insertMetadataDef
-    in
-        fmap $ \def ->
-            def
-                |> basename
-                |> Text.pack
-                |> finder
-                |> fmap (HashMap.singleton "title")
-                |> fmap (insertMeta_ def)
-                |> fromMaybe def
+insertTitleIntoMetadata finder = fmap $
+    \def ->
+        def
+            |> basename
+            |> Text.pack
+            |> finder
+            |> fmap (HashMap.singleton "title")
+            |> fmap (`insertMetadataDef` def)
+            |> Maybe.fromMaybe def
 
 
 titleFinder :: Metadata -> Text -> Text -> Maybe Aeson.Value
