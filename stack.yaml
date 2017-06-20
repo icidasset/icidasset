@@ -1,8 +1,8 @@
-resolver: lts-8.15
+resolver: lts-8.19
 
 packages:
 - '.'
 - './icidasset-template'
 
 extra-deps:
-- 'shikensu-0.3.3'
+- 'shikensu-0.3.5'

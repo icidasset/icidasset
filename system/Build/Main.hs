@@ -8,11 +8,11 @@ import Layouts.Application
 import Layouts.Writing
 import Renderers.Lucid
 import Renderers.Markdown
+import Shikensu
 import Shikensu.Contrib
 import Shikensu.Contrib.IO as Shikensu
 import Shikensu.Functions
 import Shikensu.Metadata
-import Shikensu.Types
 import Shikensu.Utilities
 import Utilities
 
@@ -24,7 +24,6 @@ import qualified Data.Text as Text (pack)
 import qualified Data.Text.IO as Text (readFile)
 import qualified Data.Tuple as Tuple (fst, snd)
 import qualified Data.Yaml as Yaml (decodeFile)
-import qualified Shikensu
 import qualified System.Directory as Dir (getModificationTime)
 
 
@@ -64,8 +63,8 @@ data Sequence
 sequences :: IO [(Sequence, Dictionary)]
 sequences =
     do
-        pages           <- list "src/Pages/**/*.hs"
-        images          <- list "icidasset-template/images/**/*.*"  >>= Shikensu.read
+        pages           <- encapsulate "src/Pages/**/*.hs"
+        images          <- encapsulate "icidasset-template/images/**/*.*"  >>= Shikensu.read
         writings        <- writingsIO
 
         return
@@ -77,11 +76,11 @@ sequences =
 
 writingsIO :: IO Dictionary
 writingsIO =
-    list "src/Writings/**/*.md" >>= Shikensu.read
+    encapsulate "src/Writings/**/*.md" >>= Shikensu.read
 
 
-list :: String -> IO Dictionary
-list thePattern =
+encapsulate :: String -> IO Dictionary
+encapsulate thePattern =
     Shikensu.listRelativeF "." [thePattern]
 
 
