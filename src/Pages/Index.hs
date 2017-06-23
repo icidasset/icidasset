@@ -1,190 +1,179 @@
 module Pages.Index where
 
 import Data.Text (Text)
-import Elements
 import Flow
-import Lucid.Base (Html, toHtml)
-import Lucid.Html5
-import Shikensu.Utilities ((!~>), (~>))
-import Types
-import Utilities ((↩))
+import Html
+import Html.Attributes
+import Html.Custom
+import Shikensu.Utilities
 
 import qualified Components.Blocks.Filler
-import qualified Data.Aeson as Aeson (Object, Value)
-import qualified Data.Text as Text (append, concat, pack, toLower)
+import qualified Data.Text as Text
+import qualified Shikensu (Metadata)
 
 
-template :: Template
+-- 🍯
+
+
+template :: Shikensu.Metadata -> Html -> Html
 template obj _ =
-  container_
-    [] ↩
-    [ p_
-        [ class_ "intro" ] ↩
-        [ markdownWithoutBlocks_ $ obj !~> "intro" ]
+    container
+        []
+        [ p
+            [ cls "intro" ]
+            [ markdownWithoutBlocks $ obj !~> "intro" ]
 
-    , blocks_
-        [] ↩
-        [ blocksRow_
-            [] ↩
-            [ nowBlock obj
-            , socialBlock obj
-            ]
+        , blocks
+            []
+            [ blocksRow
+                []
+                [ nowBlock obj
+                , socialBlock obj
+                ]
 
-        , blocksRow_
-            [] ↩
-            [ latestProjectsBlock obj
-            , latestWritingsBlock obj
-            ]
+            , blocksRow
+                []
+                [ latestProjectsBlock obj
+                , latestWritingsBlock obj
+                ]
 
-        , blocksRow_
-            [] ↩
-            [ Components.Blocks.Filler.template
-                [ class_ "has-content has-fixed-height", href_ "projects/" ]
-                "i-tools"
-                "See all projects"
-                obj
+            , blocksRow
+                []
+                [ Components.Blocks.Filler.template
+                    [ class_ "has-content has-fixed-height", href "projects/" ]
+                    "i-tools"
+                    "See all projects"
+                    obj
 
-            , Components.Blocks.Filler.template
-                [ class_ "has-content has-fixed-height", href_ "writings/" ]
-                "i-text-document"
-                "See all writings"
-                obj
-            ]
+                , Components.Blocks.Filler.template
+                    [ class_ "has-content has-fixed-height", href "writings/" ]
+                    "i-text-document"
+                    "See all writings"
+                    obj
+                ]
         ]
     ]
 
 
 
--- Blocks
+-- 🚜
 
 
-nowBlock :: Partial
+nowBlock :: Shikensu.Metadata -> Html
 nowBlock obj =
-  let
-    modifiedData = (obj !~> "nowDate")
-      |> Text.toLower
-      |> Text.append (Text.pack "Last update, ")
-      |> toHtml
-  in
-    block_
-      [] ↩
-      [ blockTitleLvl2_
-          [ class_ "is-colored" ] ↩
-          [ "What I’m doing now" ]
+    let
+        modifiedData = (obj !~> "nowDate")
+            |> Text.toLower
+            |> Text.append (Text.pack "Last update, ")
+    in
+        block
+            []
+            [ blockTitleLvl2
+                [ cls "is-colored" ]
+                [ "What I’m doing now" ]
 
-      , blockText_
-          [] ↩
-          [ markdown_ $ obj !~> "now" ]
+            , blockText
+                []
+                [ markdown $ obj !~> "now" ]
 
-      , blockText_
-          [ class_ "block__text--subtle" ] ↩
-          [ p_ (em_ [] ↩ [ modifiedData, "." ]) ]
-      ]
+            , blockText
+                [ cls "block__text--subtle" ]
+                [ p [] [ em [] [ text modifiedData, text "." ] ] ]
+            ]
 
 
-socialBlock :: Partial
+socialBlock :: Shikensu.Metadata -> Html
 socialBlock obj =
-  block_
-    [] ↩
-    [ blockTitleLvl2_
-        [ class_ "is-colored" ]
-        ("Social links")
-
-    , blockText_
+    block
         []
-        (markdown_ $ obj !~> "social")
-    ]
+        [ blockTitleLvl2
+            [ cls "is-colored" ]
+            [ text "Social links" ]
+
+        , blockText
+            []
+            [ markdown $ obj !~> "social" ]
+        ]
 
 
-latestProjectsBlock :: Partial
+latestProjectsBlock :: Shikensu.Metadata -> Html
 latestProjectsBlock obj =
-  let
-    reducer = \acc p ->
-      case p ~> "promote" of
-        Just True -> acc ++ [project p]
-        _         -> acc
+    let
+        reducer acc p =
+            case p ~> "promote" of
+                Just True -> acc ++ [ project p ]
+                _         -> acc
 
-    projectValues = (obj !~> "info" !~> "projects" :: [Aeson.Object])
-    projects = foldl reducer [] projectValues
+        projectValues = (obj !~> "info" !~> "projects" :: [Shikensu.Metadata])
+        projects = foldl reducer [] projectValues
   in
-    block_
-      [] ↩
-      [ blockTitleLvl2_
-          [ class_ "is-colored" ]
-          ("Latest projects")
+        block
+            []
+            [ blockTitleLvl2
+                [ cls "is-colored" ]
+                [ text "Latest projects" ]
 
-      , blockList_
-          []
-          (ul_ ↩ projects)
+            , blockList
+                []
+                [ ul [] projects ]
 
-      , blockText_
-          [ class_ "block__text--subtle" ]
-          ( p_ (em_ "Ordered by name.") )
-      ]
+            , blockText
+                [ cls "block__text--subtle" ]
+                [ p [] [ em [] [ text "Ordered by name." ] ] ]
+            ]
 
 
-latestWritingsBlock :: Partial
+latestWritingsBlock :: Shikensu.Metadata -> Html
 latestWritingsBlock obj =
-  let
-    reducer = \acc w ->
-      let
-        isPublished = w !~> "published" :: Bool
-        isPromoted  = w ~> "promote" :: Maybe Bool
-      in
-        case isPromoted of
-          Just True -> if isPublished == True then acc ++ [writing obj w] else acc
-          _         -> acc
+    let
+        reducer acc w =
+            case w ~> "promote" of
+                Just True ->
+                    if w !~> "published" then
+                        acc ++ [ writing obj w ]
+                    else
+                        acc
+                _ ->
+                    acc
 
-    writingValues = (obj !~> "writings" :: [Aeson.Object])
-    writings = foldl reducer [] writingValues
-  in
-    block_
-      [] ↩
-      [ blockTitleLvl2_
-          [ class_ "is-colored" ]
-          ("Latest writings")
+        writingValues = obj !~> "writings" :: [Shikensu.Metadata]
+        writings = foldl reducer [] writingValues
+    in
+        block
+            []
+            [ blockTitleLvl2
+                [ cls "block__title is-colored" ]
+                [ text "Latest writings" ]
 
-      , blockList_
-          []
-          (ul_ ↩ writings)
+            , blockList
+                []
+                [ ul [] writings ]
 
-      , blockText_
-          [ class_ "block__text--subtle" ]
-          ( p_ (em_ "Ordered by name.") )
+            , blockText
+                [ cls "block__text--subtle" ]
+                [ p [] [ em [] [ text "Ordered by name." ] ] ]
       ]
 
 
 
--- Helpers
+-- 🎒
 
 
-project :: Aeson.Object -> Html ()
+project :: Shikensu.Metadata -> Html
 project obj =
-  let
-    name = toHtml (obj !~> "name" :: String)
-    url = obj !~> "url" :: Text
-  in
-    li_
-      [] ↩
-      [ a_
-        [ href_ url ] ↩
-        [ name ]
-      ]
+    li
+        []
+        [ a
+            [ href (obj !~> "url" :: Text) ]
+            [ text (obj !~> "name" :: Text) ]
+        ]
 
 
-writing :: Aeson.Object -> Aeson.Object -> Html ()
+writing :: Shikensu.Metadata -> Shikensu.Metadata -> Html
 writing parent obj =
-  let
-    title = toHtml (obj !~> "title" :: String)
-    href = Text.concat
-      [ parent !~> "pathToRoot" :: Text
-      , obj !~> "dirname" :: Text
-      , "/"
-      ]
-  in
-    li_
-      [] ↩
-      [ a_
-        [ href_ href ] ↩
-        [ title ]
-      ]
+    li
+        []
+        [ a
+            [ hrefRelativeDir obj ]
+            [ text (obj !~> "title" :: Text) ]
+        ]

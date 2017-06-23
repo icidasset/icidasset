@@ -1,90 +1,90 @@
 module Pages.Projects where
 
 import Data.Text (Text)
-import Elements
-import Flow
-import Lucid.Base (Html, makeAttribute, toHtml)
-import Lucid.Html5
-import Shikensu.Utilities ((!~>), (~>))
-import Types
-import Utilities ((↩))
+import Html
+import Html.Attributes
+import Html.Custom
+import Shikensu.Utilities
 
 import qualified Components.Blocks.Filler
-import qualified Data.Aeson as Aeson (Object, Value)
-import qualified Data.Text as Text (append, concat, pack, toLower)
+import qualified Data.Text as Text
+import qualified Shikensu (Metadata)
 
 
-template :: Template
+-- 🍯
+
+
+template :: Shikensu.Metadata -> Html -> Html
 template obj _ =
-  container_
-    [] ↩
-    [ blocks_
-        [] ↩
-        [ blocksRow_
-            [ class_ "has-no-margin-top" ] ↩
-            [ leftSide obj
-            , rightSide obj
+    container
+        []
+        [ blocks
+            []
+            [ blocksRow
+                [ cls "has-no-margin-top" ]
+                [ left obj
+                , right obj
+                ]
             ]
         ]
-    ]
 
 
 
--- Blocks
+-- 👈
 
 
-leftSide :: Partial
-leftSide obj =
-  let
-    projectValues = (obj !~> "info" !~> "projects" :: [Aeson.Object])
-    projects = fmap project projectValues
-  in
-    block_
-      [] ↩
-      [ blockTitleLvl1_
-          [] ↩
-          [ toHtml (obj !~> "title" :: String) ]
+left :: Shikensu.Metadata -> Html
+left obj =
+    let
+        projectValues = obj !~> "info" !~> "projects"
+        projects = fmap project projectValues
+    in
+        block
+            []
+            [ blockTitleLvl1
+                []
+                [ text $ obj !~> "title" ]
 
-      , blockList_
-          [ class_ "has-extra-space" ] ↩
-          [ ul_ ↩ projects ]
+            , blockList
+                [ cls "has-extra-space" ]
+                [ ul [] projects ]
 
-      , blockText_
-          [ class_ "block__text--subtle" ] ↩
-          [ p_ (em_ "Ordered by name.") ]
-      ]
-
-
-rightSide :: Partial
-rightSide obj =
-  Components.Blocks.Filler.template
-    [ makeAttribute "hide-lt" "small" ]
-    "i-tools"
-    (obj !~> "title")
-    (obj)
+            , blockText
+                [ cls "block__text--subtle" ]
+                [ p [] [ em [] [ text "Ordered by name." ] ] ]
+            ]
 
 
 
--- Helpers
+-- 👉
 
 
-project :: Aeson.Object -> Html ()
+right :: Shikensu.Metadata -> Html
+right obj =
+    Components.Blocks.Filler.template
+        [ attr "hide-lt" "small" ]
+        "i-tools"
+        (obj !~> "title")
+        obj
+
+
+
+-- 🎒
+
+
+project :: Shikensu.Metadata -> Html
 project obj =
-  let
-    name  = toHtml (obj !~> "name" :: String)
-    desc  = toHtml (obj !~> "description" :: String)
-    url   = obj !~> "url" :: Text
-  in
-    li_
-      [] ↩
-      [ a_
-          [ href_ url ] ↩
-          [ name ]
+    li
+        []
+        [ a
+            [ href $ obj !~> "url" ]
+            [ text $ obj !~> "name" ]
 
-      , br_
-          []
+        , br
+            []
+            []
 
-      , small_
-          [ class_ "small--block" ] ↩
-          [ desc ]
-      ]
+        , small
+            [ cls "small--block" ]
+            [ text $ obj !~> "description" ]
+        ]

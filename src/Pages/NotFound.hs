@@ -1,51 +1,54 @@
 module Pages.NotFound where
 
 import Data.Text (Text)
-import Elements
-import Flow
-import Lucid.Base (Html, makeAttribute, toHtml)
-import Lucid.Html5
-import Shikensu.Utilities ((!~>), (~>))
-import Types
-import Utilities ((↩))
+import Html
+import Html.Attributes
+import Html.Custom
+import Shikensu.Utilities
 
 import qualified Components.Blocks.Filler
-import qualified Data.Aeson as Aeson (Object, Value)
-import qualified Data.Text as Text (append, concat, pack, toLower)
+import qualified Data.Text as Text
+import qualified Shikensu (Metadata)
 
 
-template :: Template
+-- 🍯
+
+
+template :: Shikensu.Metadata -> Html -> Html
 template obj _ =
-  container_
-    [] ↩
-    [ blocks_
-        [] ↩
-        [ blocksRow_
-            [ class_ "has-no-margin-top" ] ↩
-            [ leftSide obj
-            , rightSide obj
+    container
+        []
+        [ blocks
+            []
+            [ blocksRow
+                [ cls "has-no-margin-top" ]
+                [ left obj
+                , right obj
+                ]
             ]
         ]
-    ]
 
 
 
--- Blocks
+-- 👈
 
 
-leftSide :: Partial
-leftSide obj =
-  Components.Blocks.Filler.template
-    []
-    "i-megaphone"
-    (obj !~> "title")
-    (obj)
+left :: Shikensu.Metadata -> Html
+left obj =
+    Components.Blocks.Filler.template
+        []
+        "i-megaphone"
+        (obj !~> "title")
+        obj
 
 
-rightSide :: Partial
-rightSide obj =
-  Components.Blocks.Filler.template
-    [ class_ "has-content", href_ "../" ]
-    "i-home"
-    "Go to the homepage"
-    obj
+
+-- 👉
+
+
+right :: Shikensu.Metadata -> Html
+right =
+    Components.Blocks.Filler.template
+        [ cls "has-content", href "../" ]
+        "i-home"
+        "Go to the homepage"

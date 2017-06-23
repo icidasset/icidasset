@@ -1,91 +1,97 @@
 module Pages.Books where
 
 import Data.Text (Text)
-import Elements
-import Flow
-import Lucid.Base (Html, makeAttribute, toHtml)
-import Lucid.Html5
-import Shikensu.Utilities ((!~>), (~>))
-import Types
-import Utilities ((↩))
+import Html
+import Html.Attributes
+import Html.Custom
+import Prelude hiding (span)
+import Shikensu.Utilities
 
 import qualified Components.Blocks.Filler
-import qualified Data.Aeson as Aeson (Object, Value)
-import qualified Data.Text as Text (append, concat, pack, toLower)
+import qualified Data.Text as Text
+import qualified Shikensu (Metadata)
 
 
-template :: Template
+-- 🍯
+
+
+template :: Shikensu.Metadata -> Html -> Html
 template obj _ =
-  container_
-    [] ↩
-    [ blocks_
-        [] ↩
-        [ blocksRow_
-            [ class_ "has-no-margin-top" ] ↩
-            [ leftSide obj
-            , rightSide obj
+    container
+        []
+        [ blocks
+            []
+            [ blocksRow
+                [ cls "has-no-margin-top" ]
+                [ left obj
+                , right obj
+                ]
             ]
         ]
-    ]
 
 
 
--- Blocks
+-- 👈
 
 
-leftSide :: Partial
-leftSide obj =
-  let
-    bookValues = (obj !~> "info" !~> "books" :: [Aeson.Object])
-    books = fmap book bookValues
-  in
-    block_
-      [] ↩
-      [ blockTitleLvl1_
-          [] ↩
-          [ toHtml (obj !~> "title" :: String) ]
+left :: Shikensu.Metadata -> Html
+left obj =
+    let
+        bookValues = obj !~> "info" !~> "books"
+        books = fmap book bookValues
+    in
+        block
+            []
+            [ blockTitleLvl1
+                []
+                [ text (obj !~> "title") ]
 
-      , blockList_
-          [] ↩
-          [ ul_ ↩ books ]
+            , blockList
+                []
+                [ ul [] books ]
 
-      , blockText_
-          [ class_ "block__text--subtle" ] ↩
-          [ p_ (em_ "Ordered by name.") ]
-      ]
+            , blockText
+                [ cls "block__text--subtle" ]
+                [ p [] [ em [] [ text "Ordered by name." ] ] ]
+            ]
 
 
-rightSide :: Partial
-rightSide obj =
+
+-- 👉
+
+
+right :: Shikensu.Metadata -> Html
+right obj =
   Components.Blocks.Filler.template
-    [ makeAttribute "hide-lt" "small" ]
+    [ attr "hide-lt" "small" ]
     "i-book"
     (obj !~> "title")
-    (obj)
+    obj
 
 
 
--- Helpers
+-- 🎒
 
 
-book :: Aeson.Object -> Html ()
+book :: Shikensu.Metadata -> Html
 book obj =
-  let
-    title  = toHtml (obj !~> "title" :: String)
-    author = toHtml (obj !~> "author" :: String)
-  in
-    li_
-      [] ↩
-      [ title
+    li
+        []
+        [ text (obj !~> "title")
 
-      , case obj ~> "reading" of
-          Just True -> span_ [ class_ "block__list__affix" ] "Currently reading"
-          _         -> ""
+        , case obj ~> "reading" of
+            Just True ->
+                span
+                    [ cls "block__list__affix" ]
+                    [ text "Currently reading" ]
+            _ ->
+                nothing
 
-      , br_
-          []
+        , br
+            []
+            []
 
-      , small_
-          [] ↩
-          [ "by ", author ]
-      ]
+        , small
+            []
+            [ text "by ", text (obj !~> "author") ]
+        ]

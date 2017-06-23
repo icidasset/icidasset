@@ -1,94 +1,88 @@
 module Pages.Writings where
 
 import Data.Text (Text)
-import Elements
-import Flow
-import Lucid.Base (Html, makeAttribute, toHtml)
-import Lucid.Html5
-import Shikensu.Utilities ((!~>), (~>))
-import Types
-import Utilities ((↩))
+import Html
+import Html.Attributes
+import Html.Custom
+import Shikensu.Utilities
 
 import qualified Components.Blocks.Filler
-import qualified Data.Aeson as Aeson (Object, Value)
-import qualified Data.Text as Text (append, concat, pack, toLower)
+import qualified Data.Text as Text
+import qualified Shikensu (Metadata)
 
 
-template :: Template
+-- 🍯
+
+
+template :: Shikensu.Metadata -> Html -> Html
 template obj _ =
-  container_
-    [] ↩
-    [ blocks_
-        [] ↩
-        [ blocksRow_
-            [ class_ "has-no-margin-top" ] ↩
-            [ leftSide obj
-            , rightSide obj
+    container
+        []
+        [ blocks
+            []
+            [ blocksRow
+                [ cls "has-no-margin-top" ]
+                [ left obj
+                , right obj
+                ]
             ]
         ]
-    ]
 
 
 
--- Blocks
+-- 👈
 
 
-leftSide :: Partial
-leftSide obj =
-  let
-    reducer = \acc w ->
-      let
-        isPublished = w !~> "published" :: Bool
-      in
-        case isPublished of
-          True -> acc ++ [writing obj w]
-          _    -> acc
+left :: Shikensu.Metadata -> Html
+left obj =
+    let
+        reducer acc w =
+            if w !~> "published" then
+                acc ++ [ writing obj w ]
+            else
+                acc
 
-    writingValues = (obj !~> "writings" :: [Aeson.Object])
-    writings = foldl reducer [] writingValues
-  in
-    block_
-      [] ↩
-      [ blockTitleLvl1_
-          [] ↩
-          [ toHtml (obj !~> "title" :: String) ]
+        writingValues = obj !~> "writings" :: [Shikensu.Metadata]
+        writings = foldl reducer [] writingValues
+    in
+        block
+            []
+            [ blockTitleLvl1
+                []
+                [ text (obj !~> "title" :: Text) ]
 
-      , blockList_
-          [] ↩
-          [ ul_ ↩ writings ]
+            , blockList
+                []
+                [ ul [] writings ]
 
-      , blockText_
-          [ class_ "block__text--subtle" ] ↩
-          [ p_ (em_ "Ordered by name.") ]
-      ]
-
-
-rightSide :: Partial
-rightSide obj =
-  Components.Blocks.Filler.template
-    [ makeAttribute "hide-lt" "small" ]
-    "i-text-document"
-    (obj !~> "title")
-    obj
+            , blockText
+                [ cls "block__text--subtle" ]
+                [ p [] [ em [] [ text "Ordered by name." ] ] ]
+            ]
 
 
 
--- Helpers
+-- 👉
 
 
-writing :: Aeson.Object -> Aeson.Object -> Html ()
+right :: Shikensu.Metadata -> Html
+right obj =
+    Components.Blocks.Filler.template
+        [ attr "hide-lt" "small" ]
+        "i-text-document"
+        (obj !~> "title")
+        obj
+
+
+
+-- 🎒
+
+
+writing :: Shikensu.Metadata -> Shikensu.Metadata -> Html
 writing parent obj =
-  let
-    title = toHtml (obj !~> "title" :: String)
-    href  = Text.concat
-      [ parent !~> "pathToRoot" :: Text
-      , obj !~> "dirname" :: Text
-      , "/"
-      ]
-  in
-    li_
-      [] ↩
-      [ a_
-          [ href_ href ] ↩
-          [ title ]
-      ]
+    li
+        []
+        [ a
+            [ hrefRelativeDir obj ]
+            [ text (obj !~> "title" :: Text) ]
+        ]
