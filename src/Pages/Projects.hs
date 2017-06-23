@@ -1,12 +1,12 @@
 module Pages.Projects where
 
+import Components.Blocks.Filler
 import Data.Text (Text)
 import Html
 import Html.Attributes
 import Html.Custom
 import Shikensu.Utilities
 
-import qualified Components.Blocks.Filler
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
 
@@ -63,9 +63,12 @@ right :: Shikensu.Metadata -> Html
 right obj =
     Components.Blocks.Filler.template
         [ attr "hide-lt" "small" ]
-        "i-tools"
-        (obj !~> "title")
-        obj
+
+        Filler
+        { icon = "i-tools"
+        , label = obj !~> "title"
+        , metadata = obj
+        }
 
 
 

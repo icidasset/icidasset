@@ -25,6 +25,8 @@ executables:
       - src
       - system/Build
     default-extensions:
+      - DisambiguateRecordFields
+      - DuplicateRecordFields
       - ExtendedDefaultRules
       - OverloadedStrings
 

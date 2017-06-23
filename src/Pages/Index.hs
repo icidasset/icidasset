@@ -1,5 +1,6 @@
 module Pages.Index where
 
+import Components.Blocks.Filler
 import Data.Text (Text)
 import Flow
 import Html
@@ -7,7 +8,6 @@ import Html.Attributes
 import Html.Custom
 import Shikensu.Utilities
 
-import qualified Components.Blocks.Filler
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
 
@@ -41,15 +41,21 @@ template obj _ =
                 []
                 [ Components.Blocks.Filler.template
                     [ class_ "has-content has-fixed-height", href "projects/" ]
-                    "i-tools"
-                    "See all projects"
-                    obj
+
+                    Filler
+                    { icon = "i-tools"
+                    , label = "See all projects"
+                    , metadata = obj
+                    }
 
                 , Components.Blocks.Filler.template
                     [ class_ "has-content has-fixed-height", href "writings/" ]
-                    "i-text-document"
-                    "See all writings"
-                    obj
+
+                    Filler
+                    { icon = "i-text-document"
+                    , label = "See all writings"
+                    , metadata = obj
+                    }
                 ]
         ]
     ]

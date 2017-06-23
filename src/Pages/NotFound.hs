@@ -1,12 +1,12 @@
 module Pages.NotFound where
 
+import Components.Blocks.Filler
 import Data.Text (Text)
 import Html
 import Html.Attributes
 import Html.Custom
 import Shikensu.Utilities
 
-import qualified Components.Blocks.Filler
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
 
@@ -37,9 +37,12 @@ left :: Shikensu.Metadata -> Html
 left obj =
     Components.Blocks.Filler.template
         []
-        "i-megaphone"
-        (obj !~> "title")
-        obj
+
+        Filler
+        { icon = "i-megaphone"
+        , label = obj !~> "title"
+        , metadata = obj
+        }
 
 
 
@@ -47,8 +50,12 @@ left obj =
 
 
 right :: Shikensu.Metadata -> Html
-right =
+right obj =
     Components.Blocks.Filler.template
         [ cls "has-content", href "../" ]
-        "i-home"
-        "Go to the homepage"
+
+        Filler
+        { icon = "i-home"
+        , label = "Go to the homepage"
+        , metadata = obj
+        }

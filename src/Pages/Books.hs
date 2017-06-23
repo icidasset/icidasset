@@ -1,5 +1,6 @@
 module Pages.Books where
 
+import Components.Blocks.Filler
 import Data.Text (Text)
 import Html
 import Html.Attributes
@@ -7,7 +8,6 @@ import Html.Custom
 import Prelude hiding (span)
 import Shikensu.Utilities
 
-import qualified Components.Blocks.Filler
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
 
@@ -62,11 +62,14 @@ left obj =
 
 right :: Shikensu.Metadata -> Html
 right obj =
-  Components.Blocks.Filler.template
-    [ attr "hide-lt" "small" ]
-    "i-book"
-    (obj !~> "title")
-    obj
+    Components.Blocks.Filler.template
+        [ attr "hide-lt" "small" ]
+
+        Filler
+        { icon = "i-book"
+        , label = obj !~> "title"
+        , metadata = obj
+        }
 
 
 
@@ -77,8 +80,10 @@ book :: Shikensu.Metadata -> Html
 book obj =
     li
         []
-        [ text (obj !~> "title")
+        [ -- Title
+          text $ obj !~> "title"
 
+          -- Status
         , case obj ~> "reading" of
             Just True ->
                 span
@@ -91,7 +96,10 @@ book obj =
             []
             []
 
+          -- Additional info
         , small
             []
-            [ text "by ", text (obj !~> "author") ]
+            [ text "by "
+            , text $ obj !~> "author"
+            ]
         ]
