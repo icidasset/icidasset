@@ -7,6 +7,7 @@ import Html.Attributes
 import Html.Custom
 import Shikensu.Utilities
 
+import qualified Data.Maybe as Maybe
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
 
@@ -49,7 +50,7 @@ left obj =
             []
             [ blockTitleLvl1
                 []
-                [ text (obj !~> "title" :: Text) ]
+                [ text $ obj !~> "title" ]
 
             , blockList
                 []
@@ -87,5 +88,5 @@ writing parent obj =
         []
         [ a
             [ hrefRelativeDir obj ]
-            [ text (obj !~> "title" :: Text) ]
+            [ text $ Maybe.fromMaybe (obj !~> "title") (obj ~> "short_title") ]
         ]
