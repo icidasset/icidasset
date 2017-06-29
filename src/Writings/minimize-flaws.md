@@ -12,7 +12,7 @@ _This is the written version of [a talk I did recently](http://flaws.icidasset.c
 
 ## Elm & Haskell
 
-I'm going to focus on the language [Elm](http://elm-lang.org/), which is used to build client-side web applications. Mainly because it's easy to learn and it doesn't use the "slightly" more difficult terminology like monads. That said, the second focus is on Haskell, and quite a bit can be applied to other languages. Haskell does use a more difficult terminology, but a lot of the basic code is pretty much the same.
+For this article I chose [Elm](http://elm-lang.org/) and [Haskell](https://haskell-lang.org/), because I enjoy working with them and also Elm is really easy to learn. Haskell isn't, but the basic code in this article is pretty much the same. More on Haskell later.
 
 
 
@@ -39,7 +39,7 @@ sayHelloToTony =
     sayHelloTo myLittleFriend
 ```
 
-There's no way we can change myLittleFriend or sayHelloTo once they are defined, they are immutable. They also have no side effects, meaning that there are no calls to something outside our control. At all times we know what's going on, or at least the compiler does. So our sayHelloToTony function is **guaranteed to produce the same result every time**.
+There's no way we can change <x-cl-6>myLittleFriend</x-cl-6> or <x-cl-6>sayHelloTo</x-cl-6> once they are defined, they are immutable. They also have no side effects, meaning that there are no calls to something outside our control. At all times we know what's going on, or at least the compiler does. So our <x-cl-6>sayHelloToTony</x-cl-6> function is **guaranteed to produce the same result every time**.
 
 ```elm
 myLittleFriend : String
@@ -54,7 +54,7 @@ sayHelloToFrank =
         sayHelloTo myLittleFriend
 ```
 
-If we would write a new function called sayHelloToFrank where we bind the string `"Frank"` to myLittleFriend, but only in the context of this new function. This will not change our original top level binding of myLittleFriend, so in other words, our sayHelloToTony function will still return the same value.
+If we would write a new function called <x-cl-6>sayHelloToFrank</x-cl-6> where we bind the string `"Frank"` to `myLittleFriend`, but only in the context of this new function. This will not change our original top level binding of <x-cl-6>myLittleFriend</x-cl-6>, so in other words, our <x-cl-6>sayHelloToTony</x-cl-6> function will still return the same value.
 
 Now, that sounds great and all, but didn't you say that Elm is used for web applications? It has to use the DOM and the browser environment right? Which is one big mess of code that's outside our control, that could change at any time without us knowing? Yup, exactly. Javascript is a giant ball of side effects. Gets messy real fast.
 
@@ -144,9 +144,9 @@ reduceActions actions =
         action::other -> doActionAndQueueOther action other
 ```
 
-This function is a bit complex, but quite easy to follow because of the pattern matching `case` statement. What happens is we take a list of `Action`s and reduce it to a single `Action`. The logic goes as follows:
+This function is a bit complex, but quite easy to follow because of the pattern matching `case` statement. What happens is we take a list of <x-cl-2>Action</x-cl-2>'s and reduce it to a single <x-cl-2>Action</x-cl-2>. The logic goes as follows:
 
-- If we get an empty list, the action is `DoNothing`.
+- If we get an empty list, the action is <x-cl-2>DoNothing</x-cl-2>.
 - If we get a list with a single action, do that action.
 - If we get a list with two actions, make an action which is a multitasking action.
 - If we get a list with more than two actions, make an action in which we first do the first action in the list and then sequentially do the other actions.
@@ -155,7 +155,7 @@ Really useful stuff 👌
 
 #### Maybe
 
-Probably the most common thing that we have to do when dealing with data in dynamic languages is handling `null`, which are the cause of so many runtime errors. In functional languages there is no null type, but instead you have the `Maybe` type or the `Option` type. These are also sometimes found in non-functional languages like, for example, Rust.
+Probably the most common thing that we have to do when dealing with data in dynamic languages is handling `null`, which are the cause of so many runtime errors. In functional languages there is no null type, but instead you have the <x-cl-2>Maybe</x-cl-2> type or the <x-cl-2>Option</x-cl-2> type. These are also sometimes found in non-functional languages like, for example, Rust.
 
 You can see by its definition that these types are really simple, but incredibly useful.
 
@@ -223,13 +223,11 @@ decodeString (field "height" (maybe float)) json == Err ...
 
 Maybe we have a field called `height`, maybe we don't. Or another scenario, we do have a field called `height` and maybe the type of its value is a float.
 
-In the first scenario, if we wouldn't have that field, the result would be `Ok Nothing`, or in other words, the parsing went fine but we didn't find a value. In the second scenario, if we wouldn't have that field, we would get an `Err`, because it tries to parse something that isn't there.
-
-**This goes to show how far you can go in predicting things.**
+In the first scenario, if we wouldn't have that field, the result would be `Ok Nothing`, or in other words, the parsing went fine but we didn't find a value. In the second scenario, if we wouldn't have that field, we would get an `Err`, because it tries to parse something that isn't there. **This goes to show how far you can go in predicting things.**
 
 #### What about Haskell?
 
-Like I said in the beginning, Elm is functional programming without the difficult terminology. But if you would like to get started with Haskell, it's useful to know about functors, applicatives and monads. Small hint, `Maybe` implements all of these. That said, pattern matching, union types, etc. all use pretty much the same syntax. The only difference is that sometimes different keywords are used (eg. in Elm you say `type A`, but in Haskell you'd say `data A`). Other than that, the libraries are somewhat different in Haskell. For example, `Data.List.head` in Haskell doesn't return a `Maybe`, but that's just a matter of reading documentation.
+Like I said in the beginning, Elm is functional programming without the difficult terminology. But if you would like to get started with Haskell, it's useful to know about [functors, applicatives and monads](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html). Small hint, `Maybe` implements all of these. That said, pattern matching, union types, etc. all use pretty much the same syntax. The only difference is that sometimes different keywords are used (eg. in Elm you say `type A`, but in Haskell you'd say `data A`). Other than that, the libraries are somewhat different in Haskell. For example, `Data.List.head` in Haskell doesn't return a `Maybe`, but that's just a matter of reading documentation.
 
 Anyhow, to go back to the functors and things. These things are abstractions, like a set of [algebraic laws](https://en.wikiversity.org/wiki/Basic_Laws_of_Algebra) and [abstract algebra](https://www.youtube.com/watch?v=IP7nW_hKB7I). In Haskell these abstractions take the form of type classes, a common set of laws that apply to types.
 
@@ -262,7 +260,7 @@ makeAttributes =
 
 Functional code is also incredibly easy to refactor, this goes hand in hand with the prevention of runtime exceptions. It's easy to refactor because, take for example, records. **Whenever we add or change a field from a record, the compiler tells us where we still have to add or change that field.**
 
-For this example, Elm will tell us that our makeAttributes function should return a record of the type `Attributes`, but that it currently is returning a record without the `easy` field. So if we then just add that 'easy' field, makeAttributes will return something of the type 'Attributes'. Problem solved!
+For this example, Elm will tell us that our <x-cl-6>makeAttributes</x-cl-6> function should return a record of the type <x-cl-2>Attributes</x-cl-2>, but that it currently is returning a record without the `easy` field. So if we then just add that `easy` field, <x-cl-6>makeAttributes</x-cl-6> will return something of the type <x-cl-2>Attributes</x-cl-2>. Problem solved!
 
 > You just can't miss any spots to fill in or update, so you no longer need to think about those things. You can refactor without the additional stress. More time to focus on the important pieces of the puzzle
 
