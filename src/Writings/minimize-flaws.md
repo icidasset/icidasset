@@ -4,6 +4,7 @@ short_title: "Minimize Flaws Using Functional Programming"
 category: "Code"
 published: true
 promote: true
+creation_date: 26-06-2017
 ---
 
 _This is the written version of [a talk I did recently](http://flaws.icidasset.com/). How can we make our code more predictable and easier to reason about, and how can we use typed functional programming to do that._

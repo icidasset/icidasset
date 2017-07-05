@@ -3,6 +3,7 @@ title: "Functional Programming & Elixir – Pt. 1, The Basics"
 category: "Code"
 published: true
 promote: true
+creation_date: 06-07-2016
 ---
 
 *It might be difficult to get into functional programming because of

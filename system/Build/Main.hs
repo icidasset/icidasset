@@ -24,13 +24,14 @@ import qualified Data.Text as Text (pack)
 import qualified Data.Text.IO as Text (readFile)
 import qualified Data.Tuple as Tuple (fst, snd)
 import qualified Data.Yaml as Yaml (decodeFile)
+import qualified Feed
 import qualified System.Directory as Dir (getModificationTime)
 
 
 -- | (• ◡•)| (❍ᴥ❍ʋ)
 
 
-main :: IO Dictionary
+main :: IO ()
 main =
     do
         de <- dependencies
@@ -42,6 +43,11 @@ main =
 
         -- Write to disk
         write "./build" dictionary
+
+        -- RSS Feed
+        createFeed
+
+
 
 
 nonPermalinkedPages :: [String]
@@ -56,6 +62,7 @@ nonPermalinkedPages =
 data Sequence
     = Pages
     | Writings
+    | WritingsWithLayout
     | Images
     deriving (Eq)
 
@@ -70,7 +77,7 @@ sequences =
         return
             [ (Images, images)
             , (Pages, pages)
-            , (Writings, writings)
+            , (WritingsWithLayout, writings)
             ]
 
 
@@ -102,6 +109,13 @@ flow deps (Pages, dict) =
         |> renderContent (Renderers.Lucid.renderer Layouts.Application.template)
 
 
+flow deps (WritingsWithLayout, dict) =
+    (Writings, dict)
+        |> flow deps
+        |> renderContent (Renderers.Lucid.renderer Layouts.Writing.template)
+        |> renderContent (Renderers.Lucid.renderer Layouts.Application.template)
+
+
 flow deps (Writings, dict) =
     dict
         |> renameExt ".md" ".html"
@@ -111,8 +125,6 @@ flow deps (Writings, dict) =
         |> copyPropsToMetadata
         |> insertMetadata deps
         |> renderContent Renderers.Markdown.renderer
-        |> renderContent (Renderers.Lucid.renderer Layouts.Writing.template)
-        |> renderContent (Renderers.Lucid.renderer Layouts.Application.template)
 
 
 flow _ (Images, dict) =
@@ -175,6 +187,20 @@ decodeYaml :: String -> IO Aeson.Value
 decodeYaml =
     Yaml.decodeFile
     .> fmap Maybe.fromJust
+
+
+
+-- Feed
+
+
+createFeed :: IO ()
+createFeed = do
+    writings        <- writingsIO
+
+    (Writings, writings)
+        |> flow HashMap.empty
+        |> Feed.create
+        |> writeFile "./build/feed.xml"
 
 
 
