@@ -4,6 +4,8 @@ import Catalogs
 import Data.Text (Text)
 import Data.Time.Format (defaultTimeLocale, formatTime)
 import Flow
+import Html hiding (title)
+import Html.Attributes
 import Layouts.Application
 import Layouts.Writing
 import Renderers.Lucid
@@ -106,14 +108,7 @@ flow deps (Pages, dict) =
         |> copyPropsToMetadata
         |> insertMetadata deps
         |> renderContent (Renderers.Lucid.catalogRenderer Catalogs.pages)
-        |> renderContent (Renderers.Lucid.renderer Layouts.Application.template)
-
-
-flow deps (WritingsWithLayout, dict) =
-    (Writings, dict)
-        |> flow deps
-        |> renderContent (Renderers.Lucid.renderer Layouts.Writing.template)
-        |> renderContent (Renderers.Lucid.renderer Layouts.Application.template)
+        |> renderContent (Renderers.Lucid.renderer appLayout)
 
 
 flow deps (Writings, dict) =
@@ -125,6 +120,13 @@ flow deps (Writings, dict) =
         |> copyPropsToMetadata
         |> insertMetadata deps
         |> renderContent Renderers.Markdown.renderer
+
+
+flow deps (WritingsWithLayout, dict) =
+    (Writings, dict)
+        |> flow deps
+        |> renderContent (Renderers.Lucid.renderer Layouts.Writing.template)
+        |> renderContent (Renderers.Lucid.renderer appLayout)
 
 
 flow _ (Images, dict) =
@@ -201,6 +203,19 @@ createFeed = do
         |> flow HashMap.empty
         |> Feed.create
         |> writeFile "./build/feed.xml"
+
+
+
+appLayout :: Metadata -> Html -> Html
+appLayout =
+    Layouts.Application.template $
+        link
+            [ href "http://icidasset.com/feed.xml"
+            , rel "alternate"
+            , title "I.A."
+            , typ "application/rss+xml"
+            ]
+            []
 
 
 
