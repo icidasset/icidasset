@@ -2,6 +2,7 @@
 title: "Workout Schedule"
 category: "Reminders"
 published: true
+published_on: 20-03-2015
 ---
 
 Low-intensity <small>*(light-weight, half of normal, or less)*</small>

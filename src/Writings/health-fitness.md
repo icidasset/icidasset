@@ -2,8 +2,8 @@
 title: "Notes on Health & Fitness"
 category: "Reminders"
 published: true
+published_on: 21-03-2015
 promote: true
-creation_date: 21-03-2015
 ---
 
 Most of this is based upon the research of [Tim](http://fourhourbody.com/) [Ferriss](http://fourhourchef.com/), the work of [Peter Attia](http://eatingacademy.com/), the guys from [Muscle for Life](http://www.muscleforlife.com/), the [Barbell Shrugged](http://www.barbellshrugged.com/) podcast and the work of [Dr. Rhonda Patrick](http://www.foundmyfitness.com/). If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).

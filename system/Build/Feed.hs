@@ -22,15 +22,15 @@ create unfilteredWritings =
     let
         writings =
             unfilteredWritings
-                |> List.filter (Maybe.isJust . maybeDate)
-                |> List.sortOn (Maybe.fromJust . maybeDate)
+                |> List.filter isPublished
+                |> List.sortOn publishedOn
                 |> List.reverse
 
         feed =
             Atom.nullFeed
                 (baseUrl <> "feed.xml")
                 (Atom.TextString "I.A.")
-                (writings |> List.head |> creationDate)
+                (writings |> List.head |> publishedOn)
     in
         feed
             { Atom.feedEntries = fmap toEntry writings
@@ -38,6 +38,15 @@ create unfilteredWritings =
             }
             |> Export.xmlFeed
             |> XML.ppElement
+
+
+
+isPublished :: Definition -> Bool
+isPublished definition =
+    definition
+        |> metadata
+        |> \x -> x ~> "published"
+        |> Maybe.fromMaybe False
 
 
 
@@ -54,7 +63,7 @@ toEntry def =
             Atom.nullEntry
                 url
                 (Atom.TextString $ metadata def !~> "title")
-                (creationDate def)
+                (publishedOn def)
     in
         entry
             { Atom.entryAuthors = [ Atom.nullPerson { Atom.personName = "Steven Vandevelde" } ]
@@ -78,17 +87,12 @@ baseUrl =
 -- Time
 
 
-creationDate :: Definition -> String
-creationDate definition =
+publishedOn :: Definition -> String
+publishedOn definition =
     definition
         |> metadata
-        |> \m -> m !~> "creation_date"
+        |> \m -> m !~> "published_on"
         |> reformatDate
-
-
-maybeDate :: Definition -> Maybe String
-maybeDate def =
-    metadata def ~> "creation_date"
 
 
 reformatDate :: String -> String
