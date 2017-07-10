@@ -12,6 +12,7 @@ dependencies:
   - icidasset-template
   - lucid
   - shikensu
+  - tagsoup == 0.14.*
   - text
   - time
   - unordered-containers

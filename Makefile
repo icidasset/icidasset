@@ -72,4 +72,4 @@ watch_css:
 
 
 watch_system:
-	@watchexec -p -w src -w icidasset-template --ignore *.css -- make system
+	@watchexec -p -w src -w icidasset-template -w system --ignore *.css -- make system

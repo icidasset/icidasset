@@ -17,12 +17,13 @@ import Shikensu.Functions
 import Shikensu.Metadata
 import Shikensu.Utilities
 import Utilities
+import Writings
 
 import qualified Data.Aeson as Aeson (Object, Value, toJSON)
 import qualified Data.HashMap.Strict as HashMap (empty, fromList, singleton)
 import qualified Data.List as List (concatMap, find, map)
 import qualified Data.Maybe as Maybe (fromJust, fromMaybe)
-import qualified Data.Text as Text (pack)
+import qualified Data.Text as Text (append, pack)
 import qualified Data.Text.IO as Text (readFile)
 import qualified Data.Tuple as Tuple (fst, snd)
 import qualified Data.Yaml as Yaml (decodeFile)
@@ -62,10 +63,11 @@ nonPermalinkedPages =
 
 
 data Sequence
-    = Pages
+    = Images
+    | Pages
+    | Static
     | Writings
     | WritingsWithLayout
-    | Images
     deriving (Eq)
 
 
@@ -73,11 +75,13 @@ sequences :: IO [(Sequence, Dictionary)]
 sequences =
     do
         pages           <- encapsulate "src/Pages/**/*.hs"
-        images          <- encapsulate "icidasset-template/images/**/*.*"  >>= Shikensu.read
+        images          <- encapsulate "icidasset-template/images/**/*.*"   >>= Shikensu.read
+        static          <- encapsulate "src/Static/**/*.*"                  >>= Shikensu.read
         writings        <- writingsIO
 
         return
             [ (Images, images)
+            , (Static, static)
             , (Pages, pages)
             , (WritingsWithLayout, writings)
             ]
@@ -98,6 +102,11 @@ encapsulate thePattern =
 
 
 flow :: Dependencies -> (Sequence, Dictionary) -> Dictionary
+flow _ (Images, dict) =
+    dict
+        |> prefixDirname "images/"
+
+
 flow deps (Pages, dict) =
     dict
         |> renameExt ".hs" ".html"
@@ -111,6 +120,10 @@ flow deps (Pages, dict) =
         |> renderContent (Renderers.Lucid.renderer appLayout)
 
 
+flow _ (Static, dict) =
+    dict
+
+
 flow deps (Writings, dict) =
     dict
         |> renameExt ".md" ".html"
@@ -120,6 +133,7 @@ flow deps (Writings, dict) =
         |> copyPropsToMetadata
         |> insertMetadata deps
         |> renderContent Renderers.Markdown.renderer
+        |> insertSummary
 
 
 flow deps (WritingsWithLayout, dict) =
@@ -127,11 +141,6 @@ flow deps (WritingsWithLayout, dict) =
         |> flow deps
         |> renderContent (Renderers.Lucid.renderer Layouts.Writing.template)
         |> renderContent (Renderers.Lucid.renderer appLayout)
-
-
-flow _ (Images, dict) =
-    dict
-        |> prefixDirname "images/"
 
 
 
@@ -206,16 +215,44 @@ createFeed = do
 
 
 
+-- Application layout
+
+
 appLayout :: Metadata -> Html -> Html
-appLayout =
-    Layouts.Application.template $
-        link
-            [ href "http://icidasset.com/feed.xml"
-            , rel "alternate"
-            , title "I.A."
-            , typ "application/rss+xml"
+appLayout obj children =
+    let
+        docTitle =
+            Text.append
+                ( case obj ~> "title" of
+                    Just x -> Text.append x " – "
+                    Nothing -> ""
+                )
+                "I.A."
+
+        docDescription =
+            case obj !~> "workingDirname" of
+                "src/Writings"  -> obj !~> "summary" :: Text
+                _               -> ""
+
+        headNodes = mconcat
+            [ link
+                [ href "http://icidasset.com/feed.xml"
+                , rel "alternate"
+                , title "I.A."
+                , typ "application/rss+xml"
+                ]
+                []
+
+            , meta [ name "twitter:card", Html.Attributes.content "summary" ] []
+            , meta [ name "twitter:site", Html.Attributes.content "@icidasset" ] []
+            , meta [ name "twitter:title", Html.Attributes.content docTitle ] []
+            , meta [ name "twitter:description", Html.Attributes.content docDescription ] []
             ]
-            []
+    in
+    Layouts.Application.template
+        headNodes
+        obj
+        children
 
 
 
