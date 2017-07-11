@@ -4,30 +4,25 @@ import Catalogs
 import Data.Text (Text)
 import Data.Time.Format (defaultTimeLocale, formatTime)
 import Flow
-import Html hiding (title)
-import Html.Attributes
-import Layouts.Application
-import Layouts.Writing
 import Renderers.Lucid
 import Renderers.Markdown
 import Shikensu
 import Shikensu.Contrib
 import Shikensu.Contrib.IO as Shikensu
+import Shikensu.Extra
 import Shikensu.Functions
-import Shikensu.Metadata
 import Shikensu.Utilities
-import Utilities
 import Writings
 
 import qualified Data.Aeson as Aeson (Object, Value, toJSON)
-import qualified Data.HashMap.Strict as HashMap (empty, fromList, singleton)
-import qualified Data.List as List (concatMap, find, map)
+import qualified Data.HashMap.Strict as HashMap (empty, fromList)
+import qualified Data.List as List (concatMap, filter, find, head, map)
 import qualified Data.Maybe as Maybe (fromJust, fromMaybe)
-import qualified Data.Text as Text (append, pack)
 import qualified Data.Text.IO as Text (readFile)
-import qualified Data.Tuple as Tuple (fst, snd)
 import qualified Data.Yaml as Yaml (decodeFile)
 import qualified Feed
+import qualified Layouts.ApplicationExt
+import qualified Layouts.Writing
 import qualified System.Directory as Dir (getModificationTime)
 
 
@@ -113,11 +108,11 @@ flow deps (Pages, dict) =
         |> rename "NotFound.html" "404.html"
         |> insertTitleIntoMetadata (titleFinder deps "pages")
         |> lowerCaseBasename
-        |> permalinkPages
+        |> permalinkPages nonPermalinkedPages
         |> copyPropsToMetadata
         |> insertMetadata deps
         |> renderContent (Renderers.Lucid.catalogRenderer Catalogs.pages)
-        |> renderContent (Renderers.Lucid.renderer appLayout)
+        |> renderContent (Renderers.Lucid.renderer Layouts.ApplicationExt.template)
 
 
 flow _ (Static, dict) =
@@ -140,12 +135,12 @@ flow deps (WritingsWithLayout, dict) =
     (Writings, dict)
         |> flow deps
         |> renderContent (Renderers.Lucid.renderer Layouts.Writing.template)
-        |> renderContent (Renderers.Lucid.renderer appLayout)
+        |> renderContent (Renderers.Lucid.renderer Layouts.ApplicationExt.template)
 
 
 
--- Additional IO
--- (Next to the sequences)
+-- Additional IO, Pt. 1
+-- Flow dependencies
 
 
 type Dependencies = Aeson.Object
@@ -201,7 +196,8 @@ decodeYaml =
 
 
 
--- Feed
+-- Additional IO, Pt. 2
+-- RSS Feed
 
 
 createFeed :: IO ()
@@ -212,73 +208,3 @@ createFeed = do
         |> flow HashMap.empty
         |> Feed.create
         |> writeFile "./build/feed.xml"
-
-
-
--- Application layout
-
-
-appLayout :: Metadata -> Html -> Html
-appLayout obj children =
-    let
-        docTitle =
-            Text.append
-                ( case obj ~> "title" of
-                    Just x -> Text.append x " – "
-                    Nothing -> ""
-                )
-                "I.A."
-
-        docDescription =
-            case obj !~> "workingDirname" of
-                "src/Writings"  -> obj !~> "summary" :: Text
-                _               -> ""
-
-        headNodes = mconcat
-            [ link
-                [ href "http://icidasset.com/feed.xml"
-                , rel "alternate"
-                , title "I.A."
-                , typ "application/rss+xml"
-                ]
-                []
-
-            , meta [ name "twitter:card", Html.Attributes.content "summary" ] []
-            , meta [ name "twitter:site", Html.Attributes.content "@icidasset" ] []
-            , meta [ name "twitter:title", Html.Attributes.content docTitle ] []
-            , meta [ name "twitter:description", Html.Attributes.content docDescription ] []
-            ]
-    in
-    Layouts.Application.template
-        headNodes
-        obj
-        children
-
-
-
--- Helpers
-
-
-permalinkPages :: Dictionary -> Dictionary
-permalinkPages = fmap $
-    \def ->
-        if basename def `elem` nonPermalinkedPages
-            then def { pathToRoot = "/" }
-            else permalinkDef "index" def
-
-
-insertTitleIntoMetadata :: (Text -> Maybe Aeson.Value) -> Dictionary -> Dictionary
-insertTitleIntoMetadata finder = fmap $
-    \def ->
-        def
-            |> basename
-            |> Text.pack
-            |> finder
-            |> fmap (HashMap.singleton "title")
-            |> fmap (`insertMetadataDef` def)
-            |> Maybe.fromMaybe def
-
-
-titleFinder :: Metadata -> Text -> Text -> Maybe Aeson.Value
-titleFinder deps cat name =
-    deps ~> "info" ?~> "titles" ?~> cat ?~> name

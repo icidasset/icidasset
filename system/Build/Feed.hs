@@ -45,12 +45,17 @@ isPublished :: Definition -> Bool
 isPublished definition =
     definition
         |> metadata
-        |> \x -> x ~> "published"
+        |> (~> "published")
         |> Maybe.fromMaybe False
 
 
 
 -- Entries
+
+
+baseUrl :: String
+baseUrl =
+    "http://icidasset.com/"
 
 
 toEntry :: Definition -> Atom.Entry
@@ -78,20 +83,19 @@ toEntry def =
 
 
 
-baseUrl :: String
-baseUrl =
-    "http://icidasset.com/"
-
-
-
 -- Time
+
+
+parseDate :: String -> Maybe UTCTime
+parseDate =
+    parseTimeM True defaultTimeLocale "%e-%m-%Y"
 
 
 publishedOn :: Definition -> String
 publishedOn definition =
     definition
         |> metadata
-        |> \m -> m !~> "published_on"
+        |> (!~> "published_on")
         |> reformatDate
 
 
@@ -101,8 +105,3 @@ reformatDate input =
         |> parseDate
         |> Maybe.fromJust
         |> formatTime defaultTimeLocale (iso8601DateFormat $ Just "%H:%M:%SZ")
-
-
-parseDate :: String -> Maybe UTCTime
-parseDate =
-    parseTimeM True defaultTimeLocale "%e-%m-%Y"

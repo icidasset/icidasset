@@ -1,7 +1,7 @@
 module Writings where
 
 import Data.Aeson (toJSON)
-import Data.HashMap.Strict as HashMap (fromList)
+import Data.HashMap.Strict as HashMap (singleton)
 import Data.Text (Text)
 import Flow
 import Shikensu
@@ -35,7 +35,7 @@ insertSummaryDef def =
             |> parseTags
             |> extractSummary
             |> toJSON
-            |> (\x -> HashMap.fromList [("summary", x)])
+            |> HashMap.singleton "summary"
     in
     insertMetadataDef summary def
 
