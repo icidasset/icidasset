@@ -1,1 +1,1 @@
-Building an experimental Haskell source-code parser and formatter named [haskell-format](https://github.com/icidasset/haskell-format). Trying to write better documentation and doc-tests for all my work. And finishing up old projects.
+Integrating the all new [Blockstack](https://blockstack.org/) platform with my music player called [Ongaku Ryoho](http://ongakuryoho.com). Thanks for putting my app on the homepage Blockstack folks ✌️

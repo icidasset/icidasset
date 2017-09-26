@@ -1,5 +1,8 @@
-module Feed where
+module Feed
+    ( createFeed
+    ) where
 
+import Data.ByteString (ByteString)
 import Data.Monoid ((<>))
 import Data.Time.Clock
 import Data.Time.Format
@@ -17,8 +20,8 @@ import qualified Text.Atom.Feed.Export as Export
 import qualified Text.XML.Light.Output as XML
 
 
-create :: Dictionary -> String
-create unfilteredWritings =
+createFeed :: Dictionary -> ByteString
+createFeed unfilteredWritings =
     let
         writings =
             unfilteredWritings
@@ -38,6 +41,8 @@ create unfilteredWritings =
             }
             |> Export.xmlFeed
             |> XML.ppElement
+            |> Text.pack
+            |> Text.encodeUtf8
 
 
 

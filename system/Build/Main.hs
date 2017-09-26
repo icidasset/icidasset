@@ -1,8 +1,10 @@
 module Main where
 
 import Catalogs
+import Data.ByteString (ByteString)
 import Data.Text (Text)
 import Data.Time.Format (defaultTimeLocale, formatTime)
+import Feed (createFeed)
 import Flow
 import Renderers.Lucid
 import Renderers.Markdown
@@ -12,6 +14,7 @@ import Shikensu.Contrib.IO as Shikensu
 import Shikensu.Extra
 import Shikensu.Functions
 import Shikensu.Utilities
+import System.Directory (getCurrentDirectory)
 import Writings
 
 import qualified Data.Aeson as Aeson (Object, Value, toJSON)
@@ -20,7 +23,6 @@ import qualified Data.List as List (concatMap, filter, find, head, map)
 import qualified Data.Maybe as Maybe (fromJust, fromMaybe)
 import qualified Data.Text.IO as Text (readFile)
 import qualified Data.Yaml as Yaml (decodeFile)
-import qualified Feed
 import qualified Layouts.ApplicationExt
 import qualified Layouts.Writing
 import qualified System.Directory as Dir (getModificationTime)
@@ -29,21 +31,19 @@ import qualified System.Directory as Dir (getModificationTime)
 -- | (• ◡•)| (❍ᴥ❍ʋ)
 
 
-main :: IO ()
+main :: IO Dictionary
 main =
     do
         de <- dependencies
         se <- sequences
+        fe <- rssFeed
 
         -- Execute flows
         -- & reduce to a single dictionary
-        let dictionary = List.concatMap (flow de) se
+        let dictionary = List.concatMap (flow de) se ++ [ fe ]
 
         -- Write to disk
         write "./build" dictionary
-
-        -- RSS Feed
-        createFeed
 
 
 
@@ -200,11 +200,30 @@ decodeYaml =
 -- RSS Feed
 
 
-createFeed :: IO ()
-createFeed = do
+rssFeed :: IO Definition
+rssFeed = do
     writings        <- writingsIO
+    rootDir         <- getCurrentDirectory
 
     (Writings, writings)
         |> flow HashMap.empty
-        |> Feed.create
-        |> writeFile "./build/feed.xml"
+        |> createFeed
+        |> feedDefinition rootDir
+        |> return
+
+
+feedDefinition :: String -> ByteString -> Definition
+feedDefinition rootDir feed =
+    Definition
+        { basename = "feed"
+        , dirname = ""
+        , extname = ".xml"
+        , pattern = "example/**/*.md"
+        , rootDirname = rootDir
+        , workingDirname = ""
+
+        , content = Just feed
+        , metadata = HashMap.empty
+        , parentPath = Nothing
+        , pathToRoot = "../"
+        }
