@@ -5,4 +5,4 @@ import qualified Server
 
 
 main :: IO ()
-main = run 8080 Server.app
+main = run 8000 Server.app

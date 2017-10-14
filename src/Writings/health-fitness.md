@@ -6,7 +6,7 @@ published_on: 21-03-2015
 promote: true
 ---
 
-Most of this is based upon the research of [Tim](http://fourhourbody.com/) [Ferriss](http://fourhourchef.com/), the work of [Peter Attia](http://eatingacademy.com/), the guys from [Muscle for Life](http://www.muscleforlife.com/), the [Barbell Shrugged](http://www.barbellshrugged.com/) podcast and the work of [Dr. Rhonda Patrick](http://www.foundmyfitness.com/). If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
+Most of this is based upon the research of [Tim](http://fourhourbody.com/) [Ferriss](http://fourhourchef.com/), the work of [Peter Attia](http://eatingacademy.com/), the guys from [Muscle for Life](http://www.muscleforlife.com/) and the work of [Dr. Rhonda Patrick](http://www.foundmyfitness.com/). If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
 
 
 
@@ -17,12 +17,12 @@ Most of this is based upon the research of [Tim](http://fourhourbody.com/) [Ferr
 - How much you should eat depends on your TDEE (total daily energy expenditure),
   which in turn is based on your BMR (basal metabolic rate) and your activity level.
   [More info](http://www.muscleforlife.com/healthy-meal-planning-tips/).
-- If you want to lose body fat, eat 20-25% less than recommended.
-  Try not to eat less than this, or you will lose muscle.
-  This is called __cutting__.
+- If you want to lose body fat, fast for more than nine hours.
+  From that point on your body will use the stored fat
+  as its energy source. Fasting does not cause muscle loss.
+  <small>(more on fasting later)</small>
 - If you want to gain muscle, eat 5-10% more than recommended.
   Try not to eat more than this, or you will gain too much body fat.
-  This is called __bulking__.  
   <small>(Only effective if training properly, see workout schedule)</small>
 - Do __not__ overeat, ever, you're only going to gain body fat.
 - Drink enough water, if you're thirsty, it's already too late.
@@ -43,34 +43,11 @@ Most of this is based upon the research of [Tim](http://fourhourbody.com/) [Ferr
   <small>Green vegetables, beans, lentils, sweet potatoes, whole grains, etc.</small>
 - Fasting 13 hours per day is considered the optimal amount of fasting.
   Fasting is good for disease prevention, better sleep, more energy.
-  Note that fasting is __only consuming water and nothing else__. [More info](http://podcastnotes.org/2016/07/11/time-restricted-feeding-and-its-effects-on-obesity-muscle-mass-heart-health/).
+  Note that fasting is __only consuming water and nothing else__. [More info](https://www.amazon.com/Complete-Guide-Fasting-Intermittent-Alternate-Day/dp/1628600012/ref=asap_bc?ie=UTF8).
 - [Intermittent fasting](http://jamesclear.com/the-beginners-guide-to-intermittent-fasting)
   is a great pattern for eating
   to increase muscle mass and to decrease body fat.
   It might also help with increasing testosterone.
-
-
-### Cutting and bulking
-
-For me personally:
-
-- __When cutting:__
-  40% of daily calories from protein,
-  40% from healthy carbohydrates
-  and 20% from healthy fats.
-- __When bulking:__
-  140-150gr protein (1gr per pound of body weight),
-  20% of your daily calories from fats,
-  and get the rest from carbohydrates.
-- Reduce body fat percentage to 10% or less before bulking.
-  This enables you to build muscle more easily.
-- Keep the cutting periods as small as possible.
-  Example: cuts for 3 to 4 months, and bulks for 6 to 8 months.
-- When you stop with cutting and going into bulking mode,
-  do not eat a large amount or you will regain a lot of body fat.
-  Make 100-150 calorie progressions, increase every week.
-
-[More info](http://www.muscleforlife.com/healthy-meal-planning-tips/).
 
 
 ### Pre and post-workout meals
@@ -115,7 +92,7 @@ Post:
 - Low fat food mostly means high sucrose levels, so avoid those.
 - A ketogenic state means that the body will retrieve energy from your stored fat,
   instead of glucose (sugars, carbs, etc.).
-- A good diet is the best way to prevent cancer.
+- A good diet and fasting are the best ways to prevent cancer.
 - Supplement sodium (salt) and magnesium when feeling weak/dizzy while exercising.
 - Vitamin A is good for the eyes.
 
@@ -138,8 +115,6 @@ Post:
 - When you do cardio, prefer
   [HIIT](http://www.muscleforlife.com/high-intensity-interval-training-and-weight-loss/)
   (High-Intensity Interval Training) over other methods.
-- You can train while fasted (not eating for more than 6-12 hours)
-  to remove body fat more quickly, but this will cause muscle loss.
 
 
 ### Extra information
@@ -148,8 +123,6 @@ Post:
   you can do some light exercises <small>(like wall-pushes and squats)</small>
   to ensure that those muscles get fed
   <small>(also an hour and a half after the meal)</small>.
-- When cutting, you burn less energy, so move more or do more cardio.
-  Your body adjusts itself because you're eating less.
 - Relating to rest between sets, rest until your breath has somewhat
   returned to normal. Not too long though. Roughly, 3-4 minutes for
   large muscle groups (eg. legs) and 1 minute for smaller muscle groups
@@ -158,8 +131,6 @@ Post:
 
 ### Detailed information
 
-- If you are able to keep your strength level the same while cutting
-  and you are losing body fat, that means you are doing good.
 - When you are moving, your brain suppresses the pain signals.
   That's why sometimes you feel more pain after waking up the next morning.
   Your body received the full load, because you stopped moving for that long.
