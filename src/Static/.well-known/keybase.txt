@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/icidasset
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://icidasset.com
+  * I am icidasset (https://keybase.io/icidasset) on keybase.
+  * I have a public key ASDkPt5egjwXOo5-CyBNdJh98kzxTQPzbGiLKRxm57t86Qo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e43ede5e823c173a8e7e0b204d74987df24cf14d03f36c688b291c66e7bb7ce90a",
+      "host": "keybase.io",
+      "kid": "0120e43ede5e823c173a8e7e0b204d74987df24cf14d03f36c688b291c66e7bb7ce90a",
+      "uid": "b964fbe5a0c53c3dc670f1292fae1919",
+      "username": "icidasset"
+    },
+    "merkle_root": {
+      "ctime": 1508099089,
+      "hash": "b524a728536246b67933ad9d910c3222ae76a7dd473ba5b2e8a70a59cd1f22ed3dac338873a42239d58874c3e258a0f7d2f042a7c60de6e8b01efe4bd9e4cd4e",
+      "hash_meta": "82dddc959fa584ce370b99114ec94078acb60b7f0234d83bd8727b850103a282",
+      "seqno": 1582068
+    },
+    "service": {
+      "hostname": "icidasset.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.33"
+  },
+  "ctime": 1508099126,
+  "expire_in": 504576000,
+  "prev": "2f3ad19955176efc93fb96bf8c6ebd83fbb29db3e33468de6d70acd63b7bd7b5",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg5D7eXoI8FzqOfgsgTXSYffJM8U0D82xoiykcZue7fOkKp3BheWxvYWTFA0V7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZTQzZWRlNWU4MjNjMTczYThlN2UwYjIwNGQ3NDk4N2RmMjRjZjE0ZDAzZjM2YzY4OGIyOTFjNjZlN2JiN2NlOTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZTQzZWRlNWU4MjNjMTczYThlN2UwYjIwNGQ3NDk4N2RmMjRjZjE0ZDAzZjM2YzY4OGIyOTFjNjZlN2JiN2NlOTBhIiwidWlkIjoiYjk2NGZiZTVhMGM1M2MzZGM2NzBmMTI5MmZhZTE5MTkiLCJ1c2VybmFtZSI6ImljaWRhc3NldCJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUwODA5OTA4OSwiaGFzaCI6ImI1MjRhNzI4NTM2MjQ2YjY3OTMzYWQ5ZDkxMGMzMjIyYWU3NmE3ZGQ0NzNiYTViMmU4YTcwYTU5Y2QxZjIyZWQzZGFjMzM4ODczYTQyMjM5ZDU4ODc0YzNlMjU4YTBmN2QyZjA0MmE3YzYwZGU2ZThiMDFlZmU0YmQ5ZTRjZDRlIiwiaGFzaF9tZXRhIjoiODJkZGRjOTU5ZmE1ODRjZTM3MGI5OTExNGVjOTQwNzhhY2I2MGI3ZjAyMzRkODNiZDg3MjdiODUwMTAzYTI4MiIsInNlcW5vIjoxNTgyMDY4fSwic2VydmljZSI6eyJob3N0bmFtZSI6ImljaWRhc3NldC5jb20iLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjMzIn0sImN0aW1lIjoxNTA4MDk5MTI2LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjJmM2FkMTk5NTUxNzZlZmM5M2ZiOTZiZjhjNmViZDgzZmJiMjlkYjNlMzM0NjhkZTZkNzBhY2Q2M2I3YmQ3YjUiLCJzZXFubyI6NSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEAvErXFW44c+bGaBgkreEvaWl2GSdinBfFBuNjOojW6Emgs8S9JlBp8QglcC/CPfGdggKwjYjIiIgCTNB5EjOINqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgRAVmnqdf4a8uzggLgyolp1BCJTZrnOirUPH1ZHYCCIajdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/icidasset
+
+==================================================================
