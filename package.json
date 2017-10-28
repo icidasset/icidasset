@@ -2,6 +2,7 @@
   "private": true,
   "devDependencies": {
     "icidasset-template": "file:./icidasset-template",
+    "netlify-cli": "^1.2.2",
     "postcss-cli-simple": "^1.0.1"
   }
 }

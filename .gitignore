@@ -1,3 +1,4 @@
+.netlify
 .stack-work
 *.cabal
 /build
