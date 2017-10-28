@@ -1,1 +1,1 @@
-Integrating the all new [Blockstack](https://blockstack.org/) platform with my music player called [Ongaku Ryoho](http://ongakuryoho.com). Thanks for putting my app on the homepage Blockstack folks ✌️
+Learning how to ollie, experimenting with a bunch of different programming languages and catching up on reading books.
