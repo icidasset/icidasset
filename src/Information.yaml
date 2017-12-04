@@ -82,6 +82,7 @@ books:
   - { title: "How We Got to Now", author: "Steven Johnon" }
   - { title: "Letters from a Stoic", author: "Seneca" }
   - { title: "Meditations", author: "Marcus Aurelius" }
+  - { title: "Ready Player One", author: "Ernest Cline" }
   - { title: "The 4-Hour Body", author: "Timothy Ferriss" }
   - { title: "The 4-Hour Workweek", author: "Timothy Ferriss" }
   - { title: "The Art of Learning", author: "Josh Waitzkin" }
@@ -93,13 +94,13 @@ books:
 
 
 books__toRead:
-  - { title: "Artist of Life", author: "Bruce Lee" }
   - { title: "Cat's Cradle", author: "Kurt Vonnegut" }
   - { title: "How to Live", author: "Sarah Bakewell" }
 
 
 books__average:
   - { title: "10% Happier", author: "Dan Harris" }
+  - { title: "Artist of Life", author: "Bruce Lee" }
   - { title: "Benjamin Franklin", author: "Walter Isaacson" }
   - { title: "Bigger Leaner Stronger", author: "Michael Matthews" }
   - { title: "Getting Real", author: "37 Signals" }
