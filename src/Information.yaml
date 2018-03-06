@@ -34,8 +34,8 @@ projects:
     description: >
       All you need to learn about electrical engineering from the ground up.
 
-  - name: "Isotach"
-    url: "https://github.com/icidasset/isotach"
+  - name: "Diffuse"
+    url: "https://github.com/icidasset/diffuse"
     description: >
       A music player which connects to your cloud/distributed storage.
     promote: true
