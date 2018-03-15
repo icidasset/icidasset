@@ -7,11 +7,11 @@ promote: false
 ---
 
 
-_This is a more visual approach to the topic of purely-typed functional programming. What does it mean to have a "pure" programming language? What are types? What do you mean by "functional" programming? These are the questions we will answer here, with a focus on simplicity._
+_This is a more visual approach to the topic of purely-typed functional programming. What does it mean to have a "functional" programming language? What are types? What makes a functional-programming language "pure"? These are the questions we will answer here, with a focus on simplicity._
 
 
 
-## The Case For Simplicity
+## Simplicity
 
 ![](/images/fp/simple.png)
 
@@ -29,15 +29,19 @@ Intertwined.
 
 > The benefits of simplicity are: ease of understanding, ease of change, ease of debugging, flexibility.
 
-— Rich Hickey
-
----
-
-[Simple Made Easy](https://www.infoq.com/presentations/Simple-Made-Easy) pretty much says it all.
+— [Rich Hickey](https://www.infoq.com/presentations/Simple-Made-Easy)
 
 
 
-## The Case For Purity
+## Functional
+
+![](/images/fp/function.png)
+
+When we say that we are going to do functional programming, we are basically saying that we are mainly going to use functions. That's all there is to it, __just plain functions__.
+
+
+
+## Purity
 
 > Not mixed or adulterated with any other substance or material.
 
@@ -45,7 +49,7 @@ Intertwined.
 
 This is very close to the concept of _simplicity_.
 
-Purity in programming means that we don't want any side effects, or at least manage them properly. Or to put it differently, we want a function to always have the same output given the same input. For example, say you have a function that makes an HTTP request, you can't guarantee that that request will always return the same thing, it's impure.
+Purity in functional programming means that we don't want any side effects, or at least manage them properly. Or to put it differently, we want a function to always have the same output given the same input. For example, say you have a function that makes an HTTP request, you can't guarantee that that request will always return the same thing, it's impure.
 
 ![](/images/fp/impure-function.png)
 
@@ -70,35 +74,32 @@ __To summarize, why is it useful that a function is pure:__
 
 
 
-## The Case For Types
+## Types
 
-Using types we can define a blueprint, a specification, for a function:
+> Types are how we group a set of values together that share something in common. Sometimes that commonality is abstract; sometimes it's a specific model of a particular concept or domain.
+
+— Haskell Programming From First Principles (book)
+
+Using types we can define blueprints for our functions:
 
 ![](/images/fp/types.png)
 
-Our compiler now knows what to expect from this function, and consequently, the compiler can tell us if something is wrong. We don't have to wait until the code is being executed at runtime. It's also easier for us to understand what the function does, the function signature already gives us a hint. Or sometimes, as in this example, it gives us the full picture.
+Our compiler now knows what to expect from this function, and consequently, the compiler can tell us if something is wrong. We don't have to wait until the code is being executed at runtime. It's also easier for us to understand what the function does, the function signature already gives us a hint. Or sometimes, as in this example, it gives us the full picture. That said, types don't cover everything, we still need tests, especially for logic.
 
-And yes, types don't cover everything, we still need tests, especially for logic. Also varies on the programming language you are using.
+_Here again mathematics comes into play, this time in the form of set theory and type theory. I won't go into it here, the only thing I will say is that it allows us again to make certain assumptions and guarantees about our code._
 
-_Here again mathematics comes into play, this time in the form of type theory and set theory. I won't go into it here, the only thing I will say is that it allows us again to make certain assumptions and guarantees about our code._
+Every programming language has a set of predefined types, like `Integer` and `Bool`, but we can also make our own types, here's an example of a datatype:
 
+![](/images/fp/union-types.png)
 
+Or a more abstract one:
 
-## The Case For Functional
+![](/images/fp/option-type.png)
 
-The previous cases are all part of [pure-functional-programming languages](https://en.wikipedia.org/wiki/List_of_programming_languages_by_type#Pure). But there are still quite a few things that are interesting.
-
-
-### Immutability
-
-![](/images/fp/immutability.png)
-
-Immutability goes hand-in-hand with purity,
-we don't want anything changing from underneath us.
+We could have __some data__ or __none__ at all.
 
 
-### Abstractions
 
-In functional programming there's no abstraction of data mutation
-and shared pointers (no objects like in object-oriented programming).
-This allows us to easily do concurrent programming.
+## Building Blocks
+
+...
