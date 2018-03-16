@@ -109,14 +109,16 @@ data Option a = Some a | None
 
 
 {-| And then you use it like so ...
-    as a result:
+    as a result from a function:
 -}
 blowUpLegoBuilding :: Building -> Option Blocks
 blowUpLegoBuilding building =
   let
-      pickBlocksFromRubble rubble =
-          if Data.List.length (blocks rubble) > 0 then
-              Some (blocks rubble)
+      -- Create another function in scope, which
+      -- takes an argument of the type `Rubble` (a record).
+      pickBlocksFromRubble {blocksFromRubble = blocks} =
+          if (Data.List.length blocks) > 0 then
+              Some blocks
           else
               None
   in
@@ -126,7 +128,7 @@ blowUpLegoBuilding building =
           |> pickBlocksFromRubble
 
 
-{-| Or as an argument:
+{-| Or as an argument to a function:
 -}
 makeSomethingFromLeftovers :: Option Blocks -> Building
 makeSomethingFromLeftovers option =
@@ -153,6 +155,6 @@ dismantleAndGetBlockA :: OurWall -> BlockA
 dismantleAndGetBlockA (Wall blockA blockB blockC) = blockA
 ```
 
-I hope this shows some of basics and advantages of (pure) functional programming. The rabbit hole goes a lot deeper, but I think the basics alone are already super useful.
+I hope this shows some of the basics and advantages of (pure) functional programming. The rabbit hole goes a lot deeper, but I think the basics alone are already super useful.
 
 ![](/images/fp/conclusion.png)
