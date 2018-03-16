@@ -113,19 +113,14 @@ data Option a = Some a | None
 -}
 blowUpLegoBuilding :: Building -> Option Blocks
 blowUpLegoBuilding building =
-  let
-      -- Create another function in scope, which
-      -- takes an argument of the type `Rubble` (a record).
-      pickBlocksFromRubble {blocksFromRubble = blocks} =
-          if (Data.List.length blocks) > 0 then
-              Some blocks
-          else
-              None
-  in
-      building
-          |> placeDynamite
-          |> gatherRubble
-          |> pickBlocksFromRubble
+    building
+        |> placeDynamite
+        |> gatherRubble
+        |> takeBlocksFromRubble
+        |> pick
+    where
+        pick []   = None
+        pick list = Some list
 
 
 {-| Or as an argument to a function:
