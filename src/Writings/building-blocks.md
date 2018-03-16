@@ -61,6 +61,12 @@ Given a function `f` which takes the argument `A` and returns `B`, and another f
 
 ![](/images/fp/pure-function-2.png)
 
+In Haskell you can do function composition using the `.` operator. This new function is saying first `buyDynamiteFromStore` (and tell it the exact store), then after that `goIntoBuilding` and finally `strapDynamite`.
+
+```haskell
+placeDynamite = strapDynamite . goIntoBuilding . buyDynamiteFromStore store
+```
+
 > Composition is the essence of programming.
 
 — [Bartosz Milewski](https://bartoszmilewski.com/2014/11/04/category-the-essence-of-composition/)
@@ -94,6 +100,45 @@ If a function takes an argument of the type `Stacks`, you can use any of these v
 ![](/images/fp/option-type.png)
 
 We could have __some blocks__ or __none__ at all. This is a better way to deal with none-existing values, as opposed to a `null` pointer.
+
+```haskell
+{-| In Haskell you would say the following,
+    where `a` means "any type".
+-}
+data Option a = Some a | None
+
+
+{-| And then you use it like so ...
+    as a result:
+-}
+blowUpLegoBuilding :: Building -> Option Blocks
+blowUpLegoBuilding building =
+  let
+      pickBlocksFromRubble rubble =
+          if Data.List.length (blocks rubble) > 0 then
+              Some (blocks rubble)
+          else
+              None
+  in
+      building
+          |> placeDynamite
+          |> gatherRubble
+          |> pickBlocksFromRubble
+
+
+{-| Or as an argument:
+-}
+makeSomethingFromLeftovers :: Option Blocks -> Building
+makeSomethingFromLeftovers option =
+    case option of
+        Some blocks ->
+            buildNewBuilding blocks
+
+        None ->
+            -- Can't build something from nothing,
+            -- so we buy a building instead.
+            buyBuilding
+```
 
 
 
