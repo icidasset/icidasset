@@ -53,7 +53,7 @@ Purity in functional programming means that we don't want any side effects, or a
 
 ![](/images/fp/impure-function.png)
 
-Having a pure function means that we have certain guarantees, we can use mathematics and category theory now. This is a pure function:
+Having a pure function means that we have certain guarantees, we can use mathematics (category theory) now. This is a pure function:
 
 ![](/images/fp/pure-function-1.png)
 
@@ -65,12 +65,9 @@ Given a function `f` which takes the argument `A` and returns `B`, and another f
 
 — [Bartosz Milewski](https://bartoszmilewski.com/2014/11/04/category-the-essence-of-composition/)
 
-__To summarize, why is it useful that a function is pure:__
-1. Same input equals to same output, always.
-2. We have the benefits of simplicity.  
-   <small>Ease of understanding, etc.</small>
-3. Allows for function composition.  
-   <small>Which in turn allows for other mathematical operations.</small>
+This goes hand in hand with immutability, another feature of pure-functional-programming languages. Because everything in these languages is immutable, everything is simple.
+
+![](/images/fp/immutability.png)
 
 
 
@@ -92,14 +89,25 @@ Every programming language has a set of predefined types, like `Integer` and `Bo
 
 ![](/images/fp/union-types.png)
 
-Or a more abstract one:
+If a function takes an argument of the type `Stacks`, you can use any of these values. You can also make more abstract types:
 
 ![](/images/fp/option-type.png)
 
-We could have __some data__ or __none__ at all.
+We could have __some blocks__ or __none__ at all. This is a better way to deal with none-existing values, as opposed to a `null` pointer.
 
 
 
-## Building Blocks
+## Conclusion
 
-...
+You may be wondering why am I using the phrase "building blocks", it's because, to me, this really feels like putting blocks together and sometimes dismantling them.
+
+![](/images/fp/our-wall-type.png)
+
+```haskell
+dismantleAndGetBlockA :: OurWall -> BlockA
+dismantleAndGetBlockA (Wall blockA blockB blockC) = blockA
+```
+
+I hope this shows some of basics and advantages of (pure) functional programming. The rabbit hole goes a lot deeper, but I think the basics alone are already super useful.
+
+![](/images/fp/conclusion.png)
