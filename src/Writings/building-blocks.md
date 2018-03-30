@@ -141,7 +141,7 @@ makeSomethingFromLeftovers option =
 
 ## Conclusion
 
-You may be wondering why am I using the phrase "building blocks", it's because, to me, this really feels like putting blocks together and sometimes dismantling them.
+You may be wondering why I'm using the phrase "building blocks", it's because, to me, this really feels like putting blocks together and sometimes dismantling them.
 
 ![](/images/fp/our-wall-type.png)
 
