@@ -8,6 +8,7 @@ import Html.Attributes
 import Html.Custom
 import Shikensu.Utilities
 
+import qualified Data.List as List
 import qualified Data.Maybe as Maybe
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
@@ -111,8 +112,13 @@ latestProjectsBlock obj =
                 Just True -> acc ++ [ project p ]
                 _         -> acc
 
-        projectValues = (obj !~> "info" !~> "projects" :: [Shikensu.Metadata])
-        projects = foldl reducer [] projectValues
+        projectValues =
+            (obj !~> "info" !~> "projects" :: [Shikensu.Metadata])
+
+        projects =
+            projectValues
+                |> List.sortOn (\p -> p !~> "name" :: String)
+                |> List.foldl reducer []
   in
         block
             []
@@ -143,8 +149,13 @@ latestWritingsBlock obj =
                 _ ->
                     acc
 
-        writingValues = obj !~> "writings" :: [Shikensu.Metadata]
-        writings = foldl reducer [] writingValues
+        writingValues =
+            obj !~> "writings" :: [Shikensu.Metadata]
+
+        writings =
+            writingValues
+                |> List.sortOn (\w -> w !~> "title" :: String)
+                |> List.foldl reducer []
     in
         block
             []

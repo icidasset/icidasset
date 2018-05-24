@@ -2,11 +2,13 @@ module Pages.Writings where
 
 import Components.Blocks.Filler
 import Data.Text (Text)
+import Flow
 import Html
 import Html.Attributes
 import Html.Custom
 import Shikensu.Utilities
 
+import qualified Data.List as List
 import qualified Data.Maybe as Maybe
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
@@ -43,8 +45,13 @@ left obj =
             else
                 acc
 
-        writingValues = obj !~> "writings" :: [Shikensu.Metadata]
-        writings = foldl reducer [] writingValues
+        writingValues =
+            obj !~> "writings" :: [Shikensu.Metadata]
+
+        writings =
+            writingValues
+                |> List.sortOn (\p -> p !~> "title" :: String)
+                |> List.foldl reducer []
     in
         block
             []

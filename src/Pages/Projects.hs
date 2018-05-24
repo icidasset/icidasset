@@ -2,11 +2,13 @@ module Pages.Projects where
 
 import Components.Blocks.Filler
 import Data.Text (Text)
+import Flow
 import Html
 import Html.Attributes
 import Html.Custom
 import Shikensu.Utilities
 
+import qualified Data.List as List
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
 
@@ -36,8 +38,13 @@ template obj _ =
 left :: Shikensu.Metadata -> Html
 left obj =
     let
-        projectValues = obj !~> "info" !~> "projects"
-        projects = fmap project projectValues
+        projectValues =
+            obj !~> "info" !~> "projects"
+
+        projects =
+            projectValues
+                |> List.sortOn (\p -> p !~> "name" :: String)
+                |> List.map project
     in
         block
             []
