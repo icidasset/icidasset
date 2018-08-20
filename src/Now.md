@@ -1,1 +1,1 @@
-Learning how to ollie, experimenting with a bunch of different programming languages and catching up on reading books.
+Improving and extending my [Diffuse](https://diffuse.sh/about) project. Getting slowly back into electrical engineering.

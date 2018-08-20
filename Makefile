@@ -54,7 +54,7 @@ dev: build
 
 
 server:
-	@echo "> Booting up web server"
+	@echo "> Booting up web server (http://localhost:8000)"
 	@stack build && stack exec server
 
 
