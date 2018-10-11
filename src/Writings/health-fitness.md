@@ -48,6 +48,9 @@ Most of this is based upon the research of [Tim](http://fourhourbody.com/) [Ferr
   is a great pattern for eating
   to increase muscle mass and to decrease body fat.
   It might also help with increasing testosterone.
+- [Prolonged fasting](https://www.foundmyfitness.com/episodes/valter-longo-2) (at least 48 hours, ideally 96 hours or longer) is a great way to "heal", or "reset", your body.
+  Reduce inflammation, reduce age-related diseases, resetting autoimmunity, etc.
+  [More info](https://prolonfmd.com/fasting-mimicking-diet/).
 
 
 ### Pre and post-workout meals
@@ -72,9 +75,9 @@ Post:
 
 ### Extra information
 
-- Good for the gut: Fermented foods, Kombucha.
-- Carbs can best be eaten early in the day (you're more insulin sensitive later in the day).
-- Meal frequency doesn't matter.
+- Good for the gut: soluble fiber, fermented foods, kombucha.
+- Carbs can best be eaten early in the day (you're more insulin resistant later in the day).
+- Eating less frequent helps with reducing insulin resistance.
 - Keep at least 20 minutes between meal portions.
 - Don't think about your BMI, it's not relevant.
 - Creatine is the only "good" supplement for muscle growth.
@@ -195,6 +198,7 @@ Testosterone can be increased in the following ways:
   breathing is required to resist the cold,
   when trying to resist the cold you burn brown fat,
   which in turn keeps your temperature up and produces huge amounts of energy.
+  Breathing effectively is important for your focus, metabolism, stress, etc.
 - Visualizing yourself doing a task can improve your actual ability to do it.
   [More info](http://www.muscleforlife.com/how-to-get-stronger/).
 - Do not think stress is something bad.
@@ -203,8 +207,6 @@ Testosterone can be increased in the following ways:
   determines the amount and nature of its physical effects.
 - Enjoy the now, don't think to much about where you're going.
 - Don't think about tomorrow, nothing bad is going to happen.
-- Breathing effectively is important for your focus, metabolism, stress, etc.
-  –> __Wim Hof method.__
 - Meditating 20 minutes a day can bring enormous benefits, e.g. reduce bad stress.
   Focus on breathing/air flow.
 - Mental stress <=> physical stress <small>(it's all related)</small>
