@@ -28,7 +28,7 @@ template obj children =
 
         headNodes = mconcat
             [ link
-                [ href "http://icidasset.com/feed.xml"
+                [ href "https://icidasset.com/feed.xml"
                 , rel "alternate"
                 , title "I.A."
                 , typ "application/rss+xml"

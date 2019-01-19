@@ -45,7 +45,6 @@ createFeed unfilteredWritings =
             |> Text.encodeUtf8
 
 
-
 isPublished :: Definition -> Bool
 isPublished definition =
     definition
@@ -60,7 +59,7 @@ isPublished definition =
 
 baseUrl :: String
 baseUrl =
-    "http://icidasset.com/"
+    "https://icidasset.com/"
 
 
 toEntry :: Definition -> Atom.Entry
