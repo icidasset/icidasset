@@ -136,7 +136,7 @@ Speaking about `case` statements. There's this thing called pattern matching. Th
 
 ```elm
 {- Create an action based on a list of actions. -}
-reduceActions: List Action -> Action
+reduceActions : List Action -> Action
 reduceActions actions =
     case actions of
         [] -> DoNothing

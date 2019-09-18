@@ -1,11 +1,12 @@
 module Shikensu.Extra where
 
+import Common
 import Data.Text (Text)
 import Flow
+import Protolude
 import Shikensu
 import Shikensu.Contrib
 import Shikensu.Utilities
-import Utilities
 
 import qualified Data.Aeson as Aeson (Value)
 import qualified Data.HashMap.Strict as HashMap (empty, fromList, singleton)
@@ -17,14 +18,14 @@ import qualified Data.Text as Text (pack)
 
 
 insertTitleIntoMetadata :: (Text -> Maybe Aeson.Value) -> Dictionary -> Dictionary
-insertTitleIntoMetadata finder = fmap $
+insertTitleIntoMetadata finder = map $
     \def ->
         def
             |> basename
             |> Text.pack
             |> finder
-            |> fmap (HashMap.singleton "title")
-            |> fmap (`insertMetadataDef` def)
+            |> map (HashMap.singleton "title")
+            |> map (`insertMetadataDef` def)
             |> Maybe.fromMaybe def
 
 

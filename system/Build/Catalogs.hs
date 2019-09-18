@@ -10,6 +10,9 @@ import qualified Pages.Projects
 import qualified Pages.Writings
 
 
+-- 🔱
+
+
 pages :: TemplateCatalog
 pages =
     HashMap.fromList

@@ -1,13 +1,17 @@
 module Pages.Projects where
 
-import Components.Blocks.Filler
+import Chunky
+import Common (container)
+import Components.Block (Filler(..))
 import Data.Text (Text)
 import Flow
 import Html
 import Html.Attributes
 import Html.Custom
+import Protolude
 import Shikensu.Utilities
 
+import qualified Components.Block as Block
 import qualified Data.List as List
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
@@ -19,14 +23,10 @@ import qualified Shikensu (Metadata)
 template :: Shikensu.Metadata -> Html -> Html
 template obj _ =
     container
-        []
-        [ blocks
+        [ Block.row
             []
-            [ blocksRow
-                [ cls "has-no-margin-top" ]
-                [ left obj
-                , right obj
-                ]
+            [ left obj
+            , right obj
             ]
         ]
 
@@ -43,22 +43,20 @@ left obj =
 
         projects =
             projectValues
-                |> List.sortOn (\p -> p !~> "name" :: String)
+                |> List.sortOn (\p -> p !~> "name" :: Text)
                 |> List.map project
     in
-        block
+        Block.node
             []
-            [ blockTitleLvl1
+            [ Block.title
                 []
-                [ text $ obj !~> "title" ]
+                [ text (obj !~> "title") ]
 
-            , blockList
-                [ cls "has-extra-space" ]
-                [ ul [] projects ]
+            , ul
+                []
+                projects
 
-            , blockText
-                [ cls "block__text--subtle" ]
-                [ p [] [ em [] [ text "Ordered by name." ] ] ]
+            , Block.note "Ordered by name."
             ]
 
 
@@ -68,11 +66,10 @@ left obj =
 
 right :: Shikensu.Metadata -> Html
 right obj =
-    Components.Blocks.Filler.template
-        [ attr "hide-lt" "small" ]
-
-        Filler
-        { icon = "i-tools"
+    Block.filler <| Filler
+        { hideOnSmallScreen = True
+        , href = Nothing
+        , icon = "i-tools"
         , label = obj !~> "title"
         , metadata = obj
         }
@@ -84,17 +81,17 @@ right obj =
 
 project :: Shikensu.Metadata -> Html
 project obj =
-    li
+    slab
+        Html.li
         []
+        [ "mt-5" ]
         [ a
-            [ href $ obj !~> "url" ]
+            [ Html.Attributes.href $ obj !~> "url" ]
             [ text $ obj !~> "name" ]
 
-        , br
+        , slab
+            Html.small
             []
-            []
-
-        , small
-            [ cls "small--block" ]
+            [ "block", "leading-normal", "mt-2" ]
             [ text $ obj !~> "description" ]
         ]

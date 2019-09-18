@@ -2,25 +2,36 @@
 
 
 # Variables
+# ---------
 
-NODE_BIN=./node_modules/.bin
-SRC_DIR=./src
-BUILD_DIR=./build
+SRC_DIR=src
+BUILD_DIR=build
+TEMPLATE_DIR=icidasset-template
 
 
-# Default task
+
+# Default
+# -------
 
 all: dev
 
 
-#
-# Build tasks
-#
+
+# Building
+# --------
+
 build: clean system css
 	@echo "> Done ⚡"
 
 
 build-production: build
+	@echo "> Minifying Css"
+	@./node_modules/.bin/purgecss \
+		--config purgecss.config.js \
+		--out $(BUILD_DIR)
+	@./node_modules/.bin/csso \
+		"${BUILD_DIR}/stylesheet.css" \
+		--output "${BUILD_DIR}/stylesheet.css"
 
 
 clean:
@@ -29,47 +40,39 @@ clean:
 
 
 css:
-	@echo "> Compiling CSS"
-	@$(NODE_BIN)/postcss \
-		-u postcss-import \
-		-u postcss-mixins \
-		-u postcss-custom-units \
-		-u postcss-remify --postcss-remify.base=16 \
-		-u postcss-simple-vars \
-		-u postcss-cssnext --no-postcss-cssnext.features.rem \
-		-o $(BUILD_DIR)/application.css \
-		./src/Css/index.css
+	@echo "> Compiling Css"
+	@./node_modules/.bin/tailwind \
+		build "${TEMPLATE_DIR}/Css/Main.css" \
+		--config "${TEMPLATE_DIR}/Css/Tailwind.js" \
+		--output "${BUILD_DIR}/stylesheet.css"
 
 
 system:
 	@echo "> Compiling System"
-	@stack build && stack exec build
+	@stack build --fast && stack exec build
 
 
-#
-# Dev tasks
-#
+
+# Development
+# -----------
+
 dev: build
-	@make -j watch_wo_build server
+	@make -j watch server
 
 
 server:
 	@echo "> Booting up web server (http://localhost:8000)"
-	@stack build && stack exec server
+	@devd --port 8000 --all --crossdomain --quiet --notfound=404.html $(BUILD_DIR)
 
 
-watch: build
-	@make watch_wo_build
-
-
-watch_wo_build:
+watch:
 	@echo "> Watching"
-	@make -j watch_css watch_system
+	@make -j watch-css watch-system
 
 
-watch_css:
-	@watchexec -p -w src -w icidasset-template --filter *.css -- make css
+watch-css:
+	@watchexec -p -i "${BUILD_DIR}*" --exts "css" -- make css
 
 
-watch_system:
-	@watchexec -p -w src -w icidasset-template -w system --ignore *.css -- make system
+watch-system:
+	@watchexec -p -i "${BUILD_DIR}*" --exts "md,hs,yaml" -- make system

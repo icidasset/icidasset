@@ -2,12 +2,13 @@ module Feed
     ( createFeed
     ) where
 
+import Common
 import Data.ByteString (ByteString)
 import Data.Monoid ((<>))
 import Data.Time.Clock
 import Data.Time.Format
-import Debug.Trace
 import Flow
+import Protolude
 import Shikensu
 import Shikensu.Utilities
 
@@ -15,12 +16,16 @@ import qualified Data.List as List
 import qualified Data.Maybe as Maybe
 import qualified Data.Text as Text
 import qualified Data.Text.Encoding as Text
+import qualified Data.Text.Lazy as Text.Lazy
 import qualified Text.Atom.Feed as Atom
 import qualified Text.Atom.Feed.Export as Export
 import qualified Text.XML.Light.Output as XML
 
 
-createFeed :: Dictionary -> ByteString
+-- 🔱
+
+
+createFeed :: Dictionary -> Maybe ByteString
 createFeed unfilteredWritings =
     let
         writings =
@@ -35,14 +40,13 @@ createFeed unfilteredWritings =
                 (Atom.TextString "I.A.")
                 (writings |> List.head |> publishedOn)
     in
-        feed
-            { Atom.feedEntries = fmap toEntry writings
-            , Atom.feedLinks = [Atom.nullLink baseUrl]
-            }
-            |> Export.xmlFeed
-            |> XML.ppElement
-            |> Text.pack
-            |> Text.encodeUtf8
+    feed
+        { Atom.feedEntries = fmap toEntry writings
+        , Atom.feedLinks = [ Atom.nullLink baseUrl ]
+        }
+        |> Export.textFeed
+        |> map Text.Lazy.toStrict
+        |> map Text.encodeUtf8
 
 
 isPublished :: Definition -> Bool
@@ -57,7 +61,7 @@ isPublished definition =
 -- Entries
 
 
-baseUrl :: String
+baseUrl :: Text
 baseUrl =
     "https://icidasset.com/"
 
@@ -66,7 +70,7 @@ toEntry :: Definition -> Atom.Entry
 toEntry def =
     let
         url =
-            baseUrl <> localPath def
+            baseUrl <> Text.pack (localPath def)
 
         entry =
             Atom.nullEntry
@@ -81,7 +85,7 @@ toEntry def =
                 def
                     |> content
                     |> fmap Text.decodeUtf8
-                    |> fmap Text.unpack
+                    |> fmap Export.xmlId
                     |> fmap Atom.HTMLContent
             }
 
@@ -90,22 +94,22 @@ toEntry def =
 -- Time
 
 
-parseDate :: String -> Maybe UTCTime
+parseDate :: Text -> Maybe UTCTime
 parseDate =
-    parseTimeM True defaultTimeLocale "%e-%m-%Y"
+    Text.unpack .> parseTimeM True defaultTimeLocale "%e-%m-%Y"
 
 
-publishedOn :: Definition -> String
+publishedOn :: Definition -> Text
 publishedOn definition =
-    definition
-        |> metadata
-        |> (!~> "published_on")
-        |> reformatDate
+    "published_on"
+        |> (~>) (metadata definition)
+        |> (<<=) reformatDate
+        |> fromMaybe Text.empty
 
 
-reformatDate :: String -> String
+reformatDate :: Text -> Maybe Text
 reformatDate input =
     input
         |> parseDate
-        |> Maybe.fromJust
-        |> formatTime defaultTimeLocale (iso8601DateFormat $ Just "%H:%M:%SZ")
+        |> map (formatTime defaultTimeLocale $ iso8601DateFormat $ Just "%H:%M:%SZ")
+        |> map Text.pack

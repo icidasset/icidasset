@@ -1,8 +1,8 @@
 {
   "private": true,
   "devDependencies": {
-    "icidasset-template": "file:./icidasset-template",
-    "netlify-cli": "^1.2.2",
-    "postcss-cli-simple": "^1.0.1"
+    "csso-cli": "^2.0.2",
+    "purgecss": "^1.4.0",
+    "tailwindcss": "^1.1.2"
   }
 }

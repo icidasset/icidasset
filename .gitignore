@@ -1,6 +1,5 @@
-.netlify
 .stack-work
 *.cabal
 /build
-deploy.sh
-node_modules
+/node_modules
+/stack.yaml.lock

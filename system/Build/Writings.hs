@@ -4,6 +4,7 @@ import Data.Aeson (toJSON)
 import Data.HashMap.Strict as HashMap (singleton)
 import Data.Text (Text)
 import Flow
+import Protolude
 import Shikensu
 import Shikensu.Contrib
 import Text.HTML.TagSoup
@@ -13,7 +14,6 @@ import qualified Data.List as List
 import qualified Data.Maybe as Maybe
 import qualified Data.Text as Text
 import qualified Data.Text.Encoding as Text
-import qualified Debug.Trace
 
 
 -- Summary
@@ -40,7 +40,7 @@ insertSummaryDef def =
     insertMetadataDef summary def
 
 
-extractSummary :: [Tag String] -> String
+extractSummary :: [Tag [Char]] -> [Char]
 extractSummary tags =
     tags
         |> List.filter isTagText
@@ -49,7 +49,7 @@ extractSummary tags =
         |> truncateString
 
 
-truncateString :: String -> String
+truncateString :: [Char] -> [Char]
 truncateString str =
     let
         spaceIdx =

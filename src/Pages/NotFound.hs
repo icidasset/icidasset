@@ -1,12 +1,16 @@
 module Pages.NotFound where
 
-import Components.Blocks.Filler
+import Common (container)
+import Components.Block (Filler(..))
 import Data.Text (Text)
+import Flow
 import Html
 import Html.Attributes
 import Html.Custom
+import Protolude
 import Shikensu.Utilities
 
+import qualified Components.Block as Block
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
 
@@ -17,14 +21,10 @@ import qualified Shikensu (Metadata)
 template :: Shikensu.Metadata -> Html -> Html
 template obj _ =
     container
-        []
-        [ blocks
-            []
-            [ blocksRow
-                [ cls "has-no-margin-top" ]
-                [ left obj
-                , right obj
-                ]
+        [ Block.row
+            [ "md:h-48" ]
+            [ left obj
+            , right obj
             ]
         ]
 
@@ -35,11 +35,10 @@ template obj _ =
 
 left :: Shikensu.Metadata -> Html
 left obj =
-    Components.Blocks.Filler.template
-        []
-
-        Filler
-        { icon = "i-megaphone"
+    Block.filler <| Filler
+        { hideOnSmallScreen = True
+        , href = Nothing
+        , icon = "i-megaphone"
         , label = obj !~> "title"
         , metadata = obj
         }
@@ -51,11 +50,10 @@ left obj =
 
 right :: Shikensu.Metadata -> Html
 right obj =
-    Components.Blocks.Filler.template
-        [ cls "has-content", href "../" ]
-
-        Filler
-        { icon = "i-home"
+    Block.filler <| Filler
+        { hideOnSmallScreen = False
+        , href = Just "/"
+        , icon = "i-home"
         , label = "Go to the homepage"
         , metadata = obj
         }

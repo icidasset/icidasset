@@ -6,6 +6,7 @@ import Data.Text (Text)
 import Data.Time.Format (defaultTimeLocale, formatTime)
 import Feed (createFeed)
 import Flow
+import Protolude
 import Renderers.Lucid
 import Renderers.Markdown
 import Shikensu
@@ -23,7 +24,7 @@ import qualified Data.List as List (concatMap, filter, find, head, map)
 import qualified Data.Maybe as Maybe (fromJust, fromMaybe)
 import qualified Data.Text.IO as Text (readFile)
 import qualified Data.Yaml as Yaml (decodeFile)
-import qualified Layouts.ApplicationExt
+import qualified Layouts.Application.Ext
 import qualified Layouts.Writing
 import qualified System.Directory as Dir (getModificationTime)
 
@@ -46,15 +47,13 @@ main =
         write "./build" dictionary
 
 
-
-
-nonPermalinkedPages :: [String]
+nonPermalinkedPages :: [[Char]]
 nonPermalinkedPages =
-    ["200", "404"]
+    [ "200", "404" ]
 
 
 
--- Sequences
+-- SEQUENCES
 
 
 data Sequence
@@ -87,13 +86,13 @@ writingsIO =
     encapsulate "src/Writings/**/*.md" >>= Shikensu.read
 
 
-encapsulate :: String -> IO Dictionary
+encapsulate :: [Char] -> IO Dictionary
 encapsulate thePattern =
-    Shikensu.listRelativeF "." [thePattern]
+    Shikensu.listRelativeF "." [ thePattern ]
 
 
 
--- Flows
+-- FLOWS
 
 
 flow :: Dependencies -> (Sequence, Dictionary) -> Dictionary
@@ -112,7 +111,7 @@ flow deps (Pages, dict) =
         |> copyPropsToMetadata
         |> insertMetadata deps
         |> renderContent (Renderers.Lucid.catalogRenderer Catalogs.pages)
-        |> renderContent (Renderers.Lucid.renderer Layouts.ApplicationExt.template)
+        |> renderContent (Renderers.Lucid.renderer Layouts.Application.Ext.template)
 
 
 flow _ (Static, dict) =
@@ -135,11 +134,11 @@ flow deps (WritingsWithLayout, dict) =
     (Writings, dict)
         |> flow deps
         |> renderContent (Renderers.Lucid.renderer Layouts.Writing.template)
-        |> renderContent (Renderers.Lucid.renderer Layouts.ApplicationExt.template)
+        |> renderContent (Renderers.Lucid.renderer Layouts.Application.Ext.template)
 
 
 
--- Additional IO, Pt. 1
+-- ADDITIONAL IO, Pt. 1
 -- Flow dependencies
 
 
@@ -176,27 +175,27 @@ gatherWritings = do
         |> return
 
 
-fileContents :: String -> IO Aeson.Value
+fileContents :: [Char] -> IO Aeson.Value
 fileContents =
     Text.readFile
     .> fmap Aeson.toJSON
 
 
-fileModificationDate :: String -> IO Aeson.Value
+fileModificationDate :: [Char] -> IO Aeson.Value
 fileModificationDate =
     Dir.getModificationTime
     .> fmap (formatTime defaultTimeLocale "%B %Y")
     .> fmap Aeson.toJSON
 
 
-decodeYaml :: String -> IO Aeson.Value
+decodeYaml :: [Char] -> IO Aeson.Value
 decodeYaml =
     Yaml.decodeFile
     .> fmap Maybe.fromJust
 
 
 
--- Additional IO, Pt. 2
+-- ADDITIONAL IO, Pt. 2
 -- RSS Feed
 
 
@@ -208,11 +207,12 @@ rssFeed = do
     (Writings, writings)
         |> flow HashMap.empty
         |> createFeed
+        |> fromMaybe ""
         |> feedDefinition rootDir
         |> return
 
 
-feedDefinition :: String -> ByteString -> Definition
+feedDefinition :: [Char] -> ByteString -> Definition
 feedDefinition rootDir feed =
     Definition
         { basename = "feed"

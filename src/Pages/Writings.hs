@@ -1,13 +1,17 @@
 module Pages.Writings where
 
-import Components.Blocks.Filler
+import Chunky
+import Common (container)
+import Components.Block (Filler(..))
 import Data.Text (Text)
 import Flow
 import Html
 import Html.Attributes
 import Html.Custom
+import Protolude
 import Shikensu.Utilities
 
+import qualified Components.Block as Block
 import qualified Data.List as List
 import qualified Data.Maybe as Maybe
 import qualified Data.Text as Text
@@ -20,14 +24,10 @@ import qualified Shikensu (Metadata)
 template :: Shikensu.Metadata -> Html -> Html
 template obj _ =
     container
-        []
-        [ blocks
+        [ Block.row
             []
-            [ blocksRow
-                [ cls "has-no-margin-top" ]
-                [ left obj
-                , right obj
-                ]
+            [ left obj
+            , right obj
             ]
         ]
 
@@ -46,26 +46,24 @@ left obj =
                 acc
 
         writingValues =
-            obj !~> "writings" :: [Shikensu.Metadata]
+            obj !~> "writings" :: [ Shikensu.Metadata ]
 
         writings =
             writingValues
-                |> List.sortOn (\p -> p !~> "title" :: String)
+                |> List.sortOn (\p -> p !~> "title" :: Text)
                 |> List.foldl reducer []
     in
-        block
+        Block.node
             []
-            [ blockTitleLvl1
+            [ Block.title
                 []
                 [ text $ obj !~> "title" ]
 
-            , blockList
+            , ul
                 []
-                [ ul [] writings ]
+                writings
 
-            , blockText
-                [ cls "block__text--subtle" ]
-                [ p [] [ em [] [ text "Ordered by name." ] ] ]
+            , Block.note "Ordered by name."
             ]
 
 
@@ -75,11 +73,10 @@ left obj =
 
 right :: Shikensu.Metadata -> Html
 right obj =
-    Components.Blocks.Filler.template
-        [ attr "hide-lt" "small" ]
-
-        Filler
-        { icon = "i-text-document"
+    Block.filler <| Filler
+        { hideOnSmallScreen = True
+        , href = Nothing
+        , icon = "i-text-document"
         , label = obj !~> "title"
         , metadata = obj
         }
@@ -91,7 +88,7 @@ right obj =
 
 writing :: Shikensu.Metadata -> Shikensu.Metadata -> Html
 writing parent obj =
-    li
+    Html.li
         []
         [ a
             [ hrefRelativeDir obj ]

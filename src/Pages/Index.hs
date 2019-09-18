@@ -1,13 +1,17 @@
 module Pages.Index where
 
-import Components.Blocks.Filler
+import Chunky
+import Common
+import Components.Block (Filler(..))
 import Data.Text (Text)
 import Flow
 import Html
 import Html.Attributes
 import Html.Custom
+import Protolude hiding (Left, Right)
 import Shikensu.Utilities
 
+import qualified Components.Block as Block
 import qualified Data.List as List
 import qualified Data.Maybe as Maybe
 import qualified Data.Text as Text
@@ -20,46 +24,42 @@ import qualified Shikensu (Metadata)
 template :: Shikensu.Metadata -> Html -> Html
 template obj _ =
     container
-        []
-        [ p
-            [ cls "intro" ]
+        [ slab
+            Html.p
+            []
+            [ "font-serif", "leading-relaxed", "mt-12", "text-2xl", "md:text-3xl" ]
             [ markdownWithoutBlocks $ obj !~> "intro" ]
 
-        , blocks
+        , Block.row
+            [ "md:h-48" ]
+            [ Block.filler <| Filler
+                { hideOnSmallScreen = False
+                , href = Just "projects/"
+                , icon = "i-tools"
+                , label = "Projects"
+                , metadata = obj
+                }
+
+            , Block.filler <| Filler
+                { hideOnSmallScreen = False
+                , href = Just "writings/"
+                , icon = "i-text-document"
+                , label = "Writings"
+                , metadata = obj
+                }
+            ]
+
+        , Block.row
             []
-            [ blocksRow
-                []
-                [ nowBlock obj
-                , socialBlock obj
-                ]
+            [ latestProjectsBlock obj
+            , latestWritingsBlock obj
+            ]
 
-            , blocksRow
-                []
-                [ latestProjectsBlock obj
-                , latestWritingsBlock obj
-                ]
-
-            , blocksRow
-                []
-                [ Components.Blocks.Filler.template
-                    [ class_ "has-content has-fixed-height", href "projects/" ]
-
-                    Filler
-                    { icon = "i-tools"
-                    , label = "See all projects"
-                    , metadata = obj
-                    }
-
-                , Components.Blocks.Filler.template
-                    [ class_ "has-content has-fixed-height", href "writings/" ]
-
-                    Filler
-                    { icon = "i-text-document"
-                    , label = "See all writings"
-                    , metadata = obj
-                    }
-                ]
-        ]
+        , Block.row
+            []
+            [ nowBlock obj
+            , socialBlock obj
+            ]
     ]
 
 
@@ -74,28 +74,27 @@ nowBlock obj =
             |> Text.toLower
             |> Text.append (Text.pack "Last update, ")
     in
-        block
-            []
-            [ blockTitleLvl2
-                [ cls "is-colored" ]
-                [ "What I’m doing now" ]
+    Block.node
+        []
+        [ Block.title
+            [ "text-gray-500" ]
+            [ "What I’m doing now" ]
 
-            , blockText
-                []
-                [ markdown $ obj !~> "now" ]
+        , chunk
+            [ "text-justify", "md:w-9/12" ]
+            [ markdown $ obj !~> "now" ]
 
-            , blockText
-                [ cls "block__text--subtle" ]
-                [ p [] [ em [] [ text modifiedData, text "." ] ] ]
-            ]
+        , Block.note
+            (modifiedData <> ".")
+        ]
 
 
 socialBlock :: Shikensu.Metadata -> Html
 socialBlock obj =
-    block
+    Block.node
         []
-        [ blockTitleLvl2
-            [ cls "is-colored" ]
+        [ Block.title
+            [ "text-gray-500" ]
             [ text "Social links" ]
 
         , blockText
@@ -113,27 +112,26 @@ latestProjectsBlock obj =
                 _         -> acc
 
         projectValues =
-            (obj !~> "info" !~> "projects" :: [Shikensu.Metadata])
+            (obj !~> "info" !~> "projects" :: [ Shikensu.Metadata ])
 
         projects =
             projectValues
-                |> List.sortOn (\p -> p !~> "name" :: String)
+                |> List.sortOn (\p -> p !~> "name" :: Text)
                 |> List.foldl reducer []
-  in
-        block
+    in
+    Block.node
+        []
+        [ Block.title
+            [ "text-gray-500" ]
+            [ text "Latest projects" ]
+
+        , blockList
             []
-            [ blockTitleLvl2
-                [ cls "is-colored" ]
-                [ text "Latest projects" ]
+            [ ul [] projects ]
 
-            , blockList
-                []
-                [ ul [] projects ]
-
-            , blockText
-                [ cls "block__text--subtle" ]
-                [ p [] [ em [] [ text "Ordered by name." ] ] ]
-            ]
+        , Block.note
+            "Ordered by name."
+        ]
 
 
 latestWritingsBlock :: Shikensu.Metadata -> Html
@@ -150,27 +148,26 @@ latestWritingsBlock obj =
                     acc
 
         writingValues =
-            obj !~> "writings" :: [Shikensu.Metadata]
+            obj !~> "writings" :: [ Shikensu.Metadata ]
 
         writings =
             writingValues
-                |> List.sortOn (\w -> w !~> "title" :: String)
+                |> List.sortOn (\w -> w !~> "title" :: Text)
                 |> List.foldl reducer []
     in
-        block
+    Block.node
+        []
+        [ Block.title
+            [ "text-gray-500" ]
+            [ text "Latest writings" ]
+
+        , blockList
             []
-            [ blockTitleLvl2
-                [ cls "block__title is-colored" ]
-                [ text "Latest writings" ]
+            [ ul [] writings ]
 
-            , blockList
-                []
-                [ ul [] writings ]
-
-            , blockText
-                [ cls "block__text--subtle" ]
-                [ p [] [ em [] [ text "Ordered by name." ] ] ]
-      ]
+        , Block.note
+            "Ordered by name."
+        ]
 
 
 
@@ -182,7 +179,7 @@ project obj =
     li
         []
         [ a
-            [ href $ obj !~> "url" ]
+            [ Html.Attributes.href $ obj !~> "url" ]
             [ text $ obj !~> "name" ]
         ]
 

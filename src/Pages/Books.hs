@@ -1,13 +1,17 @@
 module Pages.Books where
 
-import Components.Blocks.Filler
+import Chunky
+import Common (container)
+import Components.Block (Filler(..))
 import Data.Text (Text)
+import Flow
 import Html
 import Html.Attributes
 import Html.Custom
-import Prelude hiding (span)
+import Protolude hiding (span)
 import Shikensu.Utilities
 
+import qualified Components.Block as Block
 import qualified Data.Text as Text
 import qualified Shikensu (Metadata)
 
@@ -18,14 +22,10 @@ import qualified Shikensu (Metadata)
 template :: Shikensu.Metadata -> Html -> Html
 template obj _ =
     container
-        []
-        [ blocks
+        [ Block.row
             []
-            [ blocksRow
-                [ cls "has-no-margin-top" ]
-                [ left obj
-                , right obj
-                ]
+            [ left obj
+            , right obj
             ]
         ]
 
@@ -37,22 +37,23 @@ template obj _ =
 left :: Shikensu.Metadata -> Html
 left obj =
     let
-        bookValues = obj !~> "info" !~> "books"
-        books = fmap book bookValues
+        bookValues =
+            obj !~> "info" !~> "books"
+
+        books =
+            map book bookValues
     in
-        block
+        Block.node
             []
-            [ blockTitleLvl1
+            [ Block.title
                 []
                 [ text (obj !~> "title") ]
 
-            , blockList
+            , ul
                 []
-                [ ul [] books ]
+                books
 
-            , blockText
-                [ cls "block__text--subtle" ]
-                [ p [] [ em [] [ text "Ordered by name." ] ] ]
+            , Block.note "Ordered by name."
             ]
 
 
@@ -62,11 +63,10 @@ left obj =
 
 right :: Shikensu.Metadata -> Html
 right obj =
-    Components.Blocks.Filler.template
-        [ attr "hide-lt" "small" ]
-
-        Filler
-        { icon = "i-book"
+    Block.filler <| Filler
+        { hideOnSmallScreen = True
+        , href = Nothing
+        , icon = "i-book"
         , label = obj !~> "title"
         , metadata = obj
         }
@@ -86,9 +86,9 @@ book obj =
           -- Status
         , case obj ~> "reading" of
             Just True ->
-                span
-                    [ cls "block__list__affix" ]
-                    [ text "Currently reading" ]
+                -- TODO: Styling
+                text "Currently reading"
+
             _ ->
                 nothing
 

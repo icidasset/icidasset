@@ -1,13 +1,17 @@
-module Layouts.ApplicationExt where
+module Layouts.Application.Ext where
 
 import Data.Text (Text)
 import Html hiding (title)
 import Html.Attributes
 import Layouts.Application
+import Protolude hiding (link)
 import Shikensu (Metadata)
 import Shikensu.Utilities
 
 import qualified Data.Text as Text (append, pack)
+
+
+-- 🔱
 
 
 template :: Metadata -> Html -> Html

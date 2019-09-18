@@ -1,5 +1,4 @@
-resolver: nightly-2017-06-22
-
+resolver: lts-14.4
 packages:
-- '.'
-- './icidasset-template'
+  - .
+  - icidasset-template
