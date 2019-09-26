@@ -63,7 +63,7 @@ isPublished definition =
 
 baseUrl :: Text
 baseUrl =
-    "https://icidasset.com/"
+    "https://citric.id/"
 
 
 toEntry :: Definition -> Atom.Entry
