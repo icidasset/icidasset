@@ -189,6 +189,6 @@ writing parent obj =
     li
         []
         [ a
-            [ hrefRelativeDir obj ]
+            [ hrefRelativeDir parent obj ]
             [ text $ Maybe.fromMaybe (obj !~> "title") (obj ~> "short_title") ]
         ]
