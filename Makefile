@@ -24,16 +24,6 @@ build: clean system css
 	@echo "> Done ⚡"
 
 
-build-production: build
-	@echo "> Minifying Css"
-	@./node_modules/.bin/purgecss \
-		--config purgecss.config.js \
-		--out $(BUILD_DIR)
-	@./node_modules/.bin/csso \
-		"${BUILD_DIR}/stylesheet.css" \
-		--output "${BUILD_DIR}/stylesheet.css"
-
-
 clean:
 	@echo "> Cleaning Build Directory"
 	@rm -rf $(BUILD_DIR)
@@ -76,3 +66,22 @@ watch-css:
 
 watch-system:
 	@watchexec -p -i "${BUILD_DIR}*" --exts "md,hs,yaml" -- make system
+
+
+
+# Production
+# ==========
+
+build-production: build
+	@echo "> Minifying Css"
+	@./node_modules/.bin/purgecss \
+		--config purgecss.config.js \
+		--out $(BUILD_DIR)
+	@./node_modules/.bin/csso \
+		"${BUILD_DIR}/stylesheet.css" \
+		--output "${BUILD_DIR}/stylesheet.css"
+
+
+deploy: build-production
+	@echo "> Deploying to IPFS using FISSION"
+	ipfs-deploy -p fission -d cloudflare build/
