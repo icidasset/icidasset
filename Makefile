@@ -84,4 +84,5 @@ build-production: build
 
 deploy: build-production
 	@echo "> Deploying to IPFS using FISSION"
+	ipfs add build/ --recursive --pin=true
 	ipfs-deploy -p fission -d cloudflare --no-clipboard --no-open build/
