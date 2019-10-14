@@ -77,7 +77,7 @@ nowBlock obj =
     Block.node
         []
         [ Block.title
-            [ Block.titleColorClass ]
+            ( Block.titleColorClasses )
             [ "What I’m doing now" ]
 
         , chunk
@@ -94,7 +94,7 @@ socialBlock obj =
     Block.node
         []
         [ Block.title
-            [ Block.titleColorClass ]
+            ( Block.titleColorClasses )
             [ text "Social links" ]
 
         , blockText
@@ -122,7 +122,7 @@ latestProjectsBlock obj =
     Block.node
         []
         [ Block.title
-            [ Block.titleColorClass ]
+            ( Block.titleColorClasses )
             [ text "Latest projects" ]
 
         , blockList
@@ -158,7 +158,7 @@ latestWritingsBlock obj =
     Block.node
         []
         [ Block.title
-            [ Block.titleColorClass ]
+            ( Block.titleColorClasses )
             [ text "Latest writings" ]
 
         , blockList
