@@ -79,44 +79,61 @@ projects:
 #
 books:
   - { title: "After Dark", author: "Haruki Murakami" }
-  - { title: "How We Got to Now", author: "Steven Johnon" }
+  - { title: "Ego is the Enemy", author: "Ryan Holiday" }
+  - { title: "Harry Potter series", author: "J. K. Rowling" }
+  - { title: "How We Got to Now", author: "Steven Johnon" } # → Revaluate
   - { title: "Letters from a Stoic", author: "Seneca" }
   - { title: "Meditations", author: "Marcus Aurelius" }
   - { title: "Ready Player One", author: "Ernest Cline" }
-  - { title: "The 4-Hour Body", author: "Timothy Ferriss" }
-  - { title: "The 4-Hour Workweek", author: "Timothy Ferriss" }
-  - { title: "The Art of Learning", author: "Josh Waitzkin" }
-  - { title: "The Checklist Manifesto", author: "Atul Gawande" }
-  - { title: "The Obstacle Is the Way", author: "Ryan Holiday" }
-  - { title: "Vagabonding", author: "Rolf Potts" }
-  - { title: "We Learn Nothing", author: "Tim Kreider" }
-  - { title: "Zen and the Art of Motorcycle Maintenance", author: "Robert Pirsig" }
+  - { title: "The Art of Learning", author: "Josh Waitzkin" } # → Revaluate
+  - { title: "The Colour of Magic", author: "Terry Pratchett" }
+  - { title: "The Daily Stoic", author: "Ryan Holiday" }
 
 
-books__toRead:
-  - { title: "Cat's Cradle", author: "Kurt Vonnegut" }
-  - { title: "How to Live", author: "Sarah Bakewell" }
+books__reading:
+  - { title: "Stillness is the Key", author: "Ryan Holiday" }
+  - { title: "12 Rules for Life", author: "Jordan B. Peterson" }
+  - { title: "Frankenstein", author: "Mary Shelley" }
+  - { title: "Talking to My Daughter About the Economy: A Brief History of Capitalism", author: "Yanis Varoufakis" }
+  - { title: "The Time Machine", author: "H.G. Wells" }
+  - { title: "The Secret Garden", author: "Frances Hodgson Burnett" }
+  - { title: "The Graveyard Book", author: "Neil Gaiman" }
 
 
-books__average:
+books__other:
   - { title: "10% Happier", author: "Dan Harris" }
+  - { title: "Alan Turing: The Enigma", artist: "Andrew Hodges" }
   - { title: "Artist of Life", author: "Bruce Lee" }
   - { title: "Benjamin Franklin", author: "Walter Isaacson" }
   - { title: "Bigger Leaner Stronger", author: "Michael Matthews" }
+  - { title: "Cat's Cradle", author: "Kurt Vonnegut" }
+  - { title: "Daily Rituals: How Artists Work", author: "Mason Currey" }
+  - { title: "Eat Wheat", author: "John Douillard" }
   - { title: "Getting Real", author: "37 Signals" }
+  - { title: "Homo Deus: A Brief History of Tomorrow", author: "Yuval Noah Harari" }
+  - { title: "How to Live", author: "Sarah Bakewell" }
   - { title: "Journey to the Center of the Earth", author: "Jules Verne" }
+  - { title: "Making Ideas Happen", author: "Scott Belsky" }
+  - { title: "Mythos", author: "Stephen Fry" }
   - { title: "One, Two, Three: Absolutely Elementary Mathematics", author: "David Berlinkski" }
   - { title: "Pythagoras & His Theorem", author: "Paul Strathern" }
-  - { title: "The Alchemist", author: "Paulo Coelho" }
-  - { title: "The Wild Diet", author: "Abel James" }
-  - { title: "Wizard: The Life and Times of Nikola Tesla", author: "Marc Seifer" }
-
-  # Not entirely sure if these were really good or just average
-  - { title: "Daily Rituals: How Artists Work", author: "Mason Currey" }
-  - { title: "Making Ideas Happen", author: "Scott Belsky" }
   - { title: "Rework", author: "Jason Fried" }
+  - { title: "Sapiens", author: "Yuval Noah Harari" }
   - { title: "So Good They Can't Ignore You", author: "Cal Newport" }
   - { title: "Tesla: Man Out of Time", author: "Margaret Cheney" }
+  - { title: "The 4-Hour Body", author: "Timothy Ferriss" }
+  - { title: "The 4-Hour Workweek", author: "Timothy Ferriss" }
+  - { title: "The Alchemist", author: "Paulo Coelho" }
+  - { title: "The Checklist Manifesto", author: "Atul Gawande" }
+  - { title: "The Complete Guide to Fasting", author: "Jimmy Moore & Dr. Jason Fung" }
+  - { title: "The Dental Diet", author: "Dr. Steven Lin" }
   - { title: "The Icarus Deception", author: "Seth Godin" }
   - { title: "The Information", author: "James Gleick" }
+  - { title: "The Obstacle Is the Way", author: "Ryan Holiday" }
+  - { title: "The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life", author: "Mark Manson" }
+  - { title: "The Wild Diet", author: "Abel James" }
+  - { title: "We Learn Nothing", author: "Tim Kreider" }
+  - { title: "Vagabonding", author: "Rolf Potts" }
   - { title: "You're Never Weird on the Internet (Almost)", author: "Felicia Day" }
+  - { title: "Wizard: The Life and Times of Nikola Tesla", author: "Marc Seifer" }
+  - { title: "Zen and the Art of Motorcycle Maintenance", author: "Robert Pirsig" } # → Revaluate
