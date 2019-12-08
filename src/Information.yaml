@@ -23,12 +23,6 @@ projects:
     description: >
       Electrical circuits, theory and examples.
 
-  - name: "Ectograph"
-    url: "https://github.com/icidasset/ectograph"
-    description: >
-      A set of utility functions for using Ecto in combination
-      with GraphQL (graphql-elixir/graphql).
-
   - name: "Electricity & Mathematics"
     url: "https://electrical-mathematics.surge.sh/"
     description: >
@@ -55,16 +49,6 @@ projects:
     description: >
       A small toolset for building static websites.
     promote: true
-
-  - name: "Static Base"
-    url: "https://github.com/icidasset/static-base"
-    description: >
-      A small functional toolset for building static websites.
-
-  - name: "Static Base Contrib"
-    url: "https://github.com/icidasset/static-base-contrib"
-    description: >
-      Functions you can use with static-base.
 
   - name: "Waves"
     url: "http://waves.icidasset.com/?config=eJyl0D0PgjAQBuD%2Fcq4dji%2Bx3Sra1UEHjXEgpCQkhCJQlBD%2BuxdZhDjB0ry9S55c3h5ecatPtiltAwLGcM4KHZmaXmDffQ3i3kP8zijAjYaJyU1FeXPkgeSKJmmln1YXSQdiiwxMmtaaRIptnFsNwkEcsUtX0hdkBAP7j3qeVGE4RR13rYooDwpn6m6Bev1Vw8CXPFpfwARVaq9wfuqSAqYqBq7vLC7gMXwAnY2l%2BQ%3D%3D"
