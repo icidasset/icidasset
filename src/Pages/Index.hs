@@ -97,8 +97,7 @@ socialBlock obj =
             ( Block.titleColorClasses )
             [ text "Social links" ]
 
-        , blockText
-            []
+        , raw
             [ markdown $ obj !~> "social" ]
         ]
 
@@ -125,8 +124,7 @@ latestProjectsBlock obj =
             ( Block.titleColorClasses )
             [ text "Latest projects" ]
 
-        , blockList
-            []
+        , raw
             [ ul [] projects ]
 
         , Block.note
@@ -161,8 +159,7 @@ latestWritingsBlock obj =
             ( Block.titleColorClasses )
             [ text "Latest writings" ]
 
-        , blockList
-            []
+        , raw
             [ ul [] writings ]
 
         , Block.note
