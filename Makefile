@@ -70,7 +70,7 @@ watch-system:
 
 
 # Production
-# ==========
+# ----------
 
 build-production: build
 	@echo "> Minifying Css"

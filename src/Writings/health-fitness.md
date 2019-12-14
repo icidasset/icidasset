@@ -6,34 +6,43 @@ published_on: 21-03-2015
 promote: false
 ---
 
-Most of this is based upon the research of [Tim](http://fourhourbody.com/) [Ferriss](http://fourhourchef.com/), the work of [Peter Attia](http://eatingacademy.com/), the guys from [Muscle for Life](http://www.muscleforlife.com/) and the work of [Dr. Rhonda Patrick](http://www.foundmyfitness.com/). If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
+If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
+
+<small>_Last update, December 2019._</small>
 
 
 
 
 ## Diet
 
-- __Diet is more important than exercise.__
-- How much you should eat depends on your TDEE (total daily energy expenditure),
-  which in turn is based on your BMR (basal metabolic rate) and your activity level.
-  [More info](http://www.muscleforlife.com/healthy-meal-planning-tips/).
-- If you want to lose body fat, fast for more than nine hours.
-  From that point on your body will use the stored fat
-  as its energy source. Fasting does not cause muscle loss.
-  <small>(more on fasting later)</small>
-- If you want to gain muscle, eat 5-10% more than recommended.
-  Try not to eat more than this, or you will gain too much body fat.
-  <small>(Only effective if training properly, see workout schedule)</small>
-- Do __not__ overeat, ever, you're only going to gain body fat.
-- Drink enough water, if you're thirsty, it's already too late.
-  Two to three liters per day should be good.
-  Helps with losing body fat.
-- Pre and post-workout meals are helpful if you want to gain muscle.
-  <small>More info below.</small>
-- You can eat fat, it doesn't make you fatter,
+- *Diet is more important than exercise.*
+
+- __Fasting is the best way the lose body fat__,
+  because you're using your body fat as your energy source.
+  Cutting on carbs is less effective because eventually
+  your metabolism adjusts itself and you can only go so far
+  until you feel fatigued.
+- Besides losing body fat, short-term fasting (less than 24 hours)
+  increases growth hormone, lowers insulin and blood sugar levels,
+  improves mental clarity, is good for disease prevention,
+  has short-term autophagy benefits, among other things.
+  13 hours per day is considered the optimal amount.
+- Long-term fasting (more than 48 hours), besides the short-term benefits,
+  to put it simply, detoxes/resets the body. Beware though, if you fast too long
+  (more than 3 days I'm guessing), you could lose some muscle.
+  Benefits include: reduced inflammation, reduced age-related diseases, autoimmunity reset, etc.
+  [More info](https://prolonfmd.com/fasting-mimicking-diet/).
+- Note that __fasting is only consuming water and nothing else__.
+  You could have tea and black coffee, among other things,
+  but then you lose some of the benefits.
+  [More info](https://www.amazon.com/Complete-Guide-Fasting-Intermittent-Alternate-Day/dp/1628600012/ref=asap_bc?ie=UTF8).
+
+- __Do not overeat, ever__, you're only going to gain body fat.
+- __Drink enough water__, if you're thirsty, it's already too late.
+- You can eat fat, it doesn't necessarily make you fatter,
   that is, if it are healthy fats.
   Healthy fats are:
-  saturated <small>(coconut oil, grassfed butter)</small> and
+  saturated <small>(coconut oil, grass-fed butter)</small> and
   polyunsaturated <small>(omega-3 and 6)</small>.
 - Simple and white carbohydrates are the most unhealthy forms of carbs,
   i.e. not nutritious.  
@@ -41,39 +50,9 @@ Most of this is based upon the research of [Tim](http://fourhourbody.com/) [Ferr
 - Complex carbohydrates are the most healthy form of carbs,
   i.e. most nutritious.  
   <small>Green vegetables, beans, lentils, sweet potatoes, whole grains, etc.</small>
-- Fasting 13 hours per day is considered the optimal amount of fasting.
-  Fasting is good for disease prevention, better sleep, more energy.
-  Note that fasting is __only consuming water and nothing else__. [More info](https://www.amazon.com/Complete-Guide-Fasting-Intermittent-Alternate-Day/dp/1628600012/ref=asap_bc?ie=UTF8).
-- [Intermittent fasting](http://jamesclear.com/the-beginners-guide-to-intermittent-fasting)
-  is a great pattern for eating
-  to increase muscle mass and to decrease body fat.
-  It might also help with increasing testosterone.
-- [Prolonged fasting](https://www.foundmyfitness.com/episodes/valter-longo-2) (at least 48 hours, ideally 96 hours or longer) is a great way to "heal", or "reset", your body.
-  Reduce inflammation, reduce age-related diseases, resetting autoimmunity, etc.
-  [More info](https://prolonfmd.com/fasting-mimicking-diet/).
 
 
-### Pre and post-workout meals
-
-Pre:
-
-- Pre-workout meals are useful for
-  (1) building muscle by eating protein,
-  and (2) improving performance by eating carbs.
-- A small carbs/protein meal, 30-40gr protein, 40-50gr carbs.
-- [More info](http://www.muscleforlife.com/pre-workout-nutrition/).
-
-Post:
-
-- Post-workout meals are useful for
-  preventing muscle breakdown, and thus stimulating
-  muscle growth.
-- 30-50gr of protein and about 30% of your daily carbs.
-- More activity = more protein.
-- [More info](http://www.muscleforlife.com/guide-to-post-workout-nutrition/)
-
-
-### Extra information
+### Additional info
 
 - Good for the gut: soluble fiber, fermented foods, kombucha.
 - Carbs can best be eaten early in the day (you're more insulin resistant later in the day).
@@ -86,13 +65,13 @@ Post:
 - Your mood determines a good amount of how you process food/drinks.
 
 
-### Detailed information
+### Detailed info
 
 - Vitamin D <small>(UV radiation, sun)</small> and magnesium <small>(dark green vegetables,
   kale leaves, spinach, etc.)</small> are probably the most important micronutrients.
 - Sugar <small>(50% glucose, 50% fructose)</small> is the main reason for obesity.
 - Don't eat too much fruit with a high fructose level <small>(max 1-2/day)</small>.
-- Low fat food mostly means high sucrose levels, so avoid those.
+- Low-fat food usually means high sucrose levels, so avoid those.
 - A ketogenic state means that the body will retrieve energy from your stored fat,
   instead of glucose (sugars, carbs, etc.).
 - A good diet and fasting are the best ways to prevent cancer.
@@ -120,9 +99,9 @@ Post:
   (High-Intensity Interval Training) over other methods.
 
 
-### Extra information
+### Additional info
 
-- Before meals, not pre and post-workout meals,
+- Before meals,
   you can do some light exercises <small>(like wall-pushes and squats)</small>
   to ensure that those muscles get fed
   <small>(also an hour and a half after the meal)</small>.
@@ -132,7 +111,7 @@ Post:
   (eg. biceps).
 
 
-### Detailed information
+### Detailed info
 
 - When you are moving, your brain suppresses the pain signals.
   That's why sometimes you feel more pain after waking up the next morning.
@@ -143,17 +122,55 @@ Post:
 
 
 
-## Testosterone
+## Sleep
 
-Testosterone is another important factor.  
-Testosterone can be increased in the following ways:
+- __Sleep is crucial__.
+- 7 hours of sleep is the minimum.
+- You cannot sleep one day just a few hours and the next day sleep
+  a few hours longer, it doesn't work that way.
+- Your muscles grow when you sleep
+  (and sleep deficiency leads to faster muscle loss).
+- Going to bed at the same time and getting up
+  at the same time every day is essential.
+- No screens or bright lights a half hour,
+  or ideally a bit more, before bed (blue light).
 
-- More active = more testosterone.
-- Use a lot of muscle groups while exercising (compound movements).
-- Get enough sleep.
-- Get enough vitamin D.
-- Get rid of sugar (kills 25%).
-- Making sure your selenium levels are in order.
+
+### Additional info
+
+- The ideal sleeping temperature is 17°C.
+- Not enough sleep makes you fatter.
+- Not enough sleep causes a testosterone deficiency.
+- Your bedroom should be as dark as possible and a bit cool.
+- To reset your biorhythm to the optimal hours,
+  get some sunlight early in the morning (ideally between 6 and 8AM).
+- [More info](https://www.youtube.com/watch?v=q9q3hfsPYpM).
+
+
+
+
+## Stress & Lifestyle
+
+- Mental stress ⟺ physical stress <small>(it's all related)</small>
+- Stress isn't always a bad thing.  
+  It's a signal that you're body is preparing for something.
+- How you think about stress and how you act in general,
+  determines the amount and nature of its physical effects.
+- Enjoy the now, don't think too much about where you're going.
+- Don't think about tomorrow, nothing bad is going to happen.
+
+
+### Managing
+
+- _[Wim Hof method](https://www.wimhofmethod.com/):_
+  breathing is required to resist the cold,
+  when trying to resist the cold you burn brown fat,
+  which in turn keeps your temperature up and produces huge amounts of energy.
+  Breathing effectively is important for your focus, metabolism, stress, etc.
+- Meditating 20 minutes a day can bring enormous benefits, e.g. reduce bad stress.
+  Focus on breathing/air flow.
+- Visualizing yourself doing a task can improve your actual ability to do it.
+  [More info](http://www.muscleforlife.com/how-to-get-stronger/).
 
 
 
@@ -169,44 +186,3 @@ Testosterone can be increased in the following ways:
   the blood stream prevents these delicate tissues from becoming inflamed.
 - People whose natural defense system is weakened due to an infection
   or other physical stressor are at increased risk of developing an allergy.
-
-
-
-
-## Sleep
-
-- Sleep is every important, don't listen to the people
-  that say that sleep is a waste of time.
-- 7 and half hours of sleep is the absolute minimum.
-- Not enough sleep makes you fatter.
-- Not enough sleep causes a testosterone deficiency.
-- Your muscles grow when you sleep
-  (and sleep deficiency leads to faster muscle loss).
-- You cannot sleep one day just a few hours and the next day sleep
-  a few hours longer, it does not work like that.
-- Going to bed at the same time and getting up
-  at the same time every day is essential.
-- Your bedroom should be as dark as possible and a bit cool.
-- No screens or bright lights a half hour before bed.
-
-
-
-
-## Stress & Lifestyle
-
-- _[Wim Hof method](https://www.wimhofmethod.com/):_
-  breathing is required to resist the cold,
-  when trying to resist the cold you burn brown fat,
-  which in turn keeps your temperature up and produces huge amounts of energy.
-  Breathing effectively is important for your focus, metabolism, stress, etc.
-- Visualizing yourself doing a task can improve your actual ability to do it.
-  [More info](http://www.muscleforlife.com/how-to-get-stronger/).
-- Do not think stress is something bad.
-  It's a signal that you're body is preparing for something.
-- How you think about stress and how you act in general,
-  determines the amount and nature of its physical effects.
-- Enjoy the now, don't think to much about where you're going.
-- Don't think about tomorrow, nothing bad is going to happen.
-- Meditating 20 minutes a day can bring enormous benefits, e.g. reduce bad stress.
-  Focus on breathing/air flow.
-- Mental stress <=> physical stress <small>(it's all related)</small>
