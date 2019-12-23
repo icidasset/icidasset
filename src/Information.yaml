@@ -23,11 +23,6 @@ projects:
     description: >
       Electrical circuits, theory and examples.
 
-  - name: "Electricity & Mathematics"
-    url: "https://electrical-mathematics.surge.sh/"
-    description: >
-      All you need to learn about electrical engineering from the ground up.
-
   - name: "Diffuse"
     url: "https://github.com/icidasset/diffuse"
     description: >
