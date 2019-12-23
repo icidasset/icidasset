@@ -14,17 +14,17 @@ titles:
 #
 projects:
   - name: "Checklists"
-    url: "http://checklists.icidasset.com/"
+    url: "https://checklists.citric.id"
     description: >
       Build checklists that have a url.
 
   - name: "Circuits"
-    url: "http://circuits.icidasset.com/"
+    url: "https://circuits.citric.id"
     description: >
       Electrical circuits, theory and examples.
 
   - name: "Diffuse"
-    url: "https://github.com/icidasset/diffuse"
+    url: "https://diffuse.sh"
     description: >
       A music player which connects to your cloud/distributed storage.
     promote: true
@@ -35,7 +35,7 @@ projects:
       A simple data-structure API.
 
   - name: "Quotes"
-    url: "https://github.com/icidasset/quotes"
+    url: "http://quotes.icidasset.com"
     description: >
       Show a random quote from a remote-json-quotes collection.
 
@@ -46,7 +46,7 @@ projects:
     promote: true
 
   - name: "Waves"
-    url: "http://waves.icidasset.com/?config=eJyl0D0PgjAQBuD%2Fcq4dji%2Bx3Sra1UEHjXEgpCQkhCJQlBD%2BuxdZhDjB0ry9S55c3h5ecatPtiltAwLGcM4KHZmaXmDffQ3i3kP8zijAjYaJyU1FeXPkgeSKJmmln1YXSQdiiwxMmtaaRIptnFsNwkEcsUtX0hdkBAP7j3qeVGE4RR13rYooDwpn6m6Bev1Vw8CXPFpfwARVaq9wfuqSAqYqBq7vLC7gMXwAnY2l%2BQ%3D%3D"
+    url: "https://waves.citric.id/?config=eJyl0D0PgjAQBuD%2Fcq4dji%2Bx3Sra1UEHjXEgpCQkhCJQlBD%2BuxdZhDjB0ry9S55c3h5ecatPtiltAwLGcM4KHZmaXmDffQ3i3kP8zijAjYaJyU1FeXPkgeSKJmmln1YXSQdiiwxMmtaaRIptnFsNwkEcsUtX0hdkBAP7j3qeVGE4RR13rYooDwpn6m6Bev1Vw8CXPFpfwARVaq9wfuqSAqYqBq7vLC7gMXwAnY2l%2BQ%3D%3D"
     description: >
       Electrical-wave analyzer.
     promote: true
