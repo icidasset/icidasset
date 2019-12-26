@@ -150,18 +150,18 @@ Omega 3 and 6, although omega 6 shouldn't be eaten much because it causes inflam
 
 ### Improving Digestion
 
+- 🍁 __Eat foods that are in season__.
+- 😡 __Never eat while angry__. Or in other words, the more stress
+  you have the worse your digestion will be.
 - Chew food properly and mindfully.
 - Drink enough water before a meal, 30 minutes in advance.  
   <small>Add salt and/or black pepper to boost digestion even more.</small>
 - Drink warm water with a meal (eg. with lemon).
-- __Eat foods that are in season__.
 - Eat your biggest meal between 10AM and 2PM.
 - Have a bit of apple cider vinegar before your meal.
 - Have a small amount of organic fermented foods with each meal
   <small>Examples: fermented veggies, healthy unsweetened yoghurt, kimchi, kombucha, miso soup, olives, pickles, tempeh.</small>
 - Keep at least 20 minutes between meal portions.
-- Never eat while angry. Or in other words, the more stress
-  you have the worse your digestion will be.
 - Slow, deep breaths before a meal. 3 seconds in, 5 seconds out, 5 times.
 - Tongue exercises, or "mewing" if you will. Simple exercise would be to push the tongue to the roof of your mouth, including the back of your tongue, for 3 minutes.
 
@@ -191,9 +191,9 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 
 ### Very healthy all around
 
-- Liver, easy to consume in the form of paté.  
+- 🐖 Liver, easy to consume in the form of paté.  
   <small>Vitamins A, B & C. Iron & copper. Protein rich.</small>
-- Ramen dishes with proper ingredients.  
+- 🍲 Ramen dishes with proper ingredients.  
   <small>Broth, healthy fats, meat, eggs, veggies, mushrooms, etc.</small>
 
 
@@ -257,7 +257,7 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 
 ## Sleep
 
-- __Sleep is crucial__.
+- 🛌 __Sleep is crucial__.
 - 7 hours of sleep is the minimum.
 - You cannot sleep one day just a few hours and the next day sleep
   a few hours longer, it doesn't work that way.
@@ -295,14 +295,14 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 
 ### Managing
 
-- _[Wim Hof method](https://www.wimhofmethod.com/):_
+- ❄️ [Wim Hof method](https://www.wimhofmethod.com/):
   breathing is required to resist the cold,
   when trying to resist the cold you burn brown fat,
   which in turn keeps your temperature up and produces huge amounts of energy.
   Breathing effectively is important for your focus, metabolism, stress, etc.
-- Meditating 20 minutes a day can bring enormous benefits, e.g. reduce bad stress.
+- 🧘 Meditating 20 minutes a day can bring enormous benefits, eg. reduce bad stress.
   Focus on breathing/air flow.
-- Visualizing yourself doing a task can improve your actual ability to do it.
+- 🖼 Visualizing yourself doing a task can improve your actual ability to do it.
   [More info](http://www.muscleforlife.com/how-to-get-stronger/).
 
 #### Wim Hof Method
