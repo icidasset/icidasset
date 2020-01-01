@@ -202,6 +202,7 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 - Avoid bread with oils.
 - Carbs can best be eaten early in the day (you're more insulin resistant later in the day).
 - Eat raw tough foods (heavy on fiber) for a strong tongue and jaw muscles.
+- First meal of the day should be heavy and protein rich (30+ gr), be it breakfast or lunch.
 - Gluten-free products are sometimes worse than products with gluten:
   a lot of chemicals, corn syrup, etc.
 - Low-fat food usually means high sucrose levels, so avoid those.
