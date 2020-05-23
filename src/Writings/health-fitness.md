@@ -269,7 +269,8 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 - Kickstart your circadian rhythm by getting sunlight in the morning.
   Just a few seconds is enough, but ideally a few minutes.
 - No screens or bright lights a half hour,
-  or ideally a bit more, before bed (blue light).
+  or ideally a bit more, before bed <small>(blue light)</small>.
+- Poor sleep is often a sign of stress <small>(lack of energy, not excess)</small>.
 
 
 ### Additional info
