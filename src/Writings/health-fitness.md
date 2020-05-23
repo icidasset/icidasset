@@ -8,7 +8,7 @@ promote: false
 
 If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
 
-<small>_Last update, December 2019._</small>
+<small>_Last update, May 2020._</small>
 
 
 
@@ -69,6 +69,7 @@ Insulin is a hormone responsible for creating body fat. The more you have of it,
 - Vegetables, legumes, herbs and seeds are the most important.
   Eggs, meat, diary and fermented foods go second.
   Add at least one prebiotic food to every meal <small>(more on this later)</small>.
+- Next to stress, your immune system largely depends on your digestive health and vitamin D levels.
 
 
 ### Carbohydrates
@@ -259,13 +260,14 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 ## Sleep
 
 - 🛌 __Sleep is crucial__.
+- 🌅 __Stick to your circadian rhythm__, wake up when the sun rises and sleep when the sun goes down.
 - 7 hours of sleep is the minimum.
 - You cannot sleep one day just a few hours and the next day sleep
   a few hours longer, it doesn't work that way.
 - Your muscles grow when you sleep
   (and sleep deficiency leads to faster muscle loss).
-- Going to bed at the same time and getting up
-  at the same time every day is essential.
+- Kickstart your circadian rhythm by getting sunlight in the morning.
+  Just a few seconds is enough, but ideally a few minutes.
 - No screens or bright lights a half hour,
   or ideally a bit more, before bed (blue light).
 
@@ -305,6 +307,7 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
   Focus on breathing/air flow.
 - 🖼 Visualizing yourself doing a task can improve your actual ability to do it.
   [More info](http://www.muscleforlife.com/how-to-get-stronger/).
+- Very slow breaths in and out. 7 seconds in, 7 seconds out.
 
 #### Wim Hof Method
 
