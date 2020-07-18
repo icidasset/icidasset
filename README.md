@@ -16,6 +16,6 @@ User of
 Coder of
 
 * 🎵 Music Players
-* ⚡️ Electrical Guides & Tools
+* 💡 Electrical Guides & Tools
 * 🌋 Static Site Generators
 ```
