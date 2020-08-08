@@ -8,7 +8,7 @@ promote: false
 
 If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
 
-<small>_Last update, May 2020._</small>
+<small>_Last update, August 2020._</small>
 
 
 
@@ -121,8 +121,10 @@ Omega 3 and 6, although omega 6 shouldn't be eaten much because it causes inflam
 
 - Canola oil
 - Corn oil
+- Grapeseed oil
 - Peanut oil
 - Rapeseed oil
+- **Refined** coconut oil
 - Soybean oil
 - Sunflower oil
 
@@ -200,6 +202,7 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 
 ### Additional info
 
+- Almond butter > peanut butter, if you choose for peanut butter, try finding one without hydrogen oils (they change the oils into trans fats so it can be stored longer).
 - Avoid bread with oils.
 - Carbs can best be eaten early in the day (you're more insulin resistant later in the day).
 - Eat raw tough foods (heavy on fiber) for a strong tongue and jaw muscles.
@@ -209,7 +212,9 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 - Low-fat food usually means high sucrose levels, so avoid those.
 - Milk from stores is heavily processed, buy fresh milk instead.
 - Pesto is a good way to add herbs to a meal.
+- Repair your gut lining with bone broth.
 - Supplement sodium (salt) and magnesium when feeling weak/dizzy while exercising.
+- You can improve your metabolic rate by paying attention to your sleep and your zinc levels, taking cold plunges/showers, and eating one tablespoon of coconut oil per day.
 
 
 
@@ -224,14 +229,15 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 - 8 to 12 sets of 4 to 6 reps, seems to work best.
 - Make sure to get enough rest, train every muscle group once per week.
   It can take 3 to 7 days to fully recover from a heavy-weight workout.
+- Do a lot of different exercises, there should be variety, otherwise your body gets too efficient at that specific exercise and you're not progressing anymore.
 - You can train your abs/core and calves multiple times per week,
   as they take less time to recover (smaller muscles).
 - Train your grip and core for better overall strength.
 - Cardio isn't necessary, but it can help you build and retain more muscle.
-  [More info](http://www.muscleforlife.com/cardio-and-muscle-growth-friends-or-foes/).
+  Especially if you do cardio one day and then strength training the next.
 - When you do cardio, prefer
   [HIIT](http://www.muscleforlife.com/high-intensity-interval-training-and-weight-loss/)
-  (High-Intensity Interval Training) over other methods.
+  (High-Intensity Interval Training) over other methods. Although, when fasting, you might opt for steady-state cardio if your goal is fat loss.
 
 
 ### Additional info
@@ -251,8 +257,7 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 - When you are moving, your brain suppresses the pain signals.
   That's why sometimes you feel more pain after waking up the next morning.
   Your body received the full load, because you stopped moving for that long.
-- *HIIT cardio:* You need to get moving fast and long enough to make your breathing labored,
-  and you need to hold that speed for a fair amount of time.
+- *HIIT cardio:* going to your MAX all the way, then resting for as long as you need until you're fully recovered, and then do the next round (max again). 15-20 seconds of exercise, if you're able to do longer, you're not pushing hard enough.
 
 
 
@@ -275,12 +280,12 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 
 ### Additional info
 
-- The ideal sleeping temperature is 17°C.
-- Not enough sleep makes you fatter.
-- Not enough sleep causes a testosterone deficiency.
-- Your bedroom should be as dark as possible and a bit cool.
 - To reset your biorhythm to the optimal hours,
-  get some sunlight early in the morning (ideally between 6 and 8AM).
+  get some sunlight early in the morning.
+- The ideal sleeping temperature is 17°C.
+- Your bedroom should be as dark as possible and a bit cool.
+- Try fasting the day after not sleeping well. Because your cortisol levels are higher after sleeping less, cortisol + insulin = more body fat. Cortisol without insulin = lose body fat.
+- Not enough sleep causes a testosterone deficiency.
 - [More info](https://www.youtube.com/watch?v=q9q3hfsPYpM).
 
 
