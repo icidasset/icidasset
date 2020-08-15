@@ -80,6 +80,8 @@ Insulin is a hormone responsible for creating body fat. The more you have of it,
   <small>Green vegetables, beans, lentils, sweet potatoes, whole grains, etc.</small>
 - Avoid grains if possible. If not, 2 or 3 per week max, whole grain only.
   Use spelt or sourdough, or other "ancient" grains.
+- Carbohydrates are not a dietary requirement.  
+  The human body makes carbohydrates if it needs them.
 
 #### Sugar & Sweeteners 🚨
 
