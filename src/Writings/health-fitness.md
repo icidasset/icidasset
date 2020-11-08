@@ -8,7 +8,7 @@ promote: true
 
 If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
 
-<small>_Last update, August 2020._</small>
+<small>_Last update, November 2020._</small>
 
 
 
