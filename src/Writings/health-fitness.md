@@ -3,7 +3,7 @@ title: "Notes on Health & Fitness"
 category: "Reminders"
 published: true
 published_on: 21-03-2015
-promote: false
+promote: true
 ---
 
 If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
@@ -42,7 +42,7 @@ If you see something that isn't quite right or you know something I could add to
 Insulin is a hormone responsible for creating body fat. The more you have of it, the more body fat you'll create, and vice versa. There are different factors that determine how fast your insulin rises, and how fast it lowers. Every time you eat, your insulin rises. But, depending on what you eat, it will rise more, or less. For example, sugar will rise your insulin the most. The best way to improve your insulin sensitivity is to fast frequently, and not eat too regularly (eg. two meals and no snacks). Also, the better your insulin sensitivity, the better you can use carbs as energy (as opposed to storing it as body fat).
 
 
-### How to break a fast
+### How to break a long fast
 
 - __Have a light high fat, low carb, meal.__
 - Boot up digestion with a small snack, and have the proper meal an hour later.  
@@ -63,7 +63,7 @@ Insulin is a hormone responsible for creating body fat. The more you have of it,
 - 🧘 __‍Oxygen is the most important nutrient.__
 - 💧 __Drink enough water__, if you're thirsty, it's already too late.
 - 🍛 __Do not overeat, ever__, you're only going to gain body fat and decrease growth hormone.
-- Diet is more important than exercise.
+- Diet is more important than exercise. <small>Eat until 80% full.</small>
 - Foods should be as natural and fresh as possible. Locally sourced, organic.
 - Focus on the right kinds of food, not how much. Also, eat less frequent.
 - Vegetables, legumes, herbs and seeds are the most important.
@@ -137,7 +137,7 @@ Omega 3 and 6, although omega 6 shouldn't be eaten much because it causes inflam
      <small>Carrots, cod-liver oil.</small>
 - ☀️ Vitamin D is the most important vitamin, it's involved with a lot of functions in the body.  
      <small>UV radiation, sun shine, cod-liver oil.</small>
-- 🍳 Vitamin K2 is good for the teeth and bones, improved insulin sensitivity, exercise performance, brain health, etc. You need proper amounts of magnesium, calcium and zinc.  
+- 🍳 Vitamin K2 is good for the teeth and bones, improved insulin sensitivity, exercise performance, brain health, etc. You need proper amounts of magnesium, calcium and zinc for this vitamin to be efficient.  
      <small>Grass-fed animals, pasture-raised chicken eggs, cheese.</small>
 
 
@@ -159,7 +159,7 @@ Omega 3 and 6, although omega 6 shouldn't be eaten much because it causes inflam
 - 😡 __Never eat while angry__. Or in other words, the more stress
   you have the worse your digestion will be.
 - Chew food properly and mindfully.
-- Drink enough water before a meal, 30 minutes in advance.  
+- Drink enough water before/after a meal (30 minutes before/after).  
   <small>Add salt and/or black pepper to boost digestion even more.</small>
 - Drink warm water with a meal (eg. with lemon).
 - Eat your biggest meal between 10AM and 2PM.
@@ -204,7 +204,7 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 
 ### Additional info
 
-- Almond butter > peanut butter, if you choose for peanut butter, try finding one without hydrogen oils (they change the oils into trans fats so it can be stored longer).
+- Almond butter > peanut butter, in most cases. If you opt for peanut butter, try finding one without hydrogen oils (they change the oils into trans fats so it can be stored longer).
 - Avoid bread with oils.
 - Carbs can best be eaten early in the day (you're more insulin resistant later in the day).
 - Eat raw tough foods (heavy on fiber) for a strong tongue and jaw muscles.
