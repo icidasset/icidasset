@@ -1,6 +1,6 @@
 ---
 title: "Notes on Health & Fitness"
-category: "Reminders"
+category: "Health"
 published: true
 published_on: 21-03-2015
 promote: true
