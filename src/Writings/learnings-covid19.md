@@ -85,4 +85,4 @@ This COVID-19 virus is still fairly harmless, 60-70% of the people never showed 
 
 - 15000 year old viruses found in ice: [https://www.biorxiv.org/content/10.1101/2020.01.03.894675v1.full](https://www.biorxiv.org/content/10.1101/2020.01.03.894675v1.full)
 - About cyanide air pollution: [https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure](https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure)
-- Air quality in the world: [https://www.iqair.com/world-air-quality](https://www.iqair.com/world-air-quality)
+- Relation between polio and pesticides: [https://www.ageofautism.com/2014/04/pesticides-and-the-age-of-polio.html](https://www.ageofautism.com/2014/04/pesticides-and-the-age-of-polio.html)
