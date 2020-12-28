@@ -6,7 +6,7 @@ published_on: 12-12-2020
 promote: true
 ---
 
-_Viruses are a big part of nature, they are around us constantly, in the air, in the sea, in the soil, in our gut, millions of different variations. These aren’t organisms, but packets of information for our genome to update our system. We are designed to absorb viruses, as many as possible. That’s evident by looking at our genome, 50% of the human genome is built from various viral inputs._
+_Viruses are a big part of nature, they are around us constantly, in the air, in the sea, in the soil, in our body, millions of different variations. These aren’t organisms, but packets of information for our genome to update our system. We are designed to absorb viruses, we need them for biodiversity and to adapt to changes in the environment. That’s evident by looking at our genome, 50% of the human genome is built from various viral inputs._
 
 ![](../../images/writings/chuttersnap-9G1kXjqOq4U-unsplash.jpg)
 
@@ -32,13 +32,15 @@ All this to say, it’s not the virus that’s the issue, viruses merely stimula
 
 ## Transmission
 
-Viruses mainly spread through air currents, also through people (water droplets), but only in the first 2-4 weeks of the initial spreading of the virus. After that the virus has been spread all over. Remember that corona viruses clump together with PM<sub>2.5</sub> particles. Polluted air travels a [great distance](https://www.nature.com/articles/s41598-017-13217-2) and earth’s air currents are [well known](https://www.iqair.com/earth).
+Viruses mainly spread through air currents, remember that corona viruses clump together with PM<sub>2.5</sub> particles. Polluted air travels a [great distance](https://www.nature.com/articles/s41598-017-13217-2) and earth’s air currents are [well known](https://www.iqair.com/earth). Viruses also spread through people (water droplets), but only primarily in the first 2-4 weeks of the initial spreading of the virus. After that the virus has spread all over.
+
+You can get **more** exposed to the virus (remember that more exposure equals more stress on the body) by having lots of close contact with people that are still replicating the virus (ie. they haven't fully processed it yet). For example, staying with people for at least 4-5 days. But if you've had the virus before, and your immune system is healthy, this shouldn't be an issue.
 
 <a href="https://www.iqair.com/earth">
   <img src="../../images/writings/air-pollution-map.jpg" alt="Air pollution map" />
 </a>
 
-The CDC actually [acknowledged](https://www.washingtonexaminer.com/news/cdc-guidelines-say-wearing-a-mask-during-prolonged-exposure-to-coronavirus-wont-prevent-possible-infection) that masks wouldn’t help much. Yes, a mask stops the water droplets, but you aerosolise the virus by applying high pressure to that droplets stuck on the inside of your mask. The reason it’s being suggested to wear at all times is for mental support, so you feel safer. That said, it can’t hurt (much) to wear a mask, so don’t complain about wearing them.
+The CDC [acknowledged](https://www.washingtonexaminer.com/news/cdc-guidelines-say-wearing-a-mask-during-prolonged-exposure-to-coronavirus-wont-prevent-possible-infection) that masks wouldn’t help much. Yes, a mask stops the water droplets, but you aerosolise the virus by applying high pressure to that droplets stuck on the inside of your mask. The reason it’s being suggested to wear at all times is for mental support, so you feel safer. That said, it can’t hurt (much) to wear a mask, so don’t complain about wearing them.
 
 Additionally, you might be better off not using hand gels. They damage your microbiome long-term. They kill bad bacteria yes, but also the good ones. You need good bacteria from other people and animals to keep, or increase, your microbiome diversity. And as [this study](https://www.psychologicalscience.org/news/releases/hugs-may-help-protect-against-colds-stress-related-infection.html) suggests it might be better idea to give each other hugs to improve our immune systems, rather than avoiding all human contact.
 
@@ -54,6 +56,11 @@ That said, we do want to protect those around us. But you don’t do that by hop
 Did we “cure” various diseases by using vaccines? Maybe. History is often very vague, and there are many things to consider, such as, the ecosystem in that area that does, or does not, support the microbiome of the people and animals. Was there a lot of pollution, toxicity, waste? How much nature was there? Did the people interact a lot with that nature? Did they eat animals with bad epigenetics? What about other food? Glyphosate, or other weed killers? Were the people healthy in general? So many questions.
 
 Was it helpful in some cases, most likely, so I’m not saying to get rid of them entirely. What I am saying is that for most people there is a better option.
+
+
+### Additional notes about vaccines
+
+- Antibodies are not a defence against a virus, they are a late post-viral systemic reaction. The only benefit of having additional antibodies through a vaccine is that it can decrease the time you're symptomatic.
 
 
 ## Conclusion
@@ -85,4 +92,7 @@ This COVID-19 virus is still fairly harmless, 60-70% of the people never showed 
 
 - 15000 year old viruses found in ice: [https://www.biorxiv.org/content/10.1101/2020.01.03.894675v1.full](https://www.biorxiv.org/content/10.1101/2020.01.03.894675v1.full)
 - About cyanide air pollution: [https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure](https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure)
+- Air pollution and case fatality of SARS in the People's Republic of China: an ecologic study: [https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-2-15](https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-2-15)
+- Influenza Vaccine: Military Study Shows 36% Higher Odds Of Coronavirus, 2017-2018: [https://www.disabledveterans.org/2020/03/11/flu-vaccine-increases-coronavirus-risk/](https://www.disabledveterans.org/2020/03/11/flu-vaccine-increases-coronavirus-risk/)
+- Pollution made COVID-19 worse. Now, lockdowns are clearing the air: [https://www.nationalgeographic.com/science/2020/04/pollution-made-the-pandemic-worse-but-lockdowns-clean-the-sky/](https://www.nationalgeographic.com/science/2020/04/pollution-made-the-pandemic-worse-but-lockdowns-clean-the-sky/)
 - Relation between polio and pesticides: [https://www.ageofautism.com/2014/04/pesticides-and-the-age-of-polio.html](https://www.ageofautism.com/2014/04/pesticides-and-the-age-of-polio.html)
