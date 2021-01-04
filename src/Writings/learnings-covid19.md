@@ -34,7 +34,7 @@ All this to say, it’s not the virus that’s the issue, viruses merely stimula
 
 Viruses mainly spread through air currents, remember that corona viruses clump together with PM<sub>2.5</sub> particles. Polluted air travels a [great distance](https://www.nature.com/articles/s41598-017-13217-2) and earth’s air currents are [well known](https://www.iqair.com/earth). Viruses also spread through people (water droplets), but only primarily in the first 2-4 weeks of the initial spreading of the virus. After that the virus has spread all over.
 
-You can get **more** exposed to the virus (remember that more exposure equals more stress on the body) by having lots of close contact with people that are still replicating the virus (ie. they haven't fully processed it yet). For example, staying with people for at least 4-5 days. But if you've had the virus before, and your immune system is healthy, this shouldn't be an issue.
+You can get **more** exposed to the virus (remember that more exposure equals more stress on the body) by having lots of close contact with people that are still replicating the virus (ie. they haven't fully processed it yet, they are symptomatic). For example, staying with people for at least 4-5 days. But if you've had the virus before, and your immune system is healthy, this shouldn't be an issue. Asymptomatic people do [**not** spread](https://www.nature.com/articles/s41467-020-19802-w) the virus.
 
 <a href="https://www.iqair.com/earth">
   <img src="../../images/writings/air-pollution-map.jpg" alt="Air pollution map" />
@@ -82,6 +82,7 @@ This COVID-19 virus is still fairly harmless, 60-70% of the people never showed 
 - The blood DNA virome in 8,000 humans: [https://pubmed.ncbi.nlm.nih.gov/28328962/](https://pubmed.ncbi.nlm.nih.gov/28328962/)
 - Large-scale transport of PM<sub>2.5</sub> in the lower troposphere during winter cold surges in China: [https://www.nature.com/articles/s41598-017-13217-2](https://www.nature.com/articles/s41598-017-13217-2)
 - PM<sub>2.5</sub> map & air currents (take a look at China): [https://www.iqair.com/earth](https://www.iqair.com/earth)
+- Post-lockdown SARS-CoV-2 nucleic acid screening in nearly ten million residents of Wuhan, China: [https://www.nature.com/articles/s41467-020-19802-w](https://www.nature.com/articles/s41467-020-19802-w)
 - CDC guidelines say wearing a mask during prolonged exposure to coronavirus won't prevent possible infection: [https://www.washingtonexaminer.com/news/cdc-guidelines-say-wearing-a-mask-during-prolonged-exposure-to-coronavirus-wont-prevent-possible-infection](https://www.washingtonexaminer.com/news/cdc-guidelines-say-wearing-a-mask-during-prolonged-exposure-to-coronavirus-wont-prevent-possible-infection)
 - Hugs Help Protect Against Colds by Boosting Social Support: [https://www.psychologicalscience.org/news/releases/hugs-may-help-protect-against-colds-stress-related-infection.html](https://www.psychologicalscience.org/news/releases/hugs-may-help-protect-against-colds-stress-related-infection.html)
 - Past Seasons Vaccine Effectiveness Estimates: [https://www.cdc.gov/flu/vaccines-work/past-seasons-estimates.html](https://www.cdc.gov/flu/vaccines-work/past-seasons-estimates.html)
@@ -93,6 +94,8 @@ This COVID-19 virus is still fairly harmless, 60-70% of the people never showed 
 - 15000 year old viruses found in ice: [https://www.biorxiv.org/content/10.1101/2020.01.03.894675v1.full](https://www.biorxiv.org/content/10.1101/2020.01.03.894675v1.full)
 - About cyanide air pollution: [https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure](https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure)
 - Air pollution and case fatality of SARS in the People's Republic of China: an ecologic study: [https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-2-15](https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-2-15)
+- Climate Science, Risk & Solutions: [https://climateprimer.mit.edu](https://climateprimer.mit.edu)
 - Influenza Vaccine: Military Study Shows 36% Higher Odds Of Coronavirus, 2017-2018: [https://www.disabledveterans.org/2020/03/11/flu-vaccine-increases-coronavirus-risk/](https://www.disabledveterans.org/2020/03/11/flu-vaccine-increases-coronavirus-risk/)
+- On the causal link between carbon dioxide and air pollution mortality: [https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007GL031101](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007GL031101)
 - Pollution made COVID-19 worse. Now, lockdowns are clearing the air: [https://www.nationalgeographic.com/science/2020/04/pollution-made-the-pandemic-worse-but-lockdowns-clean-the-sky/](https://www.nationalgeographic.com/science/2020/04/pollution-made-the-pandemic-worse-but-lockdowns-clean-the-sky/)
 - Relation between polio and pesticides: [https://www.ageofautism.com/2014/04/pesticides-and-the-age-of-polio.html](https://www.ageofautism.com/2014/04/pesticides-and-the-age-of-polio.html)
