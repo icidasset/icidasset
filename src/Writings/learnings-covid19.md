@@ -10,6 +10,8 @@ _Viruses are a big part of nature, they are around us constantly, in the air, in
 
 ![](../../images/writings/chuttersnap-9G1kXjqOq4U-unsplash.jpg)
 
+<small>_Last update, January 2021._</small>
+
 
 ## Why are viruses considered harmful?
 
@@ -32,7 +34,7 @@ All this to say, it’s not the virus that’s the issue, viruses merely stimula
 
 ## Transmission
 
-Viruses mainly spread through air currents, remember that corona viruses clump together with PM<sub>2.5</sub> particles. Polluted air travels a [great distance](https://www.nature.com/articles/s41598-017-13217-2) and earth’s air currents are [well known](https://www.iqair.com/earth). Viruses also spread through people (water droplets), but only primarily in the first 2-4 weeks of the initial spreading of the virus. After that the virus has spread all over.
+Viruses mainly spread through air and water currents, remember that corona viruses clump together with PM<sub>2.5</sub> particles. Polluted air travels a [great distance](https://www.nature.com/articles/s41598-017-13217-2) and earth’s air currents are [well known](https://www.iqair.com/earth). Viruses also spread through people (water droplets), but only primarily in the first 2-4 weeks of the initial spreading of the virus. After that the virus has spread all over.
 
 You can get **more** exposed to the virus (remember that more exposure equals more stress on the body) by having lots of close contact with people that are still replicating the virus (ie. they haven't fully processed it yet, they are symptomatic). For example, staying with people for at least 4-5 days. But if you've had the virus before, and your immune system is healthy, this shouldn't be an issue. Asymptomatic people do [**not** spread](https://www.nature.com/articles/s41467-020-19802-w) the virus.
 
@@ -96,6 +98,9 @@ This COVID-19 virus is still fairly harmless, 60-70% of the people never showed 
 - Air pollution and case fatality of SARS in the People's Republic of China: an ecologic study: [https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-2-15](https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-2-15)
 - Climate Science, Risk & Solutions: [https://climateprimer.mit.edu](https://climateprimer.mit.edu)
 - Influenza Vaccine: Military Study Shows 36% Higher Odds Of Coronavirus, 2017-2018: [https://www.disabledveterans.org/2020/03/11/flu-vaccine-increases-coronavirus-risk/](https://www.disabledveterans.org/2020/03/11/flu-vaccine-increases-coronavirus-risk/)
+- Open Schools, Covid-19, and Child and Teacher Morbidity in Sweden: [https://www.nejm.org/doi/full/10.1056/NEJMc2026670#.X_aJ_k_6lNk.twitter](https://www.nejm.org/doi/full/10.1056/NEJMc2026670#.X_aJ_k_6lNk.twitter)
 - On the causal link between carbon dioxide and air pollution mortality: [https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007GL031101](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007GL031101)
+- Particulate matter-attributable mortality and relationships with carbon dioxide in 250 urban areas worldwide: [https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2640558](https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2640558)
 - Pollution made COVID-19 worse. Now, lockdowns are clearing the air: [https://www.nationalgeographic.com/science/2020/04/pollution-made-the-pandemic-worse-but-lockdowns-clean-the-sky/](https://www.nationalgeographic.com/science/2020/04/pollution-made-the-pandemic-worse-but-lockdowns-clean-the-sky/)
 - Relation between polio and pesticides: [https://www.ageofautism.com/2014/04/pesticides-and-the-age-of-polio.html](https://www.ageofautism.com/2014/04/pesticides-and-the-age-of-polio.html)
+- Vaccines for preventing influenza in healthy adults: [https://pubmed.ncbi.nlm.nih.gov/20614424/](https://pubmed.ncbi.nlm.nih.gov/20614424/) (proof that influenza vaccines only reduce time of symptoms)
