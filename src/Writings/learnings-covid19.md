@@ -60,14 +60,15 @@ Did we “cure” various diseases by using vaccines? Maybe. History is often ve
 Was it helpful in some cases, most likely, so I’m not saying to get rid of them entirely. What I am saying is that for most people there is a better option.
 
 
-### Additional notes about vaccines
-
-- Antibodies are not a defence against a virus, they are a late post-viral systemic reaction. The only benefit of having additional antibodies through a vaccine is that it can decrease the time you're symptomatic.
-
-
 ## Conclusion
 
 This COVID-19 virus is still fairly harmless, 60-70% of the people never showed any symptoms, 30-40% only mild symptoms, and a mortality rate of roughly 3% (might be even less, not clear). As opposed to SARS, with a 15% mortality rate, which a vaccine was never developed for, that too has passed. That said, our ecosystems are crashing, causing bigger issues than just COVID-19, I think we should focus on that instead.
+
+
+
+### Additional notes
+
+- Antibodies are not a defence against a virus, they are a late post-viral systemic reaction. The only benefit of having additional antibodies through a vaccine is that it can decrease the time you're symptomatic.
 
 
 
@@ -98,6 +99,7 @@ This COVID-19 virus is still fairly harmless, 60-70% of the people never showed 
 - Air pollution and case fatality of SARS in the People's Republic of China: an ecologic study: [https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-2-15](https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-2-15)
 - Climate Science, Risk & Solutions: [https://climateprimer.mit.edu](https://climateprimer.mit.edu)
 - Influenza Vaccine: Military Study Shows 36% Higher Odds Of Coronavirus, 2017-2018: [https://www.disabledveterans.org/2020/03/11/flu-vaccine-increases-coronavirus-risk/](https://www.disabledveterans.org/2020/03/11/flu-vaccine-increases-coronavirus-risk/)
+- 'Microbiomes' Might Influence COVID-19 Severity: [https://www.webmd.com/lung/news/20210113/peoples-microbiomes-might-influence-covid-19-severity-study](https://www.webmd.com/lung/news/20210113/peoples-microbiomes-might-influence-covid-19-severity-study)
 - Open Schools, Covid-19, and Child and Teacher Morbidity in Sweden: [https://www.nejm.org/doi/full/10.1056/NEJMc2026670#.X_aJ_k_6lNk.twitter](https://www.nejm.org/doi/full/10.1056/NEJMc2026670#.X_aJ_k_6lNk.twitter)
 - On the causal link between carbon dioxide and air pollution mortality: [https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007GL031101](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007GL031101)
 - Particulate matter-attributable mortality and relationships with carbon dioxide in 250 urban areas worldwide: [https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2640558](https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2640558)
