@@ -10,7 +10,7 @@ _Viruses are a big part of nature, they are around us constantly, in the air, in
 
 ![](../../images/writings/chuttersnap-9G1kXjqOq4U-unsplash.jpg)
 
-<small>_Last update, January 2021._</small>
+<small>_Last update, March 2021._</small>
 
 
 ## Why are viruses considered harmful?
@@ -49,7 +49,7 @@ Additionally, you might be better off not using hand gels. They damage your micr
 
 ## Vaccination
 
-We know that vaccines [aren’t always effective](https://www.cdc.gov/flu/vaccines-work/past-seasons-estimates.html), even for something so common as the flu. Personally I’d rather avoid putting any chemicals into my body, even if they have been tested for a long time. I’m not sure we’ll ever fully know what the impact is on our body. To most medication there’s a side effect, and unfortunately you will only notice it when it’s too late. For example, taking pain medication (eg. for a migraine) damages your gut lining, a damaged gut lining means bad foods have a stronger negative effect on your microbiome, and downhill it goes from there.
+We know that vaccines [aren’t always effective](https://www.cdc.gov/flu/vaccines-work/past-seasons-estimates.html), even for something so common as the flu. Personally I’d rather avoid putting any chemicals into my body, even if they have been tested for a long time. I’m not sure we’ll ever fully know what the impact is on our body. To most medication there’s a side effect, and unfortunately you will only notice it when it’s too late. For example, taking pain medication (eg. for a migraine) damages your gut lining, a damaged gut lining means bad foods have a stronger negative effect on your microbiome, and downhill it goes from there. Can we really outsmart a system that had a billion years to develop? We barely understand the microbiome, the foundation of our health.
 
 ![](../../images/writings/brooke-lark-jUPOXXRNdcA-unsplash.jpg)
 
@@ -60,15 +60,13 @@ Did we “cure” various diseases by using vaccines? Maybe. History is often ve
 Was it helpful in some cases, most likely, so I’m not saying to get rid of them entirely. What I am saying is that for most people there is a better option.
 
 
-## Conclusion
-
-This COVID-19 virus is still fairly harmless, 60-70% of the people never showed any symptoms, 30-40% only mild symptoms, and a mortality rate of roughly 3% (might be even less, not clear). As opposed to SARS, with a 15% mortality rate, which a vaccine was never developed for, that too has passed. That said, our ecosystems are crashing, causing bigger issues than just COVID-19, I think we should focus on that instead.
-
-
 
 ### Additional notes
 
 - Antibodies are not a defence against a virus, they are a late post-viral systemic reaction. The only benefit of having additional antibodies through a vaccine is that it can decrease the time you're symptomatic.
+- Forest fires increase the PM2.5 levels in the air by roughly a factor of 200. The smoke can travel thousands of kilometres. On top of that, burning houses release additional cyanide into the air, also binding with PM2.5, making matters even worse. Cyanide is already [prevalent](https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure) these days.
+- There were no vaccines for SARS, HERV & MERS.
+- What if this wasn't true? What would the bigger picture be? Why would COVID-19 corona virus be special, what's different compared to the other corona viruses from the past 700 years?
 
 
 
