@@ -34,7 +34,7 @@ All this to say, it’s not the virus that’s the issue, viruses merely stimula
 
 ## Transmission
 
-Viruses mainly spread through air and water currents, remember that corona viruses clump together with PM<sub>2.5</sub> particles. Polluted air travels a [great distance](https://www.nature.com/articles/s41598-017-13217-2) and earth’s air currents are [well known](https://www.iqair.com/earth). Viruses also spread through people (water droplets), but only primarily in the first 2-4 weeks of the initial spreading of the virus. After that the virus has spread all over.
+Viruses mainly spread through [air](https://www.nature.com/articles/s41396-017-0042-4) and water currents, remember that corona viruses clump together with PM<sub>2.5</sub> particles. Polluted air travels a [great distance](https://www.nature.com/articles/s41598-017-13217-2) and earth’s air currents are [well known](https://www.iqair.com/earth). Viruses also spread through people (water droplets), but only primarily in the first 2-4 weeks of the initial spreading of the virus. After that the virus has spread all over.
 
 You can get **more** exposed to the virus (remember that more exposure equals more stress on the body) by having lots of close contact with people that are still replicating the virus (ie. they haven't fully processed it yet, they are symptomatic). For example, staying with people for at least 4-5 days. But if you've had the virus before, and your immune system is healthy, this shouldn't be an issue. Asymptomatic people do [**not** spread](https://www.nature.com/articles/s41467-020-19802-w) the virus.
 
@@ -65,7 +65,7 @@ Was it helpful in some cases, most likely, so I’m not saying to get rid of the
 
 - Antibodies are not a defence against a virus, they are a late post-viral systemic reaction. The only benefit of having additional antibodies through a vaccine is that it can decrease the time you're symptomatic.
 - Forest fires increase the PM2.5 levels in the air by roughly a factor of 200. The smoke can travel thousands of kilometres. On top of that, burning houses release additional cyanide into the air, also binding with PM2.5, making matters even worse. Cyanide is already [prevalent](https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure) these days.
-- There were no vaccines for SARS, HERV & MERS.
+- There were no vaccines for SARS, HEP C, HERV & MERS. Despite no vaccination, cases for these viral infections dropped significantly.
 - What if this wasn't true? What would the bigger picture be? Why would COVID-19 corona virus be special, what's different compared to the other corona viruses from the past 700 years?
 
 
@@ -81,6 +81,7 @@ Was it helpful in some cases, most likely, so I’m not saying to get rid of the
 - Obesity, Race/Ethnicity, and COVID-19: [https://www.cdc.gov/obesity/data/obesity-and-covid-19.html](https://www.cdc.gov/obesity/data/obesity-and-covid-19.html)
 - Connection between gut bacteria and vitamin D levels: [https://www.sciencedaily.com/releases/2020/11/201130131356.htm](https://www.sciencedaily.com/releases/2020/11/201130131356.htm)
 - The blood DNA virome in 8,000 humans: [https://pubmed.ncbi.nlm.nih.gov/28328962/](https://pubmed.ncbi.nlm.nih.gov/28328962/)
+- Deposition rates of viruses and bacteria above the atmospheric boundary layer: [https://www.nature.com/articles/s41396-017-0042-4](https://www.nature.com/articles/s41396-017-0042-4)
 - Large-scale transport of PM<sub>2.5</sub> in the lower troposphere during winter cold surges in China: [https://www.nature.com/articles/s41598-017-13217-2](https://www.nature.com/articles/s41598-017-13217-2)
 - PM<sub>2.5</sub> map & air currents (take a look at China): [https://www.iqair.com/earth](https://www.iqair.com/earth)
 - Post-lockdown SARS-CoV-2 nucleic acid screening in nearly ten million residents of Wuhan, China: [https://www.nature.com/articles/s41467-020-19802-w](https://www.nature.com/articles/s41467-020-19802-w)
@@ -103,4 +104,5 @@ Was it helpful in some cases, most likely, so I’m not saying to get rid of the
 - Particulate matter-attributable mortality and relationships with carbon dioxide in 250 urban areas worldwide: [https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2640558](https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2640558)
 - Pollution made COVID-19 worse. Now, lockdowns are clearing the air: [https://www.nationalgeographic.com/science/2020/04/pollution-made-the-pandemic-worse-but-lockdowns-clean-the-sky/](https://www.nationalgeographic.com/science/2020/04/pollution-made-the-pandemic-worse-but-lockdowns-clean-the-sky/)
 - Relation between polio and pesticides: [https://www.ageofautism.com/2014/04/pesticides-and-the-age-of-polio.html](https://www.ageofautism.com/2014/04/pesticides-and-the-age-of-polio.html)
+- SARS-Cov-2RNA found on particulate matter of Bergamo in Northern Italy: First evidence: [https://www.sciencedirect.com/science/article/abs/pii/S0013935120306472](https://www.sciencedirect.com/science/article/abs/pii/S0013935120306472) (proof that corona viruses bind with PM)
 - Vaccines for preventing influenza in healthy adults: [https://pubmed.ncbi.nlm.nih.gov/20614424/](https://pubmed.ncbi.nlm.nih.gov/20614424/) (proof that influenza vaccines only reduce time of symptoms)
