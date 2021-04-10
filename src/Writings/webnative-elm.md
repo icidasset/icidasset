@@ -12,7 +12,7 @@ _[Webnative](https://guide.fission.codes/developers/webnative) is an effort from
 
 ## Differentiation
 
-Let's talk about this first big change, not needing a server is a huge deal. If you've build a web application before, you can probably imagine how much time and pain this saves you. No APIs to code and no servers to manage (no devops, yay). It's almost like a prototype that works out of the box.
+Let's talk about this first big change, not needing a server is a huge deal. If you've built a web application before, you can probably imagine how much time and pain this saves you. No APIs to code and no servers to manage (no devops, yay). It's almost like a prototype that works out of the box.
 
 To be clear, there is still a server component in here, for now. I say 'for now', because Fission aims to be fully decentralised. But, the technology isn't there yet (web ecosystem), so, for now the server component will be the Fission web server. It's [open-source](https://github.com/fission-suite/fission) and you can host yourself if you want to.
 
