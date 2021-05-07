@@ -1,7 +1,8 @@
 ---
 title: "Webnative & Elm"
 category: "Code"
-published: false
+published: true
+published_on: 07-05-2021
 promote: true
 ---
 
@@ -88,7 +89,7 @@ We have two ports, one for outgoing request to webnative, and another for the re
 import * as webnativeElm from "webnative-elm"
 
 // elmApp = Elm.Main.init()
-webnativeElm.setup(elmApp)
+webnativeElm.setup({ app: elmApp })
 ```
 
 **That's it for the javascript side.** Do keep in mind, if you're using webnative-elm without a bundler, load the webnative library *before* webnative-elm.
@@ -115,13 +116,19 @@ appPermissions =
 
 Asking for this permission will grant you access to `/private/Apps/Steven Vandevelde/Diffuse/`. This folder is located in the `private` section of the filesystem, under `Apps`, which is where we suggest to store application-specific data (good defaults).
 
-This will be good enough to start out with, but if you want to achieve data interoptability, you'll want to ask for filesystem permissions. For example, say a music management app wants to store playlists on the user's filesystem. Another app could generate Youtube playlists from this.
+This will be good enough to start out with, but if you want to achieve data interoperability, you'll want to ask for filesystem permissions. For example, say a music management app wants to store playlists on the user's filesystem. Another app could generate Youtube playlists from this.
 
 ```elm
+import Webnative.Path as Path
+
 filesystemPermissions : Webnative.FileSystemPermissions
 filesystemPermissions =
-  { privatePaths = [ "Audio/Music/Playlists" ]
-  , publicPaths = [ "Audio/Music/Playlists" ]
+  let
+    playlists =
+      Path.directory [ "Audio", "Music", "Playlists" ]
+  in
+  { private = [ playlists ]
+  , public = [ playlists ]
   }
 ```
 
@@ -229,12 +236,13 @@ view model =
 **Now that we've got access to the data, we can interact with the filesystem 👏** For this we'll need the `Wnfs` module from the package. WNFS is short for Web Native File System. In this example we'll load the private playlists from the folder we configured in the permissions.
 
 ```elm
+import Webnative.Path as Path
 import Wnfs exposing (Base(..))
 
 listPrivatePlaylists : Webnative.Request
 listPrivatePlaylists =
   Wnfs.ls Private
-    { path = [ "Audio", "Music", "Playlists" ]
+    { path = Path.directory [ "Audio", "Music", "Playlists" ]
     , tag = tagToString ListedPrivatePlaylists
     }
 ```
@@ -299,7 +307,7 @@ To read a playlist, assuming a JSON file, we can do the following.
 ```elm
 request = Wnfs.readUtf8
   Private
-  { path = [ "Audio", "Music", "Playlists", "Chill Vibes Only.json" ]
+  { path = Path.file [ "Audio", "Music", "Playlists", "Chill Vibes Only.json" ]
   , tag = tagToString GotPlaylist
   }
 
@@ -313,7 +321,7 @@ Now there's only one important piece of the filesystem puzzle left. Making files
 ```elm
 request = Wnfs.writeUtf8
   Private
-  { path = [ "Audio", "Music", "Playlists", "Chill Vibes Only.json" ]
+  { path = Path.file [ "Audio", "Music", "Playlists", "Chill Vibes Only.json" ]
   , tag = tagToString SavedPlaylist
   }
   (playlistToJson playlist)
