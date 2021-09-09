@@ -62,8 +62,8 @@ Insulin is a hormone responsible for creating body fat. The more you have of it,
 
 - 🧘 __‍Oxygen is the most important nutrient.__
 - 💧 __Drink enough water__, if you're thirsty, it's already too late.
-- 🍛 __Do not overeat, ever__, you're only going to gain body fat and decrease growth hormone.
-- Diet is more important than exercise. <small>Eat until 80% full.</small>
+- 🍛 __Do not overeat, ever__, you're only going to gain body fat and decrease growth hormone. <small>Eat until 80% full.</small>
+- Diet is more important than exercise.
 - Foods should be as natural and fresh as possible. Locally sourced, organic.
 - Focus on the right kinds of food, not how much. Also, eat less frequent.
 - Vegetables, legumes, herbs and seeds are the most important.
@@ -173,7 +173,7 @@ Omega 3 and 6, although omega 6 shouldn't be eaten much because it causes inflam
 
 ### Gut microbiome
 
-To maintain a healthy microbiome, you need a balance between prebiotics and probiotics, a lot of (soluble) fiber, foods with good epigenitics and a lot of diversity. Epigenitics basically means, eat animals that had healthy food.
+To maintain a healthy microbiome, you need a balance between prebiotics and probiotics, a lot of fiber, foods with good epigenitics and a lot of diversity. Epigenitics basically means, eat animals that had healthy food. Every plant has a different kind of fiber, and depending how you prepare it, it changes as well, so variety is key. The more different kinds of fiber you eat, the more diverse your microbiome becomes (and the more health benefits you get).
 
 #### Prebiotics & fiber
 
@@ -217,6 +217,7 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 - Repair your gut lining with bone broth.
 - Supplement sodium (salt) and magnesium when feeling weak/dizzy while exercising.
 - You can improve your metabolic rate by paying attention to your sleep and your zinc levels, taking cold plunges/showers, and eating one tablespoon of coconut oil per day.
+- You have to train your body/microbiome to learn to digest new kinds of fibre. So if you've never eaten something, eat a tiny bit of it, and work your way up.
 
 
 
