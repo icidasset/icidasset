@@ -35,7 +35,7 @@ projects:
       A simple data-structure API.
 
   - name: "Quotes"
-    url: "http://quotes.icidasset.com"
+    url: "https://quotes.fission.app"
     description: >
       Show a random quote from a remote-json-quotes collection.
 
