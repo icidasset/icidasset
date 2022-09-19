@@ -95,6 +95,7 @@ _Minor notes on the COVID-19 pandemic:_
 
 - Forest fires increase the PM2.5 levels in the air by roughly a factor of 200. The smoke can travel thousands of kilometres. On top of that, burning houses release additional cyanide into the air, also binding with PM2.5, making matters even worse. Cyanide is already [prevalent](https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure) these days.
 - What if this wasn't true? What would the bigger picture be? Why would COVID-19 corona virus be special, what's different compared to the other corona viruses from the past 700 years?
+- Zinc and red-light therapy can help to regain smell and taste.
 
 _Causes of other pandemics:_
 
@@ -128,6 +129,7 @@ _Causes of other pandemics:_
 
 - 15000 year old viruses found in ice: [https://www.biorxiv.org/content/10.1101/2020.01.03.894675v1.full](https://www.biorxiv.org/content/10.1101/2020.01.03.894675v1.full)
 - About cyanide air pollution: [https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure](https://earthjustice.org/from-the-experts/2019-may/epa-must-protect-communities-from-hydrogen-cyanide-exposure)
+- Age and frailty are independently associated with increased COVID-19 mortality and increased care needs in survivors: results of an international multi-centre study: [https://academic.oup.com/ageing/article/50/3/617/6128535](https://academic.oup.com/ageing/article/50/3/617/6128535)
 - Air pollution and case fatality of SARS in the People's Republic of China: an ecologic study: [https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-2-15](https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-2-15)
 - Associations between body-mass index and COVID-19 severity in 6·9 million people in England: a prospective, community-based, cohort study: [https://www.thelancet.com/journals/landia/article/PIIS2213-8587(21)00089-9/fulltext](https://www.thelancet.com/journals/landia/article/PIIS2213-8587(21)00089-9/fulltext)
 - Climate Science, Risk & Solutions: [https://climateprimer.mit.edu](https://climateprimer.mit.edu)
