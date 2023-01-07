@@ -15,7 +15,7 @@ If you see something that isn't quite right or you know something I could add to
 
 ## Fasting
 
-- ⏰ __Fasting is the best way the lose body fat__,
+- ⏰ __Fasting is the most efficient way to lose body fat__,
   because you're using your body fat as your energy source.
   Cutting on carbs is less effective because eventually
   your metabolism adjusts itself and you can only go so far
