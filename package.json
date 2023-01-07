@@ -2,7 +2,8 @@
   "private": true,
   "devDependencies": {
     "csso-cli": "^2.0.2",
-    "purgecss": "^1.4.0",
-    "tailwindcss": "^1.1.2"
+    "icidasset-template": "file:./icidasset-template",
+    "postcss-cli": "^7.1.1",
+    "purgecss": "^1.4.0"
   }
 }

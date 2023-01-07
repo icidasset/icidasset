@@ -31,9 +31,9 @@ clean:
 
 css:
 	@echo "> Compiling Css"
-	@./node_modules/.bin/tailwind \
-		build "${TEMPLATE_DIR}/Css/Main.css" \
-		--config "${TEMPLATE_DIR}/Css/Tailwind.js" \
+	@./node_modules/.bin/postcss \
+		"${TEMPLATE_DIR}/Css/Core.css" \
+		--config "${TEMPLATE_DIR}/Css/" \
 		--output "${BUILD_DIR}/stylesheet.css"
 
 
