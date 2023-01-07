@@ -1,1 +1,1 @@
-Working on [Diffuse v3](https://github.com/icidasset/diffuse) and [Fission](https://fission.codes) integration. Getting into weightlifting. Thankful for [gowod.app](https://www.gowod.app/), much needed mobility training for olympic weightlifting. Reading [starting strength](https://www.amazon.com/Starting-Strength-Basic-Barbell-Training/dp/0982522738) and the Witcher series.
+Working on [Diffuse v3](https://github.com/icidasset/diffuse) and [Webnative](https://webnative.dev/). Reading [Courage is Calling](https://www.courageiscalling.com/).
