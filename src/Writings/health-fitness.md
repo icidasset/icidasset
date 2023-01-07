@@ -8,7 +8,7 @@ promote: true
 
 If you see something that isn't quite right or you know something I could add to this list, please send me a message on [Twitter](https://twitter.com/icidasset).
 
-<small>_Last update, November 2020._</small>
+<small>_Last update, January 2023._</small>
 
 
 
@@ -19,12 +19,16 @@ If you see something that isn't quite right or you know something I could add to
   because you're using your body fat as your energy source.
   Cutting on carbs is less effective because eventually
   your metabolism adjusts itself and you can only go so far
-  until you feel fatigued.
+  until you feel fatigued. That said, this can happen with
+  fasting too if you're fasting the same amount day after day.
+  Fasting is a tool, so adjust depending on your goals.
 - Besides losing body fat, short-term fasting <small>(less than 24 hours)</small>
   increases growth hormone, lowers insulin and blood sugar levels,
   improves mental clarity, is good for disease prevention,
   has short-term autophagy benefits, among other things.
   13 hours per day is considered the optimal amount.
+- This ties into time-restricted eating, eating earlier in the day is better.
+  Cortisol should be high in the morning, low in the evening, eating raises cortisol.
 - Long-term fasting <small>(more than 48 hours)</small>, besides the short-term benefits,
   to put it simply, detoxes/resets the body. Beware though, if you fast too long
   (more than 3 days I'm guessing), you could lose some muscle.
@@ -35,11 +39,13 @@ If you see something that isn't quite right or you know something I could add to
   but then you lose some of the benefits.
   [More info](https://www.amazon.com/Complete-Guide-Fasting-Intermittent-Alternate-Day/dp/1628600012/ref=asap_bc?ie=UTF8).
 - Using fat as your main energy source is called _being in a ketogenic state_.
+- Exercise when fasting to prevent muscle loss.
+- You can't out-fast a bad diet.
 
 
 ### Insulin
 
-Insulin is a hormone responsible for creating body fat. The more you have of it, the more body fat you'll create, and vice versa. There are different factors that determine how fast your insulin rises, and how fast it lowers. Every time you eat, your insulin rises. But, depending on what you eat, it will rise more, or less. For example, sugar will rise your insulin the most. The best way to improve your insulin sensitivity is to fast frequently, and not eat too regularly (eg. two meals and no snacks). Also, the better your insulin sensitivity, the better you can use carbs as energy (as opposed to storing it as body fat).
+Insulin is a hormone responsible for creating body fat. The more you have of it, the more body fat you'll create, and vice versa. There are different factors that determine how fast your insulin rises, and how fast it lowers. Every time you eat, your insulin rises. But, depending on what you eat, it will rise more, or less. For example, sugar will rise your insulin the most. The best way to improve your insulin sensitivity is to eat healthy, and not eat too regularly (eg. two meals and no snacks). Also, the better your insulin sensitivity, the better you can use carbs as energy (as opposed to storing it as body fat).
 
 
 ### How to break a long fast
@@ -49,75 +55,57 @@ Insulin is a hormone responsible for creating body fat. The more you have of it,
   <small>Also high fat, low carb.</small>
 - When fasting, muscles become insulin resistant
   <small>ie. they have more trouble using carbs as fuel.</small>
-- Improve your digestion as much as possible, more on this later.
 
 
 
 ## Diet
 
-*A good diet and fasting are the best ways to prevent disease.*
+*A good diet and movement are the best ways to prevent disease.*
 
 
 ### In General
 
 - 🧘 __‍Oxygen is the most important nutrient.__
-- 💧 __Drink enough water__, if you're thirsty, it's already too late.
+- 🥩 __All you need in a diet is red meat, organs, eggs, fruit, raw dairy and honey.__
+- 💧 __Make sure to hydrate__, if you're thirsty, it's already too late.
 - 🍛 __Do not overeat, ever__, you're only going to gain body fat and decrease growth hormone. <small>Eat until 80% full.</small>
 - Diet is more important than exercise.
 - Foods should be as natural and fresh as possible. Locally sourced, organic.
-- Focus on the right kinds of food, not how much. Also, eat less frequent.
-- Vegetables, legumes, herbs and seeds are the most important.
-  Eggs, meat, diary and fermented foods go second.
-  Add at least one prebiotic food to every meal <small>(more on this later)</small>.
+- Focus on the right kinds of food, not how much. The right foods are the foods that allow the body to proper satiety signals. Also, eat less frequent.
+- Focus on foods that are the most bioavailable and have the least amount negative effects.
 - Next to stress, your immune system largely depends on your digestive health and vitamin D levels.
 
 
 ### Carbohydrates
 
-- Simple and white carbohydrates are the most unhealthy forms of carbs, ie. not nutritious.  
-  <small>All forms of sugar, white bread, white pasta, etc.</small>
-- Complex carbohydrates are the most healthy form of carbs, ie. most nutritious.  
-  <small>Green vegetables, beans, lentils, sweet potatoes, whole grains, etc.</small>
-- Avoid grains if possible. If not, 2 or 3 per week max, whole grain only.
-  Use spelt or sourdough, or other "ancient" grains.
 - Carbohydrates are not a dietary requirement.  
   The human body makes carbohydrates if it needs them.
+- All plants and their seeds have defense chemicals.
+- Fruits (sweet and non-sweet) have the least amount
+  of defense chemicals, so those are safe to eat often.
+- Definitely to avoid: vegetables, brown rice, leafy greens, grains,
+  nightshades, nuts and seeds, legumes, mushrooms, chocolate,
+  seed-based spices, coffee & tea.
+- Somewhere in between there's: white rice, fermented veggies,
+  roots/tubers, herbs, coconuts, olive oil.
+- Fruit helps keep your electrolytes in balance.
+- Fructose isn’t that prevalent in fruit, compared to for example soft drinks (4g compared to 20g). Also, the other components in fruit neutralise the bad effects of fructose (unless the fruit is very ripe). Same with honey, which has a lot of fructose, but other components of honey neutralise the fructose.
 
-#### Sugar & Sweeteners 🚨
 
-- Don't eat too much fruit with a high fructose level <small>(max 1-2/day)</small>.  
-  Blueberries and kiwis are fruits with less fructose.
-- Sugar <small>(50% glucose, 50% fructose)</small> is the main reason for obesity.
-- Sweeteners aren't great either, avoid if possible (even stevia).  
-  Use coconut oil or fresh milk/cream instead.
+### Protein
+
+- 🥩 __The healthiest food is red meat.__
+- Prefer meat from ruminants over monogastric animals, because ruminants can convert polyunsaturated fatty acids in saturated fat, making them more healthy to eat.  
+  **Ruminants**: Cow/bull/ox (beef), sheep (lamb), goat, buffalo, bison, eland, deer, elk, moose, antelope, gazelle, wildebeest.
+- Don’t eat rare meat when you have trouble with stomach acid. More cooked is more digestible. This way the small intestine can better absorb the nutrients and less fermentation occurs (undigested protein -> bacteria)
+- Recommend protein per day: 1.05 per pound of body weight. So for me, 60.5 kg = 133 pounds * 1.05 = 140 gr. Which is two large steaks of 257 grams. No need to calculate fat intake, just eat the fattier cuts of meat, or add more fat.
 
 
 ### Fats
 
-Ideally you should __eat the full range of healthy fats__, these are: saturated, monounsaturated and polyunsaturated. Avoid trans fats by all means. An easy way to eat this full healthy range is to eat various nuts. Make sure nuts are not roasted, those don't have the healthy oils anymore. Fats should ideally be eaten with veggies, and never with sugar <small>(or any other simple carbohydrate for that matter)</small>.
-
-#### Saturated 🥥
-
-- Coconut (oil)
-- Grass-fed butter
-- Ghee
-
-#### Monounsaturated 🥑
-
-- Animal fats
-- Avocado (oil)
-- Lard
-- Macadamia nuts
-- Olive (oil)
-
-#### Polyunsaturated 🐟
-
-Omega 3 and 6, although omega 6 shouldn't be eaten much because it causes inflammation.
-
-- Chia seeds
-- Fish
-- Flax seeds
-- Walnuts
+- 🧈 __Cook with beef/byson tallow (filtered suet), butter or ghee.__
+- 🐄 __Focus on monounsaturated and saturated fats.__ That's animal fats.
+- Avoid all seed oils, these have too much linoleic acid.
 
 #### Oils to avoid 🚨
 
@@ -131,10 +119,29 @@ Omega 3 and 6, although omega 6 shouldn't be eaten much because it causes inflam
 - Sunflower oil
 
 
+### Elecrolytes & Hydration
+
+- 🧂 __Don't be afraid of salt.__
+- 🧃 __Hydration is based on your electrolytes.__
+- Consuming more natural salts with minerals can promote: your overall electrolyte balance, insulin sensitivity, metabolism, hormone balance, digestion, antihistamines.
+- Adrenals love sodium, more salt = less stress.
+- When increasing salt, increase magnesium as well.
+- Too much magnesium and not enough potassium and/or sodium can cause insomnia and other issues.
+- Never increase just potassium, only sodium & magnesium.
+- Sea salt is easier to absorb than rock salts.
+- Topical magnesium supplements might be better as they don’t impact sodium levels as much.
+- The more sugar and calcium you eat, the bigger the need for magnesium.
+- Add more salt and magnesium when feeling weak/dizzy while exercising.
+- Drink enough and eat enough salt to prevent constipation.
+- When doing sauna, increase electrolytes.
+- Too much salt, means getting waking up to pee,
+  being very thirsty, tired in the morning & having less energy.
+
+
 ### Vitamins
 
 - 🥕 Vitamin A is good for the eyes, a healthy immune system, and grow and repair.  
-     <small>Carrots, cod-liver oil.</small>
+     <small>Liver, carrots, cod-liver oil.</small>
 - ☀️ Vitamin D is the most important vitamin, it's involved with a lot of functions in the body.  
      <small>UV radiation, sun shine, cod-liver oil.</small>
 - 🍳 Vitamin K2 is good for the teeth and bones, improved insulin sensitivity, exercise performance, brain health, etc. You need proper amounts of magnesium, calcium and zinc for this vitamin to be efficient.  
@@ -153,71 +160,55 @@ Omega 3 and 6, although omega 6 shouldn't be eaten much because it causes inflam
   <small>Beef, chicken, lamb, chick peas.</small>
 
 
+### Microbiome
+
+- Fibre is not needed for a healthy microbiome. Increasing or decreasing fibre does not change the microbiome diversity.
+- Microbiome diversity is more about how you live: are you getting outside, do you have pets, are you hugging people, or interacting with people.
+- Eating unhealthy decreases diversity. Unhealthy, meaning: seed oils, processed sugar, plant toxins, etc.
+
+
 ### Improving Digestion
 
-- 🍁 __Eat foods that are in season__.
-- 😡 __Never eat while angry__. Or in other words, the more stress
-  you have the worse your digestion will be.
-- Chew food properly and mindfully.
-- Drink enough water before/after a meal (30 minutes before/after).  
-  <small>Add salt and/or black pepper to boost digestion even more.</small>
-- Drink warm water with a meal (eg. with lemon).
-- Eat your biggest meal between 10AM and 2PM.
-- Have a bit of apple cider vinegar before your meal.
-- Have a small amount of organic fermented foods with each meal
-  <small>Examples: fermented veggies, healthy unsweetened yoghurt, kimchi, kombucha, miso soup, olives, pickles, tempeh.</small>
-- Keep at least 20 minutes between meal portions.
+- 🚶 __Go for a walk after a meal,__ 20 minutes or so is ideal.  
+  Or sit in the hero pose immediately after eating: [Hero Pose (Virasana)](https://www.yogajournal.com/poses/hero-pose/)
+- 🦴 __Chew food properly and mindfully__, no distractions while eating.
+- 🥛 __Don't drink less than 30 min before eating and only an hour after eating.__  
+  Drinking dilutes the stomach acid.
+- Increase stomach acid to improve absorption of nutrients.
 - Slow, deep breaths before a meal. 3 seconds in, 5 seconds out, 5 times.
-- Tongue exercises, or "mewing" if you will. Simple exercise would be to push the tongue to the roof of your mouth, including the back of your tongue, for 3 minutes.
-
-
-### Gut microbiome
-
-To maintain a healthy microbiome, you need a balance between prebiotics and probiotics, a lot of fiber, foods with good epigenitics and a lot of diversity. Epigenitics basically means, eat animals that had healthy food. Every plant has a different kind of fiber, and depending how you prepare it, it changes as well, so variety is key. The more different kinds of fiber you eat, the more diverse your microbiome becomes (and the more health benefits you get).
-
-#### Prebiotics & fiber
-
-- Legumes
-- Nuts
-- Seeds
-- Veggies
-
-#### Probiotics
-
-- Artichokes
-- Asparagus
-- Banana
-- Chicory Root
-- Chives
-- Dandelion greens
-- Garlic
-- Onions
-
-
-### Very healthy all around
-
-- 🐖 Liver, easy to consume in the form of paté.  
-  <small>Vitamins A, B & C. Iron & copper. Protein rich.</small>
-- 🍲 Ramen dishes with proper ingredients.  
-  <small>Broth, healthy fats, meat, eggs, veggies, mushrooms, etc.</small>
+- Tongue exercises, or "mewing". Simple exercise would be to push the tongue to the roof of your mouth, including the back of your tongue, for 3 minutes.
+- Diagnosing where digestion problem lies:
+  Within 15 minutes of eating = stomach issue (eg. not enough acid)
+  Between 30 min and 2 hours = small intestine
+  2-3 hours after eating = large intestine
+- Ideal transit time, 24 hours or less.
+- Eat foods that are in season.
+- Never eat while angry. Or in other words, the more stress
+  you have the worse your digestion will be.
 
 
 ### Additional info
 
-- Almond butter > peanut butter, in most cases. If you opt for peanut butter, try finding one without hydrogen oils (they change the oils into trans fats so it can be stored longer).
-- Avoid bread with oils.
+- Aerobic exercise may be one of the most effective ways to promote gut health and help heal intestinal issues. Aerobic exercise increases butyrate-producing gut bacteria independent of diet. This reduces inflammation & promotes intestinal healing.
+- Avoid sweeteners all together, even natural ones like stevia. Even though they have zero carbs, they still raise insulin a lot. Might be even worse than regular sugar.
+- Bile acids are antimicrobial, eating some (animal) fats can stimulate their release and keep the small intestine clear.
 - Carbs can best be eaten early in the day (you're more insulin resistant later in the day).
-- Eat raw tough foods (heavy on fiber) for a strong tongue and jaw muscles.
+- Eat tough foods for a strong tongue and jaw muscles (eg. chewy bits in steak).
 - First meal of the day should be heavy and protein rich (30+ gr), be it breakfast or lunch.
-- Gluten-free products are sometimes worse than products with gluten:
+- Gluten-free products are often worse than products with gluten:
   a lot of chemicals, corn syrup, etc.
 - Low-fat food usually means high sucrose levels, so avoid those.
-- Milk from stores is heavily processed, buy fresh milk instead.
-- Pesto is a good way to add herbs to a meal.
+- Milk from stores is heavily processed, buy raw milk instead, raw milk still has the enzymes that allow you to digest milk properly.
+- Other things to avoid: preservatives, food colorings, additives, etc.
+- Our ability to properly metabolize sugar depends on two key factors: 1) proper mineral balance, and 2) our saturated fat to unsaturated fat (PUFA) ratio in our tissues.
+- People from different geographies have different microbiomes and thus are able to handle different foods better. Everyone has a different ability to handle plant toxins.
+- Probiotics can be as harmful as antibiotics.
+  Don't take probiotics every day, hurts the microbiome.
+  Only take probiotics when suffering a specific symptom, eg. when you have diarrhoea.
 - Repair your gut lining with bone broth.
-- Supplement sodium (salt) and magnesium when feeling weak/dizzy while exercising.
-- You can improve your metabolic rate by paying attention to your sleep and your zinc levels, taking cold plunges/showers, and eating one tablespoon of coconut oil per day.
-- You have to train your body/microbiome to learn to digest new kinds of fibre. So if you've never eaten something, eat a tiny bit of it, and work your way up.
+- You can make SCFAs on a carnivore diet as well.
+- Your body holds on to polyunsaturated fats for quite a long time, it will take time for your body to heal.
+- Zinc is needed to create stomach acid.
 
 
 
@@ -226,7 +217,7 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 
 - 🧘 __Breath trough the nose.__
   <small>More efficient oxygen usage, straighter teeth, better jaw, etc.</small>
-- ‍🏋️ __Heavy weights & less reps are better than lighter weights & more reps.__
+- ‍🏋️ __Heavy weights & less reps is better than lighter weights & more reps.__
   Mainly because it makes you stronger and it causes more fat loss
   (up to 3 days after training).
 - 8 to 12 sets of 4 to 6 reps, seems to work best.
@@ -241,6 +232,7 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 - When you do cardio, prefer
   [HIIT](http://www.muscleforlife.com/high-intensity-interval-training-and-weight-loss/)
   (High-Intensity Interval Training) over other methods. Although, when fasting, you might opt for steady-state cardio if your goal is fat loss.
+- Sauna mimics medium cardio.
 
 
 ### Additional info
@@ -275,21 +267,18 @@ To maintain a healthy microbiome, you need a balance between prebiotics and prob
 - Your muscles grow when you sleep
   (and sleep deficiency leads to faster muscle loss).
 - Kickstart your circadian rhythm by getting sunlight in the morning.
-  Just a few seconds is enough, but ideally a few minutes.
+  Just a few seconds is enough, but ideally 5 to 20 minutes depending on how cloudy it is.
 - No screens or bright lights a half hour,
   or ideally a bit more, before bed <small>(blue light)</small>.
-- Poor sleep is often a sign of stress <small>(lack of energy, not excess)</small>.
+- Things that worsen sleep: being sedentary, chronic stress, bad diet.
 
 
 ### Additional info
 
-- To reset your biorhythm to the optimal hours,
-  get some sunlight early in the morning.
 - The ideal sleeping temperature is 17°C.
 - Your bedroom should be as dark as possible and a bit cool.
 - Try fasting the day after not sleeping well. Because your cortisol levels are higher after sleeping less, cortisol + insulin = more body fat. Cortisol without insulin = lose body fat.
 - Not enough sleep causes a testosterone deficiency.
-- [More info](https://www.youtube.com/watch?v=q9q3hfsPYpM).
 
 
 
