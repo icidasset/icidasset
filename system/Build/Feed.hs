@@ -85,7 +85,6 @@ toEntry def =
                 def
                     |> content
                     |> fmap Text.decodeUtf8
-                    |> fmap Export.xmlId
                     |> fmap Atom.HTMLContent
             }
 

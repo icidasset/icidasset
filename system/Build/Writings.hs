@@ -1,7 +1,7 @@
 module Writings where
 
 import Data.Aeson (toJSON)
-import Data.HashMap.Strict as HashMap (singleton)
+import qualified Data.Aeson.KeyMap as KeyMap (singleton)
 import Data.Text (Text)
 import Flow
 import Protolude
@@ -35,7 +35,7 @@ insertSummaryDef def =
             |> parseTags
             |> extractSummary
             |> toJSON
-            |> HashMap.singleton "summary"
+            |> KeyMap.singleton "summary"
     in
     insertMetadataDef summary def
 

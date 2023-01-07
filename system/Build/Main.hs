@@ -19,7 +19,7 @@ import System.Directory (getCurrentDirectory)
 import Writings
 
 import qualified Data.Aeson as Aeson (Object, Value, toJSON)
-import qualified Data.HashMap.Strict as HashMap (empty, fromList)
+import qualified Data.Aeson.KeyMap as KeyMap (empty, fromList)
 import qualified Data.List as List (concatMap, filter, find, head, map)
 import qualified Data.Maybe as Maybe (fromJust, fromMaybe)
 import qualified Data.Text.IO as Text (readFile)
@@ -154,7 +154,7 @@ dependencies = do
     social          <- fileContents "src/Social.md"
     writings        <- gatherWritings
 
-    return $ HashMap.fromList
+    return $ KeyMap.fromList
         [ ("info", info)
         , ("intro", intro)
         , ("now", now)
@@ -169,7 +169,7 @@ gatherWritings = do
     writings        <- writingsIO
 
     (Writings, writings)
-        |> flow HashMap.empty
+        |> flow KeyMap.empty
         |> List.map metadata
         |> Aeson.toJSON
         |> return
@@ -205,7 +205,7 @@ rssFeed = do
     rootDir         <- getCurrentDirectory
 
     (Writings, writings)
-        |> flow HashMap.empty
+        |> flow KeyMap.empty
         |> createFeed
         |> fromMaybe ""
         |> feedDefinition rootDir
@@ -223,7 +223,7 @@ feedDefinition rootDir feed =
         , workingDirname = ""
 
         , content = Just feed
-        , metadata = HashMap.empty
+        , metadata = KeyMap.empty
         , parentPath = Nothing
         , pathToRoot = "../"
         }

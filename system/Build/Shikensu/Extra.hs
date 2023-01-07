@@ -9,7 +9,7 @@ import Shikensu.Contrib
 import Shikensu.Utilities
 
 import qualified Data.Aeson as Aeson (Value)
-import qualified Data.HashMap.Strict as HashMap (empty, fromList, singleton)
+import qualified Data.Aeson.KeyMap as KeyMap (empty, fromList, singleton)
 import qualified Data.Maybe as Maybe (fromMaybe)
 import qualified Data.Text as Text (pack)
 
@@ -24,7 +24,7 @@ insertTitleIntoMetadata finder = map $
             |> basename
             |> Text.pack
             |> finder
-            |> map (HashMap.singleton "title")
+            |> map (KeyMap.singleton "title")
             |> map (`insertMetadataDef` def)
             |> Maybe.fromMaybe def
 
